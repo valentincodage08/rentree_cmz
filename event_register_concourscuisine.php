@@ -59,6 +59,7 @@ vous devez être 2 participants. Nombre d’équipes limité à 12. Opérez votr
         $req->execute();
         $placescount = $req->rowCount();
         $placesrestantes = 10 - $placescount;
+        $req->closeCursor();
 
       ?>
 

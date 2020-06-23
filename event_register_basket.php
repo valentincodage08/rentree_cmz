@@ -31,24 +31,7 @@
     <div class="d-flex align-items-end justify-content-center" style="height:250px;"><h2 class="header_text display-2 text-white"><strong>Tournoi de Basket</strong></h2></div>
   </div>
 
-  <!-- Second Row -->
-  <div id="evenements" class="container-fluid">
-    <div class="row">
-      <div class="col-12 col-md-6 my-auto">
-        <h2 class="text-center policetitres">Tournoi de basket</h2>
-        <p class="policep text-center">Merci de remplir les champs ci-dessous pour inscrire votre équipe <br>
-et participer au Tournoi de basket qui pourra vous permettre <br>
-de gagner de nombreux lots. Pour constituer une équipe, vous devez être 5 à 7 participants.<br>
-Opérez votre inscription ensemble.<br>
-Le tournoi de basket aura lieu le vendredi 25 septembre à partir de 17h à l’Arena de Charleville-Mézières.</p>
-      </div>
-      <div class="col-12 col-md-6 mt-5">
-        <img class="rdeimg" src="img/event_2019/1.jpg">
-      </div>
-    </div>
-  </div>
-
-  <!-- Formumaire -->
+  <!-- Formulaire -->
 
   <section class="get-in-touch container-lg">
     <h1 class="title">Inscription Tournoi de basket</h1><br>

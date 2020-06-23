@@ -52,28 +52,22 @@
     <div class="showeventcarac" id="compteur">
         <h2 class=" policetitres text-center mt-5 text-shadow" style="color: white;">Caractéristiques</h2>
         <div class="row w-100 mt-5">
-            <div class="col-xs-6 col-md-6 col-lg-6 col-xl-3 mb-1">
+          <div class="col-xs-6 col-md-6 col-lg-6 col-xl-4">
                 <div class="rounded-circle mx-auto my-auto">
-                    <p class="text-center policetitres-proginc color-yellow-light">Participants</p>
-                    <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong id="compteur1">352</strong></p>
+                    <p class="text-center policetitres-proginc color-yellow-light">Date</p>
+                    <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong><span id="compteur4">27</span>/<span id="compteur5">09</span>/20<span id="compteur6">20</span></strong></p>
                 </div>
             </div>
-            <div class="col-xs-6 col-md-6 col-lg-6 col-xl-3 mb-1">
+            <div class="col-xs-6 col-md-6 col-lg-6 col-xl-4 mb-1">
                 <div class="rounded-circle mx-auto my-auto">
                     <p class="text-center policetitres-proginc color-yellow-light">Horaires</p>
                     <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong><span id="compteur2">14</span>h / <span id="compteur3">20</span>h</strong></p>
                 </div>
             </div>
-            <div class="col-xs-6 col-md-6 col-lg-6 col-xl-3 mb-1">
+            <div class="col-xs-6 col-md-6 col-lg-6 col-xl-4 mb-1">
                 <div class="rounded-circle mx-auto my-auto">
                     <p class="text-center policetitres-proginc color-yellow-light">Lieu</p>
                     <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong>Charleville-Mézières</strong></p>
-                </div>
-            </div>
-            <div class="col-xs-6 col-md-6 col-lg-6 col-xl-3">
-                <div class="rounded-circle mx-auto my-auto">
-                    <p class="text-center policetitres-proginc color-yellow-light">Date</p>
-                    <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong><span id="compteur4">27</span>/<span id="compteur5">09</span>/20<span id="compteur6">20</span></strong></p>
                 </div>
             </div>
         </div>
@@ -81,23 +75,6 @@
     
     <div class="container-fluid my-5">
         <div class="row w-100 mb-5 mb-xl-0">
-            <div class="col-xl-6 my-auto col-mb-10 order-1 p-0 m-0">
-                <h2 class="text-center policetitres">Règles</h2>
-                <div class="w-75 mx-auto">
-                    <p class="policep">Afin de passer tous ensemble une pause déjeuner conviviale, vous avez la
-                        possibilité de venir avec votre déjeuner, des chaises et des tables seront à disposition sur un
-                        espace de la Plaine du Mont Olympe.
-                        <br><br>
-                        Sinon, vous avez la possibilité de profiter d’une formule déjeuner à 3€ (au lieu de 5€)
-                        pour les 200 premiers les plus rapides !!
-                        <br><br>
-                        La formule sera composée d’un burger, d’une frite et d’une boisson.
-                        <br><br>
-                        Afin de bénéficier du repas à 3€, il est impératif de réserver votre repas.
-                        <br><br>
-                        Vous paierez sur place le jour J. </p>
-                </div>
-            </div>
             <div class="txt_faq col-xl-6 col-mb-10 order-2 p-0 m-auto">
             <div class="d-flex align-items-center">
             <div class="col-xl-6 col-lg-6 col-md-6"><img src="img/mascotte_montre.png" style="width:100%;"></div>
@@ -147,7 +124,7 @@
     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
         <img class="img-fluid" src="img/event_2019/11.jpg">
-        <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Bal</p>
+        <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Bal de rentrée</p>
         <hr class="style-five">
         <center><a href="events_bal.php" class="btn btn-secondary mb-2">Détails</a></center>
       </div>

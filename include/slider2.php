@@ -51,7 +51,7 @@
             <!-- LAYER NR. 2 -->
             <div class="tp-caption   tp-resizeme rs-parallaxlevel-1" id="slide-32-layer-8"
                 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                data-y="['top','top','top','top']" data-voffset="['113','93','53','53']"
+                data-y="['top','top','top','top']" data-voffset="['110','90','50','50']"
                 data-fontsize="['80','80','90','45']" data-lineheight="['70','70','80','56']" data-width="none"
                 data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on"
                 data-frames='[{"delay":1300,"speed":2000,"frame":"0","from":"sX:2;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
@@ -142,7 +142,7 @@
                 data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"sX:2;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
                 data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]"
                 data-paddingright="[0,0,0,0]" data-marginbottom="[100,100,100,200]" data-paddingleft="[0,0,0,0]"
-                style="z-index: 9; white-space: nowrap;  line-height: 90px; font-weight: 200; color: rgba(39,49,127,1);font-family:Bangers;letter-spacing:+5px;">
+                style="z-index: 9; white-space: nowrap;  line-height: 90px; font-weight: 200; color: #cb011d;font-family:Bangers;letter-spacing:+5px;">
                 <div style="transform: rotateZ(-3deg);"><span id="countd_inscriptions"></span></div></div>
 
                 <script>

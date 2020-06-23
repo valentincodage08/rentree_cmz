@@ -131,6 +131,8 @@
         </div>
     </div>
 
+    <?php include('include/parallax.php')?>
+
     <!-- Page d'acceuil content end -->
 
     <?php include('include/footer.php')?>

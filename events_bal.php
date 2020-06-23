@@ -11,7 +11,7 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <title>Bal de la rentrée</title>
+    <title>Bal de rentrée</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!-- FontAwesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
@@ -23,7 +23,7 @@
     <?php include('include/nav.php')?>
 
     <div class="header_img">
-    <div class="d-flex align-items-end justify-content-center" style="height:250px;"><h2 class="header_text display-2 text-white"><strong>Bal de la Rentrée</strong></h2></div>
+    <div class="d-flex align-items-end justify-content-center" style="height:250px;"><h2 class="header_text display-2 text-white"><strong>Bal de Rentrée</strong></h2></div>
   </div>
 
 
@@ -32,7 +32,7 @@
         <img class="evenementimg evenementimg-1 img-fluid d-block" src="img/event_2019/1.jpg">
       </div>
       <div class="col-xl-6 col-mb-10 order-xl-4 order-3 my-auto p-0 m-0">
-        <h2 class="text-center policetitres mt-5">Bal de la Rentrée</h2>
+        <h2 class="text-center policetitres mt-5">Bal de Rentrée</h2>
         <div class="w-75 mx-auto">
           <p class="policep">Pour ceux qui aiment cuisiner, un Concours de cuisine sera proposé sur
                         la Place Ducale en partenariat avec l’association INTERCampus.
@@ -52,28 +52,22 @@
     <div class="showeventcarac" id="compteur">
         <h2 class=" policetitres text-center mt-5 text-shadow" style="color: white;">Caractéristiques</h2>
         <div class="row w-100 mt-5">
-            <div class="col-xs-6 col-md-6 col-lg-6 col-xl-3 mb-1">
+          <div class="col-xs-6 col-md-6 col-lg-6 col-xl-4">
                 <div class="rounded-circle mx-auto my-auto">
-                    <p class="text-center policetitres-proginc color-yellow-light">Participants</p>
-                    <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong id="compteur1">352</strong></p>
+                    <p class="text-center policetitres-proginc color-yellow-light">Date</p>
+                    <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong><span id="compteur1">27</span>/<span id="compteur2">09</span>/20<span id="compteur3">20</span></strong></p>
                 </div>
             </div>
-            <div class="col-xs-6 col-md-6 col-lg-6 col-xl-3 mb-1">
+            <div class="col-xs-6 col-md-6 col-lg-6 col-xl-4 mb-1">
                 <div class="rounded-circle mx-auto my-auto">
                     <p class="text-center policetitres-proginc color-yellow-light">Horaires</p>
-                    <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong><span id="compteur2">14</span>h / <span id="compteur3">20</span>h</strong></p>
+                    <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong><span id="compteur4">14</span>h / <span id="compteur5">20</span>h</strong></p>
                 </div>
             </div>
-            <div class="col-xs-6 col-md-6 col-lg-6 col-xl-3 mb-1">
+            <div class="col-xs-6 col-md-6 col-lg-6 col-xl-4 mb-1">
                 <div class="rounded-circle mx-auto my-auto">
                     <p class="text-center policetitres-proginc color-yellow-light">Lieu</p>
                     <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong>Charleville-Mézières</strong></p>
-                </div>
-            </div>
-            <div class="col-xs-6 col-md-6 col-lg-6 col-xl-3">
-                <div class="rounded-circle mx-auto my-auto">
-                    <p class="text-center policetitres-proginc color-yellow-light">Date</p>
-                    <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong><span id="compteur4">27</span>/<span id="compteur5">09</span>/20<span id="compteur6">20</span></strong></p>
                 </div>
             </div>
         </div>
@@ -82,18 +76,7 @@
     
     <div class="container-fluid my-5">
         <div class="row w-100 mb-5 mb-xl-0">
-            <div class="col-xl-6 my-auto col-mb-10 order-1 p-0 m-0">
-                <h2 class="text-center policetitres">Règles</h2>
-                <div class="w-75 mx-auto">
-                    <p class="policep">Pour ceux qui aiment cuisiner, un Concours de cuisine sera proposé sur la Place Ducale en partenariat avec l’association INTERCampus.
-                    <br><br>
-                    Sur la base de quelques ingrédients, vous devrez concocter un bon petit plat ! Plusieurs équipes s’affronteront. Le matériel minimum nécessaire sera mis à disposition.
-                    <br><br>
-                    Un jury à la fin notera et goûtera, pour le meilleur ou pour le pire, vos préparations.
-                    <br><br>
-                    Afin de participer à cette manifestation, il est nécessaire au préalable de composer une équipe de 2 personnes.</p>
-                </div>
-            </div>
+            
             <div class="txt_faq col-xl-6 col-mb-10 order-2 p-0 m-auto">
             <div class="d-flex align-items-center">
             <div class="col-xl-6 col-lg-6 col-md-6"><img src="img/mascotte_montre.png" style="width:100%;"></div>
@@ -192,7 +175,7 @@ function gocompteur(startcount, endcount, duration, idTarget) {
 var waypoint1 = new Waypoint({
   element: document.getElementById('compteur1'),
   handler: function(direction) {
-        gocompteur(0,352,1,"compteur1");
+        gocompteur(0,27,1.4,"compteur1");
   },
   offset: 'bottom-in-view' 
 })
@@ -200,7 +183,7 @@ var waypoint1 = new Waypoint({
 var waypoint2 = new Waypoint({
   element: document.getElementById('compteur2'),
   handler: function(direction) {
-        gocompteur(0,14,0.7,"compteur2");
+        gocompteur(0,9,0.9,"compteur2");
   },
   offset: 'bottom-in-view' 
 })
@@ -213,26 +196,18 @@ var waypoint3 = new Waypoint({
   offset: 'bottom-in-view' 
 })
 
-var waypoint3 = new Waypoint({
+var waypoint4 = new Waypoint({
   element: document.getElementById('compteur4'),
   handler: function(direction) {
-        gocompteur(0,27,1.4,"compteur4");
+        gocompteur(0,14,0.7,"compteur4");
   },
   offset: 'bottom-in-view' 
 })
 
-var waypoint3 = new Waypoint({
+var waypoint5 = new Waypoint({
   element: document.getElementById('compteur5'),
   handler: function(direction) {
-        gocompteur(0,9,0.9,"compteur5");
-  },
-  offset: 'bottom-in-view' 
-})
-
-var waypoint3 = new Waypoint({
-  element: document.getElementById('compteur6'),
-  handler: function(direction) {
-        gocompteur(0,20,1,"compteur6");
+        gocompteur(0,20,1,"compteur5");
   },
   offset: 'bottom-in-view' 
 })

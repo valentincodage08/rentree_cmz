@@ -59,7 +59,7 @@
                     <label class="label mb-4">Établissement</label>
 
                     <select class="custom-select" name="etablissement" required>
-                        <option value="0">Veuillez choisir un établissement</option>
+                        <option value="" disabled selected>Veuillez choisir un établissement</option>
                         <option value="IUTRCC">Institut Universitaire de Technologie (IUT RCC)</option>
                         <option value="EiSINe">Ecole d’Ingénieurs en Sciences Industrielles et Numérique (EiSINe)</option>
                         <option value="INSPE">Institut national Supérieur du Professorat et de l’Education (INSPÉ)</option>

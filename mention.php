@@ -21,8 +21,6 @@
 </head>
 <body>
 
-    <?php include('include/nav.php'); ?>
-
     <div class="mention"><br><br><br><br>
         <center><h2>Mentions Légales</h2><hr color="black" width="200em" size="2"><br></center><br><br>
      
@@ -46,9 +44,7 @@
      </div>
      <form><center>
      <input type = "button" value = "Retour"  onclick = "history.back()" class="mb-5">
-     </center></form>
-
-     <?php include('include/footer.php'); ?>   
+     </center></form> 
 
 </body>
 </html>

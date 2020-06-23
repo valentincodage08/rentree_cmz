@@ -35,33 +35,7 @@
 
     <section class="get-in-touch container-lg">
     <h1 class="title">Inscription bal de la rentrée</h1><br>
-    <h2 class="title2 mt-3">Etablissement</h2>
     <form id="inscription" class="contact-form row w-100 justify-content-center" action="include/balregister.php" method="post">
-      <div class="form-field col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7">
-        <center><select class="custom-select" name="etablissement" id="etablissement-font-1">
-            <option value="" disabled selected>Veuillez choisir un établissement</option>
-            <option value="IUTRCC">Institut Universitaire de Technologie (IUT RCC)</option>
-            <option value="EiSINe">Ecole d’Ingénieurs en Sciences Industrielles et Numérique (EiSINe)</option>
-            <option value="INSPE">Institut national Supérieur du Professorat et de l’Education (INSPÉ)</option>
-            <option value="EGC">Ecole de gestion et de commerce (EGC)</option>
-            <option value="SIMPLON">Ecole Simplon</option>
-            <option value="ISCEE">Institut supérieur de comptabilité et d’économie des entreprises (ISCEE)</option>
-            <option value="ESNAM">Ecole supérieure nationale des Arts de la marionnettes (ESNAM)</option>
-            <option value="IFSI">Institut de formation en soins infirmiers (IFSI)</option>
-            <option value="CFAI">Centre de formation des apprentis de l’industrie (CFAI)</option>
-            <option value="LABDA">Lycée agricole Balcon des Ardennes</option>
-            <option value="LDMDB">Lycée des métiers de Bazeilles</option>
-            <option value="LMDS">Lycée Sévigné</option>
-            <option value="LDMB">Lycée des métiers Bazin</option>
-            <option value="LM">Lycée Monge</option>
-            <option value="LJBC">Lycée JB Clément</option>
-            <option value="LPB">Lycée Pierre Bayle</option>
-            <option value="LSV">Lycée Simone Veil</option>
-            <option value="SCBS">SCBS – Y Schools</option>
-          </select></center>
-      </div>
- 
-
       <div class="mb-5"></div>
         <div class="row justify-content-center">
           <div class="tab-content" id="myTabContent">

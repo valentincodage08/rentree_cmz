@@ -1,3 +1,5 @@
+<?php include('include/connexiondbval.php'); ?>
+
 <!doctype html>
 <html lang="fr">
 
@@ -51,10 +53,22 @@ vous devez être 2 participants. Nombre d’équipes limité à 12. Opérez votr
 
   <section class="get-in-touch container-lg">
     <h1 class="title">Inscription Concours de cuisine</h1><br>
+
+    <?php
+        $req = $bdd->prepare("SELECT * FROM RDEcuisineregister");
+        $req->execute();
+        $placescount = $req->rowCount();
+        $placesrestantes = 10 - $placescount;
+
+      ?>
+
+      <h2 class="title2 mt-3">Vite, il reste de la place pour <?= $placesrestantes ?> équipes</h2>
+
     <h2 class="title2 mt-3">Etablissement</h2>
     <form id="inscription" class="contact-form row w-100 justify-content-center" action="include/cuisineregister.php" method="post">
       <div class="form-field col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7">
         <center><select class="custom-select" name="etablissement" id="etablissement-font-5">
+            <option value="" disabled selected>Veuillez choisir un établissement</option>
             <option value="IUTRCC">Institut Universitaire de Technologie (IUT RCC)</option>
             <option value="EiSINe">Ecole d’Ingénieurs en Sciences Industrielles et Numérique (EiSINe)</option>
             <option value="INSPE">Institut national Supérieur du Professorat et de l’Education (INSPÉ)</option>

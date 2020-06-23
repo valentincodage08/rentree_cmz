@@ -99,12 +99,11 @@
   
   <!-- Image / Motif / Editions -->
   
-  <div class="container-fluid">
+  <div class="container-fluid" style="background-image: url(img/gacolor.jpeg); height:300px;">
     <div class="row motifimg">
-      <div data-bs-parallax-bg="true" class="backgroundimages" style="background-image: url(img/gacolor.jpeg);"></div>
       <!-- Carousel Testimonials -->
       <div id="carouseltestimonials" class="carousel slide" data-ride="carousel"  data-interval="3500"
-        style="background-color: transparent !important; font-size:1.8em;">
+        style=" font-size:1.8em;width:80%;">
         <div class="carousel-inner">
       
           <?php $req = $bdd->prepare("SELECT * FROM RDETestimonials");
@@ -114,14 +113,14 @@
       
                 <div class="carousel-item mt-4 mb-4">
                   <!-- Ici chaque item -->
-                  <div class="row d-flex">
+                  <div class="row d-flex justify-content-center">
                     <div class="col-2"></div>
                     <div class="col-2 carou_img">
                       <img src="img/logoetudiantcarolo_bleu.png" class="d-block w-100" alt="<?= $testimonial['alt'] ?>">
                     </div>
                     <div class="col-1"></div>
-                    <div class="col-md-12 col-lg-5 align-self-center m-2">
-                      <center><p class="testiresponsif"><strong><?= $testimonial['first_name'] ?>, <?= $testimonial['age'] ?> ans (<?= $testimonial['establishment'] ?></strong>) :</p><p class="testiresponsifmini"><?= $testimonial['text'] ?></p></center>
+                    <div class="col-md-12 col-lg-5 align-self-center m-2" style="background-color:white; border: 1px solid #999;border-radius:2px;">
+                    <center><p class="testiresponsif"><strong><?= $testimonial['first_name'] ?>, <?= $testimonial['age'] ?> ans (<?= $testimonial['establishment'] ?></strong>) :</p><p class="testiresponsifmini"><?= $testimonial['text'] ?></p></center>
                     </div>
                   </div>
                 </div>
@@ -141,9 +140,6 @@
 
     </div>
   </div>
-
-
-  <?php include ('include/parallax.php'); ?>
 
   <div class="container-fluid mt-2 mb-5 pr-5 pl-5 persp">
     <h2 class="text-center policetitres mt-3 mb-3">EDITION 2019</h2>
@@ -168,6 +164,8 @@
   </div>
 
   <!-- Page d'acceuil content end -->
+
+  <?php include ('include/parallax.php'); ?>
 
   <?php include('include/footer.php')?>
 

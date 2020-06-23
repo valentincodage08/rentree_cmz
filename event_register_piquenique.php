@@ -30,25 +30,18 @@
     <div class="d-flex align-items-end justify-content-center" style="height:250px;"><h2 class="header_text display-2 text-white"><strong>Pique-Nique</strong></h2></div>
   </div>
 
-  <!-- Second Row -->
-  <div id="evenements" class="container-fluid">
-    <div class="row">
-      <div class="col-12 col-md-6 my-auto">
-        <h2 class="text-center policetitres">Pique-Nique</h2>
-        <p class="policep text-center">Merci de remplir les champs ci-dessous pour reserver votre repas
-à la plaine du Mont Olympe pour le prix de 3€ au lieu de 5€
-pour les 200 premières réservations.</p>
-      </div>
-      <div class="col-12 col-md-6 mt-5">
-        <img class="rdeimg" src="img/event_2019/1.jpg">
-      </div>
-    </div>
-  </div>
-
   <!-- Formumaire -->
 
   <section class="get-in-touch container-lg">
     <h1 class="title">Inscription au pique-nique</h1><br>
+    <?php
+        $req = $bdd->prepare("SELECT * FROM RDEPiqueniquetregister");
+        $req->execute();
+        $placescount = $req->rowCount();
+        $placesrestantes = 200 - $placescount;
+        $req->closeCursor();
+      ?>
+      <h2 class="title2 mt-3">Vite, il ne reste que <?= $placesrestantes ?> places pour les repas à 3€!</h2>
     <h2 class="title2 mt-3">Etablissement</h2>
     <form id="inscription" class="contact-form row w-100 justify-content-center" action="include/piqueniqueregister.php" method="post">
       <div class="form-field col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7">
@@ -96,16 +89,6 @@ pour les 200 premières réservations.</p>
           <label class="label">Veuillez resaisir votre email</label>
         </div>
       </div>
-
-      <?php
-        $req = $bdd->prepare("SELECT * FROM RDEPiqueniquetregister");
-        $req->execute();
-        $placescount = $req->rowCount();
-        $placesrestantes = 200 - $placescount;
-
-      ?>
-
-      <h2 class="title2 mt-3">Vite, il ne reste que <?= $placesrestantes ?> places pour les repas à 3€!</h2>
       <div class="form-field col-12">
         <center><input class="submit-btn" type="submit" value="Valider"></center>
       </div>

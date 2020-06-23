@@ -30,22 +30,7 @@
     <div class="d-flex align-items-end justify-content-center" style="height:250px;"><h2 class="header_text display-2 text-white"><strong>Gacolor</strong></h2></div>
   </div>
 
-    <!-- Second Row -->
-    <div id="evenements" class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-md-6 my-auto">
-                <h2 class="text-center policetitres">Gacolor</h2>
-                <p class="policep text-center"><br>La Gacolor est l’événement phare de la vie étudiante à
-                    Charleville-Mézières. Cette manifestation, grand public, est ouverte à tous. <br>
-                    La Gacolor aura lieu le dimanche 27 septembre 2020 entre 14h et 20h.</p>
-            </div>
-            <div class="col-12 col-md-6 mt-5">
-                <img class="rdeimg" src="img/event_2019/1.jpg">
-            </div>
-        </div>
-    </div>
-
-    <!-- Formumaire -->
+    <!-- Formulaire -->
 
     <section class="get-in-touch container-lg">
         <h1 class="title">Inscription Gacolor</h1><br>

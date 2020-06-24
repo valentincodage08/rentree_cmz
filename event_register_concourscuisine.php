@@ -48,6 +48,11 @@
     <center><div class="alert alert-danger" role="alert">
       Ce nom d'équipe est déjà pris, veuillez en choisir un autre.
     </div></center>
+  <?php } ?>
+  <?php if($_GET['success'] == 4 ) {?><br><br>
+    <center><div class="alert alert-danger" role="alert">
+      On ne joue pas avec l'URL petit malin !! Et non il n'y a vraiment plus de places 
+    </div></center>
   <?php }} ?>
 
   <!-- Formumaire -->
@@ -63,13 +68,18 @@
         $req->closeCursor();
 
       ?>
-
-      <h2 class="title2 mt-3">Vite, il reste de la place pour <?= $placesrestantes ?> équipes</h2>
+<?php if ($placesrestantes == 1) {?>
+      <h2 class="title2 mt-3">Vite, il ne reste de la place que pour <?= $placesrestantes ?> équipe!</h2>
+<?php } elseif ($placesrestantes == 0) {?>
+      <h2 class="title2 mt-3">Toutes les places sont prises, vous ne pourrez plus vous inscrire</h2>
+<?php } else {?>
+      <h2 class="title2 mt-3">Vite, il ne reste de la place que pour <?= $placesrestantes ?> équipes</h2>
+<?php } ?>
 
     <h2 class="title2 mt-3">Etablissement</h2>
     <form id="inscription" class="contact-form row w-100 justify-content-center" action="include/cuisineregister.php" method="post">
       <div class="form-field col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7">
-        <center><select class="custom-select" name="etablissement" id="etablissement-font-5">
+        <center><select class="custom-select" name="etablissement" id="etablissement-font-5" required>
             <option value="" disabled selected>Veuillez choisir un établissement</option>
             <option value="IUTRCC">Institut Universitaire de Technologie (IUT RCC)</option>
             <option value="EiSINe">Ecole d’Ingénieurs en Sciences Industrielles et Numérique (EiSINe)</option>
@@ -177,9 +187,15 @@
                       <label class="label">Veuillez resaisir votre email</label>
                     </div>
                   </div>
+                  <?php if ($placesrestantes > 0) {?>
                   <div class="form-field col-12">
                     <center><input class="submit-btn" type="submit" value="Valider"></center>
                   </div>
+                  <?php } else { ?>
+                    <div class="form-field col-12">
+                    <center><h3 class="title2 mt-3">Il n'y a plus de places</h3></center>
+                  </div>
+                  <?php } ?>
                 </div>
               </div>
             </div>

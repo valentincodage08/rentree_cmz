@@ -33,7 +33,7 @@
           <p class="policep">A travers les rues de Charleville-Mézières, le Carolo Express permet aux étudiants de découvrir la ville autrement avec ses moments incontournables et de nombreux lieux insolites ou méconnus.
          Etes-vous déjà entré au sein de la TOUR DU ROY ?
          <br><br>
-         Le parcours est composé d’environ 10 étapes. Sur chaque étape, une énigme ou une mise en situation sera demandée. Les équipes qui auront découvert les lieux le plus rapidement possible remporteront cette course d’orientation. Le parcours du Carolo Express doit, bien évidemment, se faire à pied (sinon, c’est trop facile ).
+         Le parcours est composé d’environ 10 étapes. Sur chaque étape, une énigme ou une mise en situation sera demandée. Les équipes qui auront découvert les lieux le plus rapidement possible remporteront cette course d’orientation. Le parcours du Carolo Express doit, bien évidemment, se faire à pied (sinon, c’est trop facile).
          <br><br>
          Afin de participer à cette manifestation, il est nécessaire au préalable de composer une équipe de 5 personnes.<p class="mb-5">
         </div>

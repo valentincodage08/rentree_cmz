@@ -31,7 +31,7 @@
      
      Autorisation d’exploitation d’image donnée à la Ville de Charleville-Mézières<br><br>
      
-     En participant aux activités de la Rentrée des étudiants 2019, j’autorise la Ville de Charleville-Mézières :<br><br>
+     En participant aux activités de la Rentrée des étudiants 2020, j’autorise la Ville de Charleville-Mézières :<br><br>
      
      1) à me photographier, ainsi que mes biens, pendant toute la durée de la manifestation à laquelle je participe.<br><br>
      2) à exploiter et à utiliser mon image de façon non commerciale et à des fins de communication institutionnelle (notamment dans le bulletin <br>

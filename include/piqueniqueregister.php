@@ -8,10 +8,6 @@ $tel = !empty($_POST['tel']) ? $_POST['tel'] : NULL;
 $mail = !empty($_POST['mail']) ? $_POST['mail'] : NULL;
 $verifmail = !empty($_POST['verifmail']) ? $_POST['verifmail'] : NULL;
 
-$objetinscrip = utf8_decode("Confirmation d'inscription au Pique-Nique");
-$messageinscrip = utf8_decode("Bonjour, votre inscription est bien prise en compte pour le Pique-Nique.");
-
-
 
 if($mail == $verifmail) {
 
@@ -26,8 +22,21 @@ if($mail == $verifmail) {
     ':establishment' => $establishment
     ));
     $balregistration->closeCursor();
+    $idparticipant = $bdd->lastInsertId();
 
-    mail($mail, $objetinscrip, $messageinscrip);
+    echo $idparticipant;
+
+    if ($idparticipant <= 200) {
+        $objetinscrip = utf8_decode("Confirmation d'inscription au Pique-Nique");
+        $messageinscrip = utf8_decode("Bonjour, votre inscription est bien prise en compte pour le Pique-Nique, le prix de votre repas sera de 3€.");
+
+        mail($mail, $objetinscrip, $messageinscrip);
+    } else {
+        $objetinscrip2 = utf8_decode("Confirmation d'inscription au Pique-Nique");
+        $messageinscrip2 = utf8_decode("Bonjour, votre inscription est bien prise en compte pour le Pique-Nique, le prix de votre repas sera de 5€.");
+
+        mail($mail, $objetinscrip2, $messageinscrip2);
+    }
 
     header('location: ../event_register_piquenique.php?success=1');
 }

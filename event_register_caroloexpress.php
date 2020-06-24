@@ -62,7 +62,7 @@
     <h2 class="title2 mt-3">Etablissement</h2>
     <form id="inscription" class="contact-form row w-100 justify-content-center" action="include/expressregister.php" method="post">
       <div class="form-field col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7">
-        <center><select class="custom-select" name="etablissement" id="etablissement-font-3">
+        <center><select class="custom-select" name="etablissement" id="etablissement-font-3" required>
             <option value="" disabled selected>Veuillez choisir un établissement</option>
             <option value="IUTRCC">Institut Universitaire de Technologie (IUT RCC)</option>
             <option value="EiSINe">Ecole d’Ingénieurs en Sciences Industrielles et Numérique (EiSINe)</option>

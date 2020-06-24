@@ -21,6 +21,13 @@ $verifmail2 = !empty($_POST['verifmail2']) ? $_POST['verifmail2'] : NULL;
 $objetinscrip = utf8_decode("Confirmation d'inscription au Concours de Cuisine");
 $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription est bien prise en compte pour le Concours de Cuisine.");
 
+        $req = $bdd->prepare("SELECT * FROM RDEcuisineregister");
+        $req->execute();
+        $placescount = $req->rowCount();
+        $placesrestantes = 10 - $placescount;
+        $req->closeCursor();
+
+if($placesrestantes>0) {
 
     if($mail1 == $verifmail1 && $mail2 == $verifmail2) {
 
@@ -91,4 +98,8 @@ $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription es
     } else {
         header('location: ../event_register_concourscuisine.php?success=2');
     }
+}
+else {
+    header('location: ../event_register_concourscuisine.php?success=4');
+}
 ?>

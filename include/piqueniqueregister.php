@@ -8,6 +8,9 @@ $tel = !empty($_POST['tel']) ? $_POST['tel'] : NULL;
 $mail = !empty($_POST['mail']) ? $_POST['mail'] : NULL;
 $verifmail = !empty($_POST['verifmail']) ? $_POST['verifmail'] : NULL;
 
+$objetinscrip = utf8_decode("Confirmation d'inscription au Pique-Nique");
+$messageinscrip = utf8_decode("Bonjour, votre inscription est bien prise en compte pour le Pique-Nique.");
+
 
 
 if($mail == $verifmail) {
@@ -23,10 +26,14 @@ if($mail == $verifmail) {
     ':establishment' => $establishment
     ));
     $balregistration->closeCursor();
+
+    mail($mail, $objetinscrip, $messageinscrip);
+
+    header('location: ../event_register_piquenique.php?success=1');
 }
 
 else {
-    echo "Quand le form sera en ajax, ici mettre une alerte : les deux mails ne sont pas les mêmes";
+    header('location: ../event_register_piquenique.php?success=2');
 }
 
 ?>

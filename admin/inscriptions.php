@@ -138,7 +138,6 @@ include('../include/connexiondbval.php');
       <tr>
           <th scope="col">Nom de l'équipe</th>
           <th scope="col">Etablissement</th>
-          <th scope="col">Mot de passe</th>
           <th scope="col">Nom</th>
           <th scope="col">Prénom</th>
           <th scope="col">Téléphone</th>
@@ -157,7 +156,6 @@ include('../include/connexiondbval.php');
         <tr>
           <th scope="row"><?= $donnees['team_name']; ?></th>
           <td><?= $donnees['establishment']; ?></td>
-          <td><?= $donnees['password_manif']; ?></td>
           <td><?= $donnees['name']; ?></td>
           <td><?= $donnees['first_name']; ?></td>
           <td><?= $donnees['phone']; ?></td>
@@ -183,12 +181,19 @@ include('../include/connexiondbval.php');
   <!-- Cuisine -->
 
   <div class="tab-pane fade show container mt-2" id="cuisine" role="tabpanel" aria-labelledby="register1-tab">
+  <?php
+        $req = $bdd->prepare("SELECT * FROM RDEcuisineregister");
+        $req->execute();
+        $placescount = $req->rowCount();
+        $req->closeCursor();
+
+      ?>
+<h4 class="text-center font-weight-light font-italic text-black-50 mt-4 mb-5">Il y a actuellement <?= $placescount ?> équipes inscrites.</h4>
     <table class="table">
       <thead class="thead-light">
       <tr>
           <th scope="col">Nom de l'équipe</th>
           <th scope="col">Etablissement</th>
-          <th scope="col">Mot de passe</th>
           <th scope="col">Nom</th>
           <th scope="col">Prénom</th>
           <th scope="col">Téléphone</th>
@@ -207,7 +212,6 @@ include('../include/connexiondbval.php');
         <tr>
           <th scope="row"><?= $donnees['team_name']; ?></th>
           <td><?= $donnees['establishment']; ?></td>
-          <td><?= $donnees['password_manif']; ?></td>
           <td><?= $donnees['name']; ?></td>
           <td><?= $donnees['first_name']; ?></td>
           <td><?= $donnees['phone']; ?></td>
@@ -290,7 +294,6 @@ include('../include/connexiondbval.php');
       <tr>
           <th scope="col">Nom de l'équipe</th>
           <th scope="col">Etablissement</th>
-          <th scope="col">Mot de passe</th>
           <th scope="col">Nom</th>
           <th scope="col">Prénom</th>
           <th scope="col">Téléphone</th>
@@ -309,7 +312,6 @@ include('../include/connexiondbval.php');
         <tr>
           <th scope="row"><?= $donnees['team_name']; ?></th>
           <td><?= $donnees['establishment']; ?></td>
-          <td><?= $donnees['password_manif']; ?></td>
           <td><?= $donnees['name']; ?></td>
           <td><?= $donnees['first_name']; ?></td>
           <td><?= $donnees['phone']; ?></td>

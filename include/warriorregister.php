@@ -5,8 +5,6 @@ include('connexiondbval.php');
 $establishment = !empty($_POST['etablissement']) ? $_POST['etablissement'] : NULL;
 
 $teamname = !empty($_POST['teamname']) ? $_POST['teamname'] : NULL;
-$password = !empty($_POST['password']) ? $_POST['password'] : NULL;
-$verifpassword = !empty($_POST['verifpassword']) ? $_POST['verifpassword'] : NULL;
 
 $name1 = !empty($_POST['name1']) ? $_POST['name1'] : NULL;
 $firstname1 = !empty($_POST['firstname1']) ? $_POST['firstname1'] : NULL;
@@ -56,7 +54,9 @@ $tel8 = !empty($_POST['tel8']) ? $_POST['tel8'] : NULL;
 $mail8 = !empty($_POST['mail8']) ? $_POST['mail8'] : NULL;
 $verifmail8 = !empty($_POST['verifmail8']) ? $_POST['verifmail8'] : NULL;
 
-if($password == $verifpassword) {
+$objetinscrip = utf8_decode("Confirmation d'inscription au Carolo Warrior");
+$messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription est bien prise en compte pour le Carolo Warrior.");
+
     if($mail1 == $verifmail1 && $mail2 == $verifmail2 && $mail3 == $verifmail3 && $mail4 == $verifmail4 && $mail5 == $verifmail5 && $mail6 == $verifmail6 && $mail7 == $verifmail7 && $mail8 == $verifmail8) {
 
         $teamnameexist = $bdd->prepare("SELECT team_name FROM RDEWarriorregister WHERE team_name = '$teamname'");
@@ -64,7 +64,7 @@ if($password == $verifpassword) {
 
         $count = $teamnameexist->rowCount();
         if($count>0) {
-                echo "nom d'équipe déjà pris";
+                header('location: ../event_register_carolowarrior.php?success=3');
             } else {
         
             $part1 = $bdd->prepare("INSERT INTO RDEParticipants (name, first_name, phone, mail)
@@ -164,13 +164,12 @@ if($password == $verifpassword) {
             $idpart8 = $bdd->lastInsertId();
 
 
-            $basketregistration = $bdd->prepare("INSERT INTO RDEWarriorregister (team_name, establishment, password_manif)
-                                                VALUES ( :team_name, :establishment, :password_manif)");
+            $basketregistration = $bdd->prepare("INSERT INTO RDEWarriorregister (team_name, establishment)
+                                                VALUES ( :team_name, :establishment)");
 
             $basketregistration->execute(array(
             ':team_name' => $teamname,
-            ':establishment' => $establishment,
-            ':password_manif' => $password
+            ':establishment' => $establishment
             ));
             $basketregistration->closeCursor();
 
@@ -246,12 +245,20 @@ if($password == $verifpassword) {
             ));
             $basketrelation7->closeCursor();
 
+            mail($mail1, $objetinscrip, $messageinscrip);
+            mail($mail2, $objetinscrip, $messageinscrip);
+            mail($mail3, $objetinscrip, $messageinscrip);
+            mail($mail4, $objetinscrip, $messageinscrip);
+            mail($mail5, $objetinscrip, $messageinscrip);
+            mail($mail6, $objetinscrip, $messageinscrip);
+            mail($mail7, $objetinscrip, $messageinscrip);
+            mail($mail8, $objetinscrip, $messageinscrip);
+
+            header('location: ../event_register_carolowarrior.php?success=1');
+
         }
     } else {
-        echo "Sur la page : Au moins un des mails n'a pas été entré ou confirmé correctement.";
+        header('location: ../event_register_carolowarrior.php?success=2');
     }
-}
-else {
-    echo "Sur la page : Les deux mots de passe ne correspondent pas";
-}
+
 ?>

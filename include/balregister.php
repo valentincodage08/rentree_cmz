@@ -8,6 +8,9 @@ $tel = !empty($_POST['tel']) ? $_POST['tel'] : NULL;
 $mail = !empty($_POST['mail']) ? $_POST['mail'] : NULL;
 $verifmail = !empty($_POST['verifmail']) ? $_POST['verifmail'] : NULL;
 
+$objetinscrip = utf8_decode("Confirmation d'inscription au Bal de rentrée");
+$messageinscrip = utf8_decode("Bonjour, votre inscription est bien prise en compte pour le Bal de rentrée.");
+
 
 
 if($mail == $verifmail) {
@@ -33,28 +36,13 @@ if($mail == $verifmail) {
     ));
     $balregistration->closeCursor();
 
-    // Le success passé dans l'url a retranscrire en ajax
+    mail($mail, $objetinscrip, $messageinscrip);
+
     header('Location: ../event_register_bal.php?success=1');
 }
 
 else {
-    echo "Quand le form sera en ajax, ici mettre une alerte : les deux mails ne sont pas les mêmes";
-
-    // Requête d'affichage de mes données, si jamais j'en ai besoin c'est là
-
-    // $req = $bdd->prepare("SELECT * FROM RDEBalregister, RDEParticipants WHERE RDEBalregister.participant_id = RDEParticipants.id_participant");
-    // $req->execute();
-    // while( $donnees = $req->fetch() ) {
-    //     echo $donnees['id_registration'];
-    //     echo $donnees['establishment'];
-    //     echo $donnees['participant_id'];
-    //     echo $donnees['id_participant'];
-    //     echo $donnees['name'];
-    //     echo $donnees['first_name'];
-    //     echo $donnees['phone'];
-    //     echo $donnees['mail'];
-    // };
-    // $req->closeCursor();
+    header('Location: ../event_register_bal.php?success=2');
 }
 
 ?>

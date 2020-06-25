@@ -69,8 +69,6 @@ include('../include/connexiondbval.php');
           <th scope="col">Age</th>
           <th scope="col">Etablissement</th>
           <th scope="col">Texte</th>
-          <th scope="col">Photo</th>
-          <th scope="col">Brève description de la photo</th>
           <!-- <th scope="col">Modifier</th> -->
           <th scope="col">Supprimer</th>
         </tr>
@@ -89,8 +87,6 @@ include('../include/connexiondbval.php');
           <td><?= $donnees['age']; ?></td>
           <td><?= $donnees['establishment']; ?></td>
           <td><?= substr($donnees['text'], 0, 60); ?>...</td>
-          <td><img src="../img/<?= $donnees['image']; ?>" style="width:5em; height:auto;"></td>
-          <td><?= $donnees['alt']; ?></td>
 
           <!-- <td><a href="admincrud/update/testimonials.php?id= $donnees['id_testimonial'];" class="text-muted"><i
                 class="fas fa-user-edit"></i></a></td> -->

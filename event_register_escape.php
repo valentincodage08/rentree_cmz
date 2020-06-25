@@ -103,6 +103,7 @@
                       <label class="label">Veuillez resaisir votre email</label>
                     </div>
                   </div>
+                  <a class="nav-link" id="part2" data-toggle="tab" href="#register2" role="tab" aria-controls="home" aria-selected="true">Participant suivant</a>
                 </div>
               </div>
             </div>
@@ -134,6 +135,7 @@
                       <label class="label">Veuillez resaisir votre email</label>
                     </div>
                   </div>
+                  <a class="nav-link" id="part1" data-toggle="tab" href="#register1" role="tab" aria-controls="home" aria-selected="true">Participant précédent</a>
                   <div class="form-field col-12">
                     <center><input class="submit-btn" type="submit" value="Valider"></center>
                   </div>

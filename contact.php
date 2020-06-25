@@ -91,7 +91,7 @@
                 </div>
                 <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
                     <input class="input-text js-input" type="text" name="objet" tabindex="6" required>
-                    <label class="label">Objet du message</label>
+                    <label class="label">Objet de la demande</label>
                 </div>
                 <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
                     <input class="input-text js-input" type="text" name="message" tabindex="7" required>

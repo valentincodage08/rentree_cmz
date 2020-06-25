@@ -119,7 +119,7 @@
                       <img src="img/logoetudiantcarolo_bleu.png" class="d-block w-100 my-auto">
                     </div>
                     <div class="col-1"></div>
-                    <div class="testi-text col-md-12 col-lg-5 align-self-center" style="width:90%;border-width:5px;border-style:solid;border-color:white;background-color:rgba(255,255,255, .8);border-radius:5px;">
+                    <div class="testi-text col-md-12 col-lg-5 align-self-center" style="width:90%;border-width:2px;border-style:solid;border-color:#2337D2;background-color:rgba(255,255,255, .7);border-radius:5px;box-shadow: 0px 0px 30px #2337D2 inset;">
                     <center><p class="testiresponsif"><strong><?= $testimonial['first_name'] ?>, <?= $testimonial['age'] ?> ans (<?= $testimonial['establishment'] ?></strong>) :</p><p class="testiresponsifmini mb-2"><?= $testimonial['text'] ?></p></center>
                     </div>
                   </div>

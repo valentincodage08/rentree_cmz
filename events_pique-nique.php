@@ -27,7 +27,7 @@
   </div>
     <div class="row w-100 text-center">
       <div class="col-xl-6 col-mb-10 order-xl-3 order-4 p-0 m-auto">
-        <img class="evenementimg evenementimg-1 img-fluid d-block" src="img/event_2019/1.jpg">
+        <img class="evenementimg evenementimg-1 img-fluid d-block" src="img/event_2019/5.jpg">
       </div>
       <div class="col-xl-6 col-mb-10 order-xl-4 order-3 my-auto p-0 m-0">
         <h2 class="text-center policetitres mt-5">Pique-Nique</h2>
@@ -99,7 +99,7 @@
     </div>
     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
-        <img class="img-fluid" src="img/event_2019/6.jpg">
+        <img class="img-fluid" src="img/capture_rde/warrior_11.png">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Carolo Warrior</p>
         <hr class="style-five">
         <center><a href="events_warrior.php" class="btn btn-secondary mb-2">Détails</a></center>
@@ -107,7 +107,7 @@
     </div>
     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
-        <img class="img-fluid" src="img/event_2019/3.jpg">
+        <img class="img-fluid" src="img/capture_rde/basket_2.png">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Tournoi de Basket</p>
         <hr class="style-five">
         <center><a href="events_basket.php" class="btn btn-secondary mb-2">Détails</a></center>
@@ -115,7 +115,7 @@
     </div>
     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
-        <img class="img-fluid" src="img/event_2019/15.jpg">
+        <img class="img-fluid" src="img/capture_rde/express_3.png">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Carolo Express</p>
         <hr class="style-five">
         <center><a href="events_express.php" class="btn btn-secondary mb-2">Détails</a></center>
@@ -139,7 +139,7 @@
     </div>
     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
-        <img class="img-fluid" src="img/event_2019/9.jpg">
+        <img class="img-fluid" src="img/capture_rde/cuisine.png">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Concours de Cuisine</p>
         <hr class="style-five">
         <center><a href="events_cuisine.php" class="btn btn-secondary mb-2">Détails</a></center>

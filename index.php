@@ -115,11 +115,11 @@
                   <!-- Ici chaque item -->
                   <div class="row d-flex my-auto">
                     <div class="col-2"></div>
-                    <div class="col-2 carou_img">
+                    <div class="col-2 carou_img my-auto">
                       <img src="img/logoetudiantcarolo_bleu.png" class="d-block w-100 my-auto" alt="<?= $testimonial['alt'] ?>">
                     </div>
                     <div class="col-1"></div>
-                    <div class="col-md-12 col-lg-5 align-self-center m-2" style="margin: 3px; border: 2px solid black;background-color:white;border-radius:2px;">
+                    <div class="col-md-12 col-lg-5 align-self-center" style="border-width:5px;border-style:solid;border-color:white;background-color:rgba(255,255,255, .5);backdrop-filter: blur(5px);">
                     <center><p class="testiresponsif"><strong><?= $testimonial['first_name'] ?>, <?= $testimonial['age'] ?> ans (<?= $testimonial['establishment'] ?></strong>) :</p><p class="testiresponsifmini mb-2"><?= $testimonial['text'] ?></p></center>
                     </div>
                   </div>
@@ -144,20 +144,20 @@
   <div class="container-fluid mt-2 mb-5 pr-5 pl-5 persp">
     <h2 class="text-center policetitres mt-3 mb-3">EDITION 2019</h2>
     <div class="row">
-      <div class="col-12 col-sm-6 col-lg-3 p-2"><div class="polaroid mx-auto">
-        <a class="" href="event.php#galerie"><img class="img-fluid" src="img/event_2019/1.jpg"></a>
+      <div class="col-12 col-sm-6 col-lg-3 p-2 my-auto"><div class="polaroid mx-auto">
+        <a class="" href="event.php#galerie"><img class="img-fluid" src="img/capture_rde/warrior_11.png"></a>
         <p class="policep text-center">Carolo Warrior</p>
       </div></div>
-      <div class="col-12 col-sm-6 col-lg-3 p-2"><div class="polaroid mx-auto">
-        <a class="" href="event.php#galerie"><img class="img-fluid" src="img/event_2019/2.jpg"></a>
+      <div class="col-12 col-sm-6 col-lg-3 p-2 my-auto"><div class="polaroid mx-auto">
+        <a class="" href="event.php#galerie"><img class="img-fluid" src="img/capture_rde/express_3.png"></a>
         <p class="policep text-center">Carolo Express</p>
       </div></div>
-      <div class="col-12 col-sm-6 col-lg-3 p-2"><div class="polaroid mx-auto">
-        <a class="" href="event.php#galerie"><img class="img-fluid" src="img/event_2019/3.jpg"></a>
+      <div class="col-12 col-sm-6 col-lg-3 p-2 my-auto"><div class="polaroid mx-auto">
+        <a class="" href="event.php#galerie"><img class="img-fluid" src="img/capture_rde/cuisine.png"></a>
         <p class="policep text-center">Concours de Cuisine</p>
       </div></div>
-      <div class="col-12 col-sm-6 col-lg-3 p-2"><div class="polaroid mx-auto">
-        <a class="" href="event.php#galerie"><img class="img-fluid" src="img/event_2019/4.jpg"></a>
+      <div class="col-12 col-sm-6 col-lg-3 p-2 my-auto"><div class="polaroid mx-auto">
+        <a class="" href="event.php#galerie"><img class="img-fluid" src="img/event_2019/7.jpg"></a>
         <p class="policep text-center">Pique-Nique</p>
       </div></div>
     </div>

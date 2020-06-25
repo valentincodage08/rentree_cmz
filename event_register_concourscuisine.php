@@ -73,7 +73,7 @@
 <?php } elseif ($placesrestantes == 0) {?>
       <h2 class="title2 mt-3">Toutes les places sont prises, vous ne pourrez plus vous inscrire</h2>
 <?php } else {?>
-      <h2 class="title2 mt-3">Vite, il ne reste de la place que pour <?= $placesrestantes ?> équipes</h2>
+      <h2 class="title2 mt-3">Vite, il ne reste de la place pour <?= $placesrestantes ?> équipes</h2>
 <?php } ?>
 
     <h2 class="title2 mt-3">Etablissement</h2>

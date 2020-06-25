@@ -57,7 +57,7 @@
       <?php if ($placesrestantes > 0) {?>
         <h2 class="title2 mt-3">Vite, il ne reste que <?= $placesrestantes ?> places pour les repas à 3€!</h2>
       <?php } else {?>
-        <h2 class="title2 mt-3">Il ne reste malheureusement plus de places pour les repas à 3€, votre repas sera facturé 5€.</h2>
+        <h2 class="title2 mt-3">Il ne reste malheureusement plus de places pour les repas à 3€, votre repas vous sera facturé 5€.</h2>
       <?php } ?>
     <h2 class="title2 mt-3">Etablissement</h2>
     <form id="inscription" class="contact-form row w-100 justify-content-center" action="include/piqueniqueregister.php" method="post">

@@ -99,7 +99,7 @@
   
   <!-- Image / Motif / Editions -->
   
-  <div class="container-fluid" style="background-image: url(img/gacolor.jpeg); height:300px;">
+  <div class="container-fluid testi-back" style="background-image: url(img/gacolor.jpeg);">
     <div class="row motifimg h-100">
       <!-- Carousel Testimonials -->
       <div id="carouseltestimonials" class="carousel slide" data-ride="carousel"  data-interval="3500"
@@ -119,7 +119,7 @@
                       <img src="img/logoetudiantcarolo_bleu.png" class="d-block w-100 my-auto">
                     </div>
                     <div class="col-1"></div>
-                    <div class="col-md-12 col-lg-5 align-self-center" style="border-width:5px;border-style:solid;border-color:white;background-color:rgba(255,255,255, .5);backdrop-filter: blur(5px);">
+                    <div class="testi-text col-md-12 col-lg-5 align-self-center" style="width:90%;border-width:5px;border-style:solid;border-color:white;background-color:rgba(255,255,255, .8);border-radius:5px;">
                     <center><p class="testiresponsif"><strong><?= $testimonial['first_name'] ?>, <?= $testimonial['age'] ?> ans (<?= $testimonial['establishment'] ?></strong>) :</p><p class="testiresponsifmini mb-2"><?= $testimonial['text'] ?></p></center>
                     </div>
                   </div>

@@ -38,7 +38,9 @@ html {
     margin-top: 0.75rem;
     margin-bottom: 0;
 }
-
+.testi-back{
+    height: 300px;
+}
 .testiresponsif {
     font-family: 'Titillium Web', sans-serif;
     font-size: 1em;
@@ -996,7 +998,13 @@ header .input-group {
 
 @media screen and (max-width: 500px) {
     
-    
+    .testi-back{
+        height: 450px;
+    }
+    .testi-text{
+        margin-left: auto;
+        margin-right: auto;
+    }
     .get-in-touch .title {
         letter-spacing: 1px;
         font-size: 2.2em;

@@ -36,15 +36,21 @@
                 if($_GET['success'] == 1) { ?>
                 <div class="row justify-content-center">
                     <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7">
-                        <div class="alert alert-danger text-center" role="alert">
+                        <div class="alert alert-success text-center" role="alert">
                             Votre mail a bien été envoyé.
                         </div>
                     </div>
                 </div>
                 <?php }
-            }
-
-            ?>
+                if($_GET['success'] == 2) { ?>
+                    <div class="row justify-content-center">
+                        <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7">
+                            <div class="alert alert-danger text-center" role="alert">
+                                Veuillez remplir tous les champs du formulaire.
+                            </div>
+                        </div>
+                    </div>
+                    <?php }} ?>
             <h1 class="title">Contactez-nous</h1>
             <form id="formcontact" class="contact-form row justify-content-center" action="include/traitementcontact.php" method="post">
                 <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
@@ -82,7 +88,7 @@
 
                 </div>
                 <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
-                    <input class="input-text js-input" type="text" name="mail" tabindex="4" required>
+                    <input class="input-text js-input" type="email" name="mail" tabindex="4" required>
                     <label class="label">Mail</label>
                 </div>
                 <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
@@ -160,29 +166,6 @@
         }
     }
     </script>
-
-      <!-- Ajax -->
- <script>
-    $("#formcontact").submit(function(e) {
-
-e.preventDefault(); // avoid to execute the actual submit of the form.
-
-var form = $(this);
-    // Envoie un mail
-    $.ajax({        // On check en ajax en appelant check_submit.php, en lui passant les champs en POST
-        type: "POST",
-        url: "include/traitementcontact.php",
-        data: form.serialize(), // sérialises les éléments du formulaire
-        success: function(data)
-        {
-            alert("Nous avons reçu votre mail, nous vous répondrons au plus vite.");
-        }
-    });
-
-$('#formcontact')[0].reset();
-
-});
-  </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

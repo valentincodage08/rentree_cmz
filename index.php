@@ -116,7 +116,7 @@
                   <div class="row d-flex my-auto">
                     <div class="col-2"></div>
                     <div class="col-2 carou_img my-auto">
-                      <img src="img/logoetudiantcarolo_bleu.png" class="d-block w-100 my-auto" alt="<?= $testimonial['alt'] ?>">
+                      <img src="img/logoetudiantcarolo_bleu.png" class="d-block w-100 my-auto">
                     </div>
                     <div class="col-1"></div>
                     <div class="col-md-12 col-lg-5 align-self-center" style="border-width:5px;border-style:solid;border-color:white;background-color:rgba(255,255,255, .5);backdrop-filter: blur(5px);">

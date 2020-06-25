@@ -54,8 +54,12 @@
         $placesrestantes = 200 - $placescount;
         $req->closeCursor();
       ?>
-      <?php if ($placesrestantes > 0) {?>
+      <?php if ($placesrestantes > 20) {?>
+        <h2 class="title2 mt-3">Il reste <?= $placesrestantes ?> places pour les repas à 3€</h2>
+      <?php } elseif ($placesrestantes > 1 AND $placesrestantes <=20) {?>
         <h2 class="title2 mt-3">Vite, il ne reste que <?= $placesrestantes ?> places pour les repas à 3€!</h2>
+      <?php } elseif ($placesrestantes == 1) {?>
+        <h2 class="title2 mt-3">Vite, il ne reste plus qu'<?= $placesrestantes ?> place pour les repas à 3€!</h2>
       <?php } else {?>
         <h2 class="title2 mt-3">Il ne reste malheureusement plus de places pour les repas à 3€, votre repas vous sera facturé 5€.</h2>
       <?php } ?>

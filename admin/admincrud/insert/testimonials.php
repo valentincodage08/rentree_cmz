@@ -38,15 +38,6 @@
                         <label>Texte du témoignage</label>
                         <input type="text" class="form-control" name="text" tabindex="4" required>
                     </div>
-                    <div class="form-group">
-                        <label>Choisissez une photo</label>
-                        <input type="hidden" name="MAX_FILE_SIZE" value="3000000"><br>
-                        <input type="file" name="avatar" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Entrez une brève description de la photo</label>
-                        <input type="text" class="form-control" name="alt" tabindex="6" required>
-                    </div>
                     <center><button type="submit" class="btn btn-outline-secondary mb-5" value="submit">Valider</button>
                     </center>
                 </form>

@@ -5,8 +5,6 @@ include('connexiondbval.php');
 $establishment = !empty($_POST['etablissement']) ? $_POST['etablissement'] : NULL;
 
 $teamname = !empty($_POST['teamname']) ? $_POST['teamname'] : NULL;
-$password = !empty($_POST['password']) ? $_POST['password'] : NULL;
-$verifpassword = !empty($_POST['verifpassword']) ? $_POST['verifpassword'] : NULL;
 
 $name1 = !empty($_POST['name1']) ? $_POST['name1'] : NULL;
 $firstname1 = !empty($_POST['firstname1']) ? $_POST['firstname1'] : NULL;
@@ -20,8 +18,17 @@ $tel2 = !empty($_POST['tel2']) ? $_POST['tel2'] : NULL;
 $mail2 = !empty($_POST['mail2']) ? $_POST['mail2'] : NULL;
 $verifmail2 = !empty($_POST['verifmail2']) ? $_POST['verifmail2'] : NULL;
 
+$objetinscrip = utf8_decode("Confirmation d'inscription au Concours de Cuisine");
+$messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription est bien prise en compte pour le Concours de Cuisine.");
 
-if($password == $verifpassword) {
+        $req = $bdd->prepare("SELECT * FROM RDEcuisineregister");
+        $req->execute();
+        $placescount = $req->rowCount();
+        $placesrestantes = 10 - $placescount;
+        $req->closeCursor();
+
+if($placesrestantes>0) {
+
     if($mail1 == $verifmail1 && $mail2 == $verifmail2) {
 
         $teamnameexist = $bdd->prepare("SELECT team_name FROM RDECuisineregister WHERE team_name = '$teamname'");
@@ -29,7 +36,7 @@ if($password == $verifpassword) {
 
         $count = $teamnameexist->rowCount();
         if($count>0) {
-                echo "nom d'équipe déjà pris";
+            header('location: ../event_register_concourscuisine.php?success=3');
             } else {
         
             $part1 = $bdd->prepare("INSERT INTO RDEParticipants (name, first_name, phone, mail)
@@ -56,13 +63,12 @@ if($password == $verifpassword) {
             $part2->closeCursor();
             $idpart2 = $bdd->lastInsertId();
 
-            $basketregistration = $bdd->prepare("INSERT INTO RDECuisineregister (team_name, establishment, password_manif)
-                                                VALUES ( :team_name, :establishment, :password_manif)");
+            $basketregistration = $bdd->prepare("INSERT INTO RDECuisineregister (team_name, establishment)
+                                                VALUES ( :team_name, :establishment)");
 
             $basketregistration->execute(array(
             ':team_name' => $teamname,
-            ':establishment' => $establishment,
-            ':password_manif' => $password
+            ':establishment' => $establishment
             ));
             $basketregistration->closeCursor();
 
@@ -83,12 +89,17 @@ if($password == $verifpassword) {
             ':name_team' => $teamname
             ));
             $basketrelation2->closeCursor();
+
+            mail($mail1, $objetinscrip, $messageinscrip);
+            mail($mail2, $objetinscrip, $messageinscrip);
+
+            header('location: ../event_register_concourscuisine.php?success=1');
         }
     } else {
-        echo "Sur la page : Au moins un des mails n'a pas été entré ou confirmé correctement.";
+        header('location: ../event_register_concourscuisine.php?success=2');
     }
 }
 else {
-    echo "Sur la page : Les deux mots de passe ne correspondent pas";
+    header('location: ../event_register_concourscuisine.php?success=4');
 }
 ?>

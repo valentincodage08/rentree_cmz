@@ -38,18 +38,19 @@ $tel5 = !empty($_POST['tel5']) ? $_POST['tel5'] : NULL;
 $mail5 = !empty($_POST['mail5']) ? $_POST['mail5'] : NULL;
 $verifmail5 = !empty($_POST['verifmail5']) ? $_POST['verifmail5'] : NULL;
 
+$objetinscrip = utf8_decode("Confirmation d'inscription au Carolo Express");
+$messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription est bien prise en compte pour le Carolo Express.");
 
-if($password == $verifpassword) {
+
+
+$teamnameexist = $bdd->prepare("SELECT team_name FROM RDEExpressregister WHERE team_name = '$teamname'");
+$teamnameexist->execute();
+
+$count = $teamnameexist->rowCount();
+if($count==0) {
     if($mail1 == $verifmail1 && $mail2 == $verifmail2 && $mail3 == $verifmail3 && $mail4 == $verifmail4 && $mail5 == $verifmail5) {
 
-        $teamnameexist = $bdd->prepare("SELECT team_name FROM RDEExpressregister WHERE team_name = '$teamname'");
-        $teamnameexist->execute();
-
-        $count = $teamnameexist->rowCount();
-        if($count>0) {
-                echo "nom d'équipe déjà pris";
-            } else {
-        
+        if($password == $verifpassword) {
             $part1 = $bdd->prepare("INSERT INTO RDEParticipants (name, first_name, phone, mail)
                                     VALUES ( :name, :first_name, :phone, :mail)");
 
@@ -165,11 +166,27 @@ if($password == $verifpassword) {
             ));
             $basketrelation5->closeCursor();
 
-        }} else {
-        echo "Sur la page : Au moins un des mails n'a pas été entré ou confirmé correctement.";
+            mail($mail1, $objetinscrip, $messageinscrip);
+            mail($mail2, $objetinscrip, $messageinscrip);
+            mail($mail3, $objetinscrip, $messageinscrip);
+            mail($mail4, $objetinscrip, $messageinscrip);
+            mail($mail5, $objetinscrip, $messageinscrip);
+
+            header('location: ../event_register_caroloexpress.php?success=1');
+
+            }
+            else {
+                header('location: ../event_register_caroloexpress.php?success=2');
+            }
+        
+            
+
+        } else {
+            header('location: ../event_register_caroloexpress.php?success=3');
     }
 }
 else {
-    echo "Sur la page : Les deux mots de passe ne correspondent pas";
+    header('location: ../event_register_caroloexpress.php?success=4');
 }
+
 ?>

@@ -4,10 +4,6 @@ include('connexiondbval.php');
 
 $establishment = !empty($_POST['etablissement']) ? $_POST['etablissement'] : NULL;
 
-$teamname = !empty($_POST['teamname']) ? $_POST['teamname'] : NULL;
-$password = !empty($_POST['password']) ? $_POST['password'] : NULL;
-$verifpassword = !empty($_POST['verifpassword']) ? $_POST['verifpassword'] : NULL;
-
 $name1 = !empty($_POST['name1']) ? $_POST['name1'] : NULL;
 $firstname1 = !empty($_POST['firstname1']) ? $_POST['firstname1'] : NULL;
 $tel1 = !empty($_POST['tel1']) ? $_POST['tel1'] : NULL;

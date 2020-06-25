@@ -31,6 +31,24 @@
     <div class="d-flex align-items-end justify-content-center" style="height:250px;"><h2 class="header_text display-2 text-white"><strong>Tournoi de Basket</strong></h2></div>
   </div>
 
+  <!-- Success -->
+  <?php if(isset($_GET['success'])){
+  if($_GET['success'] == 1 ) {?><br><br>
+    <center><div class="alert alert-success" role="alert">
+      Votre inscription a bien été prise en compte, vous allez recevoir un mail de confirmation.
+    </div></center>
+  <?php } ?>
+  <?php if($_GET['success'] == 2 ) {?><br><br>
+    <center><div class="alert alert-danger" role="alert">
+    Au moins un des deux mails n'a pas été entré ou confirmé correctement.
+    </div></center>
+  <?php } ?>
+  <?php if($_GET['success'] == 3 ) {?><br><br>
+    <center><div class="alert alert-danger" role="alert">
+      Ce nom d'équipe est déjà pris, veuillez en choisir un autre.
+    </div></center>
+  <?php }} ?>
+
   <!-- Formulaire -->
 
   <section class="get-in-touch container-lg">
@@ -38,7 +56,7 @@
     <h2 class="title2 mt-3">Etablissement</h2>
     <form id="inscription" class="contact-form row w-100 justify-content-center" action="include/basketregister.php" method="post">
       <div class="form-field col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7">
-        <center><select class="custom-select" name="etablissement" id="etablissement-font-2">
+        <center><select class="custom-select" name="etablissement" id="etablissement-font-2" required>
             <option value="" disabled selected>Veuillez choisir un établissement</option>
             <option value="IUTRCC">Institut Universitaire de Technologie (IUT RCC)</option>
             <option value="EiSINe">Ecole d’Ingénieurs en Sciences Industrielles et Numérique (EiSINe)</option>
@@ -404,28 +422,6 @@
   </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
     integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous">
-  </script>
-  <!-- Ajax -->
- <script>
-    $("#inscription").submit(function(e) {
-
-e.preventDefault(); // avoid to execute the actual submit of the form.
-
-var form = $(this);
-    // Envoie un mail
-    $.ajax({        // On check en ajax en appelant check_submit.php, en lui passant les champs en POST
-        type: "POST",
-        url: "include/basketregister.php",
-        data: form.serialize(), // sérialises les éléments du formulaire
-        success: function(data)
-        {
-            alert("Votre inscription a bien été prise en compte.");
-        }
-    });
-
-$('#inscription')[0].reset();
-
-});
   </script>
 </body>
 

@@ -28,15 +28,27 @@
      <!-- img event -->
 
      <div class="header_img">
-    <div class="d-flex align-items-end justify-content-center" style="height:250px;"><h2 class="header_text display-2 text-white"><strong>Bal de la Rentrée</strong></h2></div>
+    <div class="d-flex align-items-end justify-content-center" style="height:250px;"><h2 class="header_text display-2 text-white"><strong>Bal de Rentrée</strong></h2></div>
   </div>
+
+  <!-- Success -->
+  <?php if(isset($_GET['success'])){
+  if($_GET['success'] == 1 ) {?><br><br>
+    <center><div class="alert alert-success" role="alert">
+      Votre inscription a bien été prise en compte, vous allez recevoir un mail de confirmation.
+    </div></center>
+  <?php } ?>
+  <?php if($_GET['success'] == 2 ) {?><br><br>
+    <center><div class="alert alert-danger" role="alert">
+    Au moins un des deux mails n'a pas été entré ou confirmé correctement.
+    </div></center>
+  <?php }} ?>
 
     <!-- Formulaire -->
 
     <section class="get-in-touch container-lg">
-    <h1 class="title">Inscription bal de la rentrée</h1><br>
-    <form id="inscription" class="contact-form row w-100 justify-content-center" action="include/balregister.php" method="post"> 
-
+    <h1 class="title">Inscription bal de rentrée</h1><br>
+    <form id="inscription" class="contact-form row w-100 justify-content-center" action="include/balregister.php" method="post">
       <div class="mb-5"></div>
         <div class="row justify-content-center">
           <div class="tab-content" id="myTabContent">
@@ -158,28 +170,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
         integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous">
     </script>
-    <!-- Ajax -->
- <script>
-    $("#inscription").submit(function(e) {
-
-e.preventDefault(); // avoid to execute the actual submit of the form.
-
-var form = $(this);
-    // Envoie un mail
-    $.ajax({        // On check en ajax en appelant check_submit.php, en lui passant les champs en POST
-        type: "POST",
-        url: "include/balregister.php",
-        data: form.serialize(), // sérialises les éléments du formulaire
-        success: function(data)
-        {
-            alert("Votre inscription a bien été prise en compte.");
-        }
-    });
-
-$('#inscription')[0].reset();
-
-});
-  </script>
 </body>
 
 </html>

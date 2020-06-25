@@ -37,7 +37,7 @@
     <h2 class="title2 mt-3">Etablissement</h2>
     <form id="inscription" class="contact-form row w-100 justify-content-center" action="include/escaperegister.php" method="post">
       <div class="form-field col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7">
-        <center><select class="custom-select" name="etablissement" id="etablissement-font-6">
+        <center><select class="custom-select" name="etablissement" id="etablissement-font-6" required>
             <option value="" disabled selected>Veuillez choisir un établissement</option>
             <option value="IUTRCC">Institut Universitaire de Technologie (IUT RCC)</option>
             <option value="EiSINe">Ecole d’Ingénieurs en Sciences Industrielles et Numérique (EiSINe)</option>
@@ -103,6 +103,7 @@
                       <label class="label">Veuillez resaisir votre email</label>
                     </div>
                   </div>
+                  <a class="nav-link" id="part2" data-toggle="tab" href="#register2" role="tab" aria-controls="home" aria-selected="true">Participant suivant</a>
                 </div>
               </div>
             </div>
@@ -134,6 +135,7 @@
                       <label class="label">Veuillez resaisir votre email</label>
                     </div>
                   </div>
+                  <a class="nav-link" id="part1" data-toggle="tab" href="#register1" role="tab" aria-controls="home" aria-selected="true">Participant précédent</a>
                   <div class="form-field col-12">
                     <center><input class="submit-btn" type="submit" value="Valider"></center>
                   </div>

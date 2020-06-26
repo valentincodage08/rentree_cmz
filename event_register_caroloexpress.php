@@ -99,14 +99,65 @@
       <h2 class="title2 mt-3">Merci de bien vouloir inscrire un mot de passe de votre choix qui vous sera nécessaire le jour de la manifestation</h2>
       <div class="contact-form row w-100 justify-content-center">
         <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field mb-5">
-          <input name="password" class="input-text js-input" type="password" required>
-          <label class="label">Mot de passe</label>
+          <input name="password" class="input-text js-input ici2" type="password" required>
+          <button class="unmask" type="button" title="Mask/Unmask password to check content"></button>
+          <label class="label">Mot de passe</label><a class="ici"></a>
         </div>
         <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
-          <input name="verifpassword" class="input-text js-input" type="password" required>
-          <label class="label">Confirmer le mot de passe</label>
+          <input name="verifpassword" class="input-text js-input la2" type="password" required>
+          <button class="unmask" type="button" title="Mask/Unmask password to check content"></button>
+          <label class="label">Confirmer le mot de passe</label><a class="la"></a>
         </div>
       </div>
+
+      <script>
+function changeType(x, type) {
+   if(x.prop('type') == type)
+      return x; // ça serait facile.
+   try {
+      // Une sécurité d'IE empêche ceci
+      return x.prop('type', type);
+   } 
+   catch(e) {
+      // On tente de recréer l'élément
+      // En créant d'abord une div
+      var html = $("<div>").append(x.clone()).html();
+      var regex = /type=(\")?([^\"\s]+)(\")?/;
+      // la regex trouve type=text ou type="text"
+      // si on ne trouve rien, on ajoute le type à la fin, sinon on le remplace
+      var tmp = $(html.match(regex) == null ?
+         html.replace(">", ' type="' + type + '">') :
+         html.replace(regex, 'type="' + type + '"') );
+
+      // on rajoute les vieilles données de l'élément
+      tmp.data('type', x.data('type') );
+      var events = x.data('events');
+      var cb = function(events) {
+         return function() {
+            //Bind all prior events
+            for(i in events) {
+               var y = events[i];
+               for(j in y) tmp.bind(i, y[j].handler);
+            }
+         }
+      }(events);
+      x.replaceWith(tmp);
+      setTimeout(cb, 10); // On attend un peu avant d'appeler la fonction
+      return tmp;
+   }
+}
+
+      $('.unmask').on('click', function(){
+  
+  if($(this).prev('input').attr('type') == 'password')
+    changeType($(this).prev('input'), 'text');
+  
+  else
+    changeType($(this).prev('input'), 'password');
+  
+  return false;
+});
+      </script>
 
 
       <div class="container-fluid mt-5">

@@ -150,6 +150,9 @@
                       <label class="label">Veuillez resaisir votre email</label>
                     </div>
                   </div>
+                  <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 d-flex justify-content-center">
+                    <a class="btn submit-btn next" style="width:8rem;border-radius:15px;text-decoration:none;" role="button" href="#register2">Suivant</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -181,6 +184,10 @@
                       <label class="label">Veuillez resaisir votre email</label>
                     </div>
                   </div>
+                  <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 d-flex justify-content-between">
+                    <a class="btn submit-btn previous" style="width:8rem;border-radius:15px;text-decoration:none;" role="button" href="#register1">Précédent</a>
+                    <a class="btn submit-btn next" style="width:8rem;border-radius:15px;text-decoration:none;" role="button" href="#register3">Suivant</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -211,6 +218,10 @@
                       <input name="verifmail3" class="input-text js-input" type="email" required>
                       <label class="label">Veuillez resaisir votre email</label>
                     </div>
+                  </div>
+                  <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 d-flex justify-content-between">
+                    <a class="btn submit-btn previous" style="width:8rem;border-radius:15px;text-decoration:none;" role="button" href="#register2">Précédent</a>
+                    <a class="btn submit-btn next" style="width:8rem;border-radius:15px;text-decoration:none;" role="button" href="#register4">Suivant</a>
                   </div>
                 </div>
               </div>
@@ -244,6 +255,10 @@
                       <label class="label">Veuillez resaisir votre email</label>
                     </div>
                   </div>
+                  <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 d-flex justify-content-between">
+                    <a class="btn submit-btn previous" style="width:8rem;border-radius:15px;text-decoration:none;" role="button" href="#register3">Précédent</a>
+                    <a class="btn submit-btn next" style="width:8rem;border-radius:15px;text-decoration:none;" role="button" href="#register5">Suivant</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -273,6 +288,10 @@
                       <input name="verifmail5" class="input-text js-input" type="email" required>
                       <label class="label">Veuillez resaisir votre email</label>
                     </div>
+                  </div>
+                  <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 d-flex justify-content-between">
+                    <a class="btn submit-btn previous" style="width:8rem;border-radius:15px;text-decoration:none;" role="button" href="#register4">Précédent</a>
+                    <a class="btn submit-btn next" style="width:8rem;border-radius:15px;text-decoration:none;" role="button" href="#register6">Suivant</a>
                   </div>
                 </div>
               </div>
@@ -304,6 +323,10 @@
                       <label class="label">Veuillez resaisir votre email</label>
                     </div>
                   </div>
+                  <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 d-flex justify-content-between">
+                    <a class="btn submit-btn previous" style="width:8rem;border-radius:15px;text-decoration:none;" role="button" href="#register5">Précédent</a>
+                    <a class="btn submit-btn next" style="width:8rem;border-radius:15px;text-decoration:none;" role="button" href="#register7">Suivant</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -333,6 +356,10 @@
                       <input name="verifmail7" class="input-text js-input" type="email" required>
                       <label class="label">Veuillez resaisir votre email</label>
                     </div>
+                  </div>
+                  <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 d-flex justify-content-between">
+                    <a class="btn submit-btn previous" style="width:8rem;border-radius:15px;text-decoration:none;" role="button" href="#register6">Précédent</a>
+                    <a class="btn submit-btn next" style="width:8rem;border-radius:15px;text-decoration:none;" role="button" href="#register8">Suivant</a>
                   </div>
                 </div>
               </div>
@@ -364,6 +391,11 @@
                       <label class="label">Veuillez resaisir votre email</label>
                     </div>
                   </div>
+
+                  <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 d-flex justify-content-center">
+                    <a class="btn submit-btn previous" style="width:8rem;border-radius:15px;text-decoration:none;" role="button" href="#register7">Précédent</a>
+                  </div>
+
                   <div class="form-field col-12">
                     <center><input class="submit-btn" type="submit" value="Valider"></center>
                   </div>
@@ -445,6 +477,17 @@
 
   <!-- Event register content end -->
   <?php include('include/footer.php')?>
+
+  <!-- Script pour suivant / précédent les tabs -->
+  <script>
+      $('.next').click(function () {
+        $('.nav-tabs > .nav-item > .active').parent().next('li').find('a').trigger('click');
+      });
+
+      $('.previous').click(function () {
+          $('.nav-tabs > .nav-item > .active').parent().prev('li').find('a').trigger('click');
+      });
+  </script>
 
 
   <!-- Optional JavaScript -->

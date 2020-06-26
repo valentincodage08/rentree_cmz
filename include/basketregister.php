@@ -156,8 +156,7 @@ $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription es
 
             $basketregistration->execute(array(
             ':team_name' => $teamname,
-            ':establishment' => $establishment,
-            ':password_manif' => $password
+            ':establishment' => $establishment
             ));
             $basketregistration->closeCursor();
 
@@ -228,6 +227,7 @@ $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription es
                 ':name_team' => $teamname
                 ));
                 $basketrelation7->closeCursor();
+            }
 
                 mail($mail1, $objetinscrip, $messageinscrip);
                 mail($mail2, $objetinscrip, $messageinscrip);
@@ -238,7 +238,6 @@ $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription es
                 if($mail7 != NULL) {mail($mail7, $objetinscrip, $messageinscrip);};
 
                 header('location: ../event_register_basket.php?success=1');
-            }
         }
     } else {
         header('location: ../event_register_basket.php?success=2');

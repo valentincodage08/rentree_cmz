@@ -1,10 +1,10 @@
 <?php
 include('../../include/connexiondbval.php');
 
-$objet = !empty($_POST['objet']) ? $_POST['objet'] : NULL;
-$message = !empty($_POST['message']) ? $_POST['message'] : NULL;
+$objet = utf8_decode(!empty($_POST['objet']) ? $_POST['objet'] : NULL);
+$message = utf8_decode(!empty($_POST['message']) ? $_POST['message'] : NULL);
 
-    $req7 = $bdd->prepare("SELECT * FROM RDEEscaperegister, RDEEscaperelation, RDEParticipants WHERE RDEEscaperelation.participant_id = RDEParticipants.id_participant AND RDEEscaperelation.name_team = RDEEscaperegister.team_name");
+    $req7 = $bdd->prepare("SELECT * FROM RDEEscaperegister, RDEParticipants WHERE RDEEscaperegister.participant_id = RDEParticipants.id_participant ORDER BY RDEEscaperegister.participant_id ASC");
     $req7->execute();
 
     while ($donnees = $req7->fetch())
@@ -12,7 +12,7 @@ $message = !empty($_POST['message']) ? $_POST['message'] : NULL;
         mail($mail, $objet, $message);
     };
 
-    $req->closeCursor();
+    $req7->closeCursor();
 
     header('location: ../inscriptions.php?success=6');
 

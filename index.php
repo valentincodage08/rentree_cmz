@@ -27,7 +27,7 @@
 </head>
 
 <body>
-<!-- Preloader -->
+<!-- Preloader visuel -->
 <div class="spinner-wrapper">
   <div class="sk-chase">
     <div class="sk-chase-dot"></div>
@@ -67,7 +67,7 @@
         </div>
       </div>
       <div class="col-xl-6 col-mb-10 order-2 p-0 m-auto">
-        <img class="evenementimg evenementimg-2 img-fluid d-block" src="img/event_2019/1.jpg">
+        <img class="evenementimg evenementimg-2 img-fluid d-block" src="img/capture_rde/express_3.png">
       </div>
     </div>
   
@@ -75,7 +75,7 @@
   
     <div class="row w-100 mb-5  mt-5 mt-xl-0">
       <div class="col-xl-6 col-mb-10 order-xl-3 order-4 p-0 m-auto">
-        <img class="evenementimg evenementimg-1 img-fluid d-block" src="img/event_2019/1.jpg">
+        <img class="evenementimg evenementimg-1 img-fluid d-block" src="img/capture_rde/warrior.png">
       </div>
       <div class="col-xl-6 col-mb-10 order-xl-4 order-3 my-auto p-0 m-0">
         <h2 class="text-center policetitres">Qui ? Quand ? Où ?</h2>
@@ -119,7 +119,7 @@
                       <img src="img/logoetudiantcarolo_bleu.png" class="d-block w-100 my-auto">
                     </div>
                     <div class="col-1"></div>
-                    <div class="testi-text col-md-12 col-lg-5 align-self-center" style="width:90%;border-width:2px;border-style:solid;border-color:#2337D2;background-color:rgba(255,255,255, .7);border-radius:5px;box-shadow: 0px 0px 30px #2337D2 inset;">
+                    <div class="testi-text col-md-12 col-lg-5 align-self-center" style="width:90%;border-width:2px;border-style:solid;border-color:#0C276A;background-color:rgba(255,255,255, .7);border-radius:5px;box-shadow: 0px 0px 30px #2337D2 inset;">
                     <center><p class="testiresponsif"><strong><?= $testimonial['first_name'] ?>, <?= $testimonial['age'] ?> ans (<?= $testimonial['establishment'] ?></strong>) :</p><p class="testiresponsifmini mb-2"><?= $testimonial['text'] ?></p></center>
                     </div>
                   </div>

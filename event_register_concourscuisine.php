@@ -61,7 +61,7 @@
     <h1 class="title">Inscription Concours de cuisine</h1><br>
 
     <?php
-        $req = $bdd->prepare("SELECT * FROM RDEcuisineregister");
+        $req = $bdd->prepare("SELECT * FROM RDECuisineregister");
         $req->execute();
         $placescount = $req->rowCount();
         $placesrestantes = 10 - $placescount;
@@ -156,6 +156,9 @@
                       <label class="label">Veuillez resaisir votre email</label>
                     </div>
                   </div>
+                  <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 d-flex justify-content-center">
+                    <a class="btn submit-btn next" style="width:8rem;border-radius:15px;text-decoration:none;" role="button" href="#register2">Suivant</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -188,6 +191,9 @@
                     </div>
                   </div>
                   <?php if ($placesrestantes > 0) {?>
+                  <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 d-flex justify-content-center">
+                    <a class="btn submit-btn previous" style="width:8rem;border-radius:15px;text-decoration:none;" role="button" href="#register1">Précédent</a>
+                  </div>
                   <div class="form-field col-12">
                     <center><input class="submit-btn" type="submit" value="Valider"></center>
                   </div>
@@ -275,6 +281,17 @@
 
   <!-- Event register content end -->
   <?php include('include/footer.php')?>
+
+  <!-- Script pour suivant / précédent les tabs -->
+  <script>
+      $('.next').click(function () {
+        $('.nav-tabs > .nav-item > .active').parent().next('li').find('a').trigger('click');
+      });
+
+      $('.previous').click(function () {
+          $('.nav-tabs > .nav-item > .active').parent().prev('li').find('a').trigger('click');
+      });
+    </script>
 
 
   <!-- Optional JavaScript -->

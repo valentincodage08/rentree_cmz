@@ -11,7 +11,9 @@ include('../include/connexiondbval.php');
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
 </head>
 
 <body class="bg-light">
@@ -65,9 +67,9 @@ include('../include/connexiondbval.php');
                 <li class="nav-item mr-2">
                     <a class="nav-link" data-toggle="tab" href="#basket" role="tab" aria-controls="home" aria-selected="true"><p class="tabgalerietxt inscripdesktop">Tournoi de Basket</p></a>
                 </li>
-                <li class="nav-item mr-2">
+                <!-- <li class="nav-item mr-2">
                     <a class="nav-link" data-toggle="tab" href="#bal" role="tab" aria-controls="home" aria-selected="true"><p class="tabgalerietxt inscripdesktop">Bal de la rentrée</p></a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#escape" role="tab" aria-controls="home" aria-selected="true"><p class="tabgalerietxt inscripdesktop">Escape Game</p></a>
                 </li>
@@ -82,53 +84,53 @@ include('../include/connexiondbval.php');
 
                 <!-- Express -->
 
-<div class="tab-pane fade show active container mt-2" id="express" role="tabpanel" aria-labelledby="register1-tab">
-    <table class="table">
-      <thead class="thead-light">
-        <tr>
-          <th scope="col">Nom de l'équipe</th>
-          <th scope="col">Etablissement</th>
-          <th scope="col">Mot de passe</th>
-          <th scope="col">Nom</th>
-          <th scope="col">Prénom</th>
-          <th scope="col">Téléphone</th>
-          <th scope="col">Mail</th>
-        </tr>
-      </thead>
-      <tbody>
+                    <div class="tab-pane fade show active container mt-2" id="express" role="tabpanel" aria-labelledby="register1-tab">
+                      <table class="table">
+                        <thead class="thead-light">
+                          <tr>
+                            <th scope="col">Nom de l'équipe</th>
+                            <th scope="col">Etablissement</th>
+                            <th scope="col">Mot de passe</th>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Prénom</th>
+                            <th scope="col">Téléphone</th>
+                            <th scope="col">Mail</th>
+                          </tr>
+                        </thead>
+                        <tbody>
 
 
-        <?php
-            $req = $bdd->prepare("SELECT * FROM RDEExpressregister, RDEExpressrelation, RDEParticipants WHERE RDEExpressrelation.participant_id = RDEParticipants.id_participant AND RDEExpressrelation.name_team = RDEExpressregister.team_name ORDER BY RDEExpressregister.team_name ASC");
-            $req->execute();
+                          <?php
+                              $req = $bdd->prepare("SELECT * FROM RDEExpressregister, RDEExpressrelation, RDEParticipants WHERE RDEExpressrelation.participant_id = RDEParticipants.id_participant AND RDEExpressrelation.name_team = RDEExpressregister.team_name ORDER BY RDEExpressregister.team_name ASC");
+                              $req->execute();
 
-            while ($donnees = $req->fetch())
-        { ?>
-        <tr>
-          <th scope="row"><?= $donnees['team_name']; ?></th>
-          <td><?= $donnees['establishment']; ?></td>
-          <td><?= $donnees['password_manif']; ?></td>
-          <td><?= $donnees['name']; ?></td>
-          <td><?= $donnees['first_name']; ?></td>
-          <td><?= $donnees['phone']; ?></td>
-          <td><?= $donnees['mail']; ?></td>
-        </tr>
-        <?php
-            } $req->closecursor();
-        ?>
-      </tbody>
-    </table>
-    <br>
-    <center>
-      <h3>Envoyer un mail à tous les participants du Carolo Express</h3>
-      <form action="mailinscriptions/express.php" method="post">
-        <input type="text" class="form-control" name="objet" placeholder="Sujet"><br>
-        <textarea class="form-control" name="message" placeholder="Message"></textarea><br>
-        <input class="submit-btn" type="submit" value="Envoyer">
-      </form>
-    </center>
-    <br>
-  </div>
+                              while ($donnees = $req->fetch())
+                          { ?>
+                          <tr>
+                            <th scope="row"><?= $donnees['team_name']; ?></th>
+                            <td><?= $donnees['establishment']; ?></td>
+                            <td><?= $donnees['password_manif']; ?></td>
+                            <td><?= $donnees['name']; ?></td>
+                            <td><?= $donnees['first_name']; ?></td>
+                            <td><?= $donnees['phone']; ?></td>
+                            <td><?= $donnees['mail']; ?></td>
+                          </tr>
+                          <?php
+                              } $req->closecursor();
+                          ?>
+                        </tbody>
+                      </table>
+                      <br>
+                      <center>
+                        <h3>Envoyer un mail à tous les participants du Carolo Express</h3>
+                        <form action="mailinscriptions/express.php" method="post">
+                          <input type="text" class="form-control" name="objet" placeholder="Sujet"><br>
+                          <textarea class="form-control" name="message" placeholder="Message"></textarea><br>
+                          <input class="submit-btn" type="submit" value="Envoyer">
+                        </form>
+                      </center>
+                      <br>
+                    </div>
 
   <!-- Warrior -->
 
@@ -182,13 +184,15 @@ include('../include/connexiondbval.php');
 
   <div class="tab-pane fade show container mt-2" id="cuisine" role="tabpanel" aria-labelledby="register1-tab">
   <?php
-        $req = $bdd->prepare("SELECT * FROM RDEcuisineregister");
-        $req->execute();
-        $placescount = $req->rowCount();
-        $req->closeCursor();
+        $req5 = $bdd->prepare("SELECT * FROM RDECuisineregister");
+        $req5->execute();
+        $placescuisine = $req5->rowCount();
+        $req5->closeCursor();
 
       ?>
-<h4 class="text-center font-weight-light font-italic text-black-50 mt-4 mb-5">Il y a actuellement <?= $placescount ?> équipes inscrites.</h4>
+
+<h4 class="text-center font-weight-light font-italic text-black-50 mt-4 mb-5">Il y a actuellement <?= $placescuisine ?> équipes inscrites.</h4>
+
     <table class="table">
       <thead class="thead-light">
       <tr>
@@ -243,7 +247,7 @@ include('../include/connexiondbval.php');
             $placescount = $req4->rowCount();
             $placesrestantes = 200 - $placescount;?>
 
-  <h6 class="text-center font-weight-light font-italic text-black-50 mt-4 mb-5">Il reste <?= $placesrestantes ?> repas à 3€ (<?= $placescount ?> inscriptions)</h6>
+<h4 class="text-center font-weight-light font-italic text-black-50 mt-4 mb-5">Il reste <?= $placesrestantes ?> repas à 3€ (<?= $placescount ?> inscriptions)</h4>
 
     <table class="table">
       <thead class="thead-light">
@@ -336,7 +340,7 @@ include('../include/connexiondbval.php');
 
   <!-- Bal -->
 
-  <div class="tab-pane fade show container mt-2" id="bal" role="tabpanel" aria-labelledby="register1-tab">
+  <!-- <div class="tab-pane fade show container mt-2" id="bal" role="tabpanel" aria-labelledby="register1-tab">
     <table class="table">
       <thead class="thead-light">
       <tr>
@@ -347,29 +351,29 @@ include('../include/connexiondbval.php');
           <th scope="col">Email</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody> -->
 
 
         <?php
-            $req6 = $bdd->prepare("SELECT * FROM RDEBalregister, RDEParticipants WHERE RDEBalregister.participant_id = RDEParticipants.id_participant ORDER BY RDEParticipants.name ASC");
-            $req6->execute();
+            // $req6 = $bdd->prepare("SELECT * FROM RDEBalregister, RDEParticipants WHERE RDEBalregister.participant_id = RDEParticipants.id_participant ORDER BY RDEParticipants.name ASC");
+            // $req6->execute();
 
-            while ($donnees = $req6->fetch())
-        { ?>
-        <tr>
+            // while ($donnees = $req6->fetch())
+        //{ ?>
+        <!-- <tr>
           <th scope="row"><?= $donnees['establishment']; ?></th>
           <td><?= $donnees['name']; ?></td>
           <td><?= $donnees['first_name']; ?></td>
           <td><?= $donnees['phone']; ?></td>
           <td><?= $donnees['mail']; ?></td>
-        </tr>
+        </tr> -->
         <?php
-            }
-            $req6->closecursor();
+            // }
+            // $req6->closecursor();
         ?>
-      </tbody>
+      <!-- </tbody>
     </table>
-  </div>
+  </div> -->
 
   <!-- Escape -->
 
@@ -377,9 +381,7 @@ include('../include/connexiondbval.php');
     <table class="table">
       <thead class="thead-light">
       <tr>
-          <th scope="col">Nom de l'équipe</th>
           <th scope="col">Etablissement</th>
-          <th scope="col">Mot de passe</th>
           <th scope="col">Nom</th>
           <th scope="col">Prénom</th>
           <th scope="col">Téléphone</th>
@@ -390,15 +392,13 @@ include('../include/connexiondbval.php');
 
 
       <?php
-            $req7 = $bdd->prepare("SELECT * FROM RDEEscaperegister, RDEEscaperelation, RDEParticipants WHERE RDEEscaperelation.participant_id = RDEParticipants.id_participant AND RDEEscaperelation.name_team = RDEEscaperegister.team_name ORDER BY RDEEscaperegister.team_name ASC");
+            $req7 = $bdd->prepare("SELECT * FROM RDEEscaperegister, RDEParticipants WHERE RDEEscaperegister.participant_id = RDEParticipants.id_participant ORDER BY RDEEscaperegister.participant_id ASC");
             $req7->execute();
 
             while ($donnees = $req7->fetch())
         { ?>
         <tr>
-          <th scope="row"><?= $donnees['team_name']; ?></th>
           <td><?= $donnees['establishment']; ?></td>
-          <td><?= $donnees['password_manif']; ?></td>
           <td><?= $donnees['name']; ?></td>
           <td><?= $donnees['first_name']; ?></td>
           <td><?= $donnees['phone']; ?></td>
@@ -428,7 +428,9 @@ include('../include/connexiondbval.php');
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
     integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
   </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
+    integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous">
+  </script>
 
 </body>
 </html>

@@ -30,6 +30,19 @@
     <div class="d-flex align-items-end justify-content-center" style="height:250px;"><h2 class="header_text display-2 text-white"><strong>Escape Game</strong></h2></div>
   </div>
 
+  <!-- Success -->
+  <?php if(isset($_GET['success'])){
+  if($_GET['success'] == 1 ) {?><br><br>
+    <center><div class="alert alert-success" role="alert">
+      Votre inscription a bien été prise en compte, vous allez recevoir un mail de confirmation.
+    </div></center>
+  <?php } ?>
+  <?php if($_GET['success'] == 2 ) {?><br><br>
+    <center><div class="alert alert-danger" role="alert">
+    Au moins un des deux mails n'a pas été entré ou confirmé correctement.
+    </div></center>
+  <?php }} ?>
+
     <!-- Formulaire -->
 
     <section class="get-in-touch container-lg">
@@ -60,18 +73,6 @@
           </select></center>
       </div>
 
-      <div class="container-fluid mt-5">
-        <div class="row justify-content-center">
-          <ul class="nav nav-tabs" id="register" role="tablist">
-            <li class="nav-item mr-2">
-              <a class="nav-link active" id="part1" data-toggle="tab" href="#register1" role="tab" aria-controls="home" aria-selected="true"><p class="tabgalerietxt inscripdesktop">Participant 1</p><p class="tabgalerietxt inscripmobile">1</p></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="part2" data-toggle="tab" href="#register2" role="tab" aria-controls="home" aria-selected="true"><p class="tabgalerietxt inscripdesktop">Participant 2</p><p class="tabgalerietxt inscripmobile">2</p></a>
-            </li>
-          </ul>
-        </div>
-      </div>
 
       <div class="mb-5"></div>
         <div class="row justify-content-center">
@@ -80,7 +81,6 @@
             <div class="tab-pane fade show active" id="register1" role="tabpanel" aria-labelledby="register1-tab">
               <div class="container-fluid pl-5 pr-5">
                 <div class="row justify-content-center mt-5 mb-5">
-                  <h2 class="title2 mt-3">Participant 1</h2>
                   <div class="contact-form row w-100 justify-content-center">
                     <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
                       <input name="name1" class="input-text js-input" type="text" required>
@@ -103,39 +103,6 @@
                       <label class="label">Veuillez resaisir votre email</label>
                     </div>
                   </div>
-                  <a class="nav-link" id="part2" data-toggle="tab" href="#register2" role="tab" aria-controls="home" aria-selected="true">Participant suivant</a>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="tab-pane fade show" id="register2" role="tabpanel" aria-labelledby="register2-tab">
-              <div class="container-fluid pl-5 pr-5">
-                <div class="row justify-content-center mt-5 mb-5">
-                  <h2 class="title2 mt-3 text-center">Participant 2</h2>
-                  <div class="contact-form row w-100 justify-content-center">
-                    <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
-                      <input name="name2" class="input-text js-input" type="text" required>
-                      <label class="label">Nom</label>
-                    </div>
-                    <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
-                      <input name="firstname2" class="input-text js-input" type="text" required>
-                      <label class="label">Prénom</label>
-                    </div>
-                    <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
-                      <input name="tel2" class="input-text js-input" type="text" required>
-                      <label class="label">Mobile</label>
-                    </div>
-                    <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
-                      <input name="mail2" class="input-text js-input" type="email" required>
-                      <label class="label">Email</label>
-                    </div>
-                    <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
-                      <input name="verifmail2" class="input-text js-input" type="email" required>
-                      <label class="label">Veuillez resaisir votre email</label>
-                    </div>
-                  </div>
-                  <a class="nav-link" id="part1" data-toggle="tab" href="#register1" role="tab" aria-controls="home" aria-selected="true">Participant précédent</a>
                   <div class="form-field col-12">
                     <center><input class="submit-btn" type="submit" value="Valider"></center>
                   </div>
@@ -219,6 +186,17 @@
     <!-- Event register content end -->
     <?php include('include/footer.php')?>
 
+    <!-- Script pour suivant / précédent les tabs -->
+    <script>
+      $('.next').click(function () {
+        $('.nav-tabs > .nav-item > .active').parent().next('li').find('a').trigger('click');
+      });
+
+      $('.previous').click(function () {
+          $('.nav-tabs > .nav-item > .active').parent().prev('li').find('a').trigger('click');
+      });
+    </script>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -228,28 +206,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
         integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous">
     </script>
-    <!-- Ajax -->
-  <script>
-    $("#inscription").submit(function(e) {
-
-e.preventDefault(); // avoid to execute the actual submit of the form.
-
-var form = $(this);
-    // Envoie un mail
-    $.ajax({        // On check en ajax en appelant check_submit.php, en lui passant les champs en POST
-        type: "POST",
-        url: "include/escaperegister.php",
-        data: form.serialize(), // sérialises les éléments du formulaire
-        success: function(data)
-        {
-            alert("Votre inscription a bien été prise en compte.");
-        }
-    });
-
-$('#inscription')[0].reset();
-
-});
-  </script>
 </body>
 
 </html>

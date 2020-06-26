@@ -12,7 +12,7 @@ $message = !empty($_POST['message']) ? $_POST['message'] : NULL;
         mail($mail, $objet, $message);
     };
 
-    $req->closeCursor();
+    $req5->closeCursor();
 
     header('location: ../inscriptions.php?success=5');
 

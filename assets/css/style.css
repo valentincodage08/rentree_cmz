@@ -49,6 +49,30 @@ html {
     margin-bottom: 0;
 }
 
+.unmask {
+    position:absolute;
+    right: 20px;
+    top: 7px;
+    width: 25px;
+    height: 25px;
+    text-indent: -9999px;
+  }
+  .unmask:before {
+    content: "";
+    position:absolute;
+    top:4px; left:4px;
+    z-index:1;
+    width: 17px;
+    height: 17px;
+  }
+  .unmask:after {
+    content: "";
+    position:absolute;
+    top:6px; left:6px;
+    width: 13px;
+    height: 13px;
+  }
+
 .testiresponsifmini {
     font-family: 'Titillium Web', sans-serif;
     font-size: .8em;

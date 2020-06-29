@@ -464,6 +464,13 @@ hr.style-five:after {  /* Not really supposed to work, but does */
 .event_img {
     max-width: 100%;
 }
+.header_img_quizz {
+    background-image: url("../../img/header.png");
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
 .header_img {
     background-image: url("../../img/header.png");
     height: 250px;

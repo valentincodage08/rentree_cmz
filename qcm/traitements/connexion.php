@@ -19,6 +19,8 @@ if ($nbresultats == 1) {
     $_SESSION['team'] = $resultat['team_name'];
 
     header('location: ../qcm.php');
+} else {
+    header('location: ../index.php?success=1');
 }
 
 

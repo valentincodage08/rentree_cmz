@@ -43,7 +43,7 @@
             <div class="logo m-2"><img src="../img/logoetudiantcarolo_bleu.png"
                     style="width:150px;height:auto;"></div>
             <form action="traitements/codes.php" method="post">
-                <div class="form text-center m-2"><input type="text" name="code"><button type="submit"
+                <div class="form text-center m-2"><input type="text" placeholder="Entrez le code" name="code"><br><button type="submit"
                         class="btn btn-primary m-2">Valider</button></div>
             </form>
         </div>

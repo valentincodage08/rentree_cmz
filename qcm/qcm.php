@@ -19,7 +19,9 @@
             </div>
             <div class="logo text-center"><img src="../img/logoetudiantcarolo_bleu.png" style="width:150px;height:auto;"></div>
             <div class="etape"></div>
-            <div class="form text-center"><input type="text" placeholder="****"><button type="button" class="btn btn-primary">Clique !!!!</button></div>
+            <form action="traitements/codes.php" method="post">
+                <div class="form text-center"><input type="text" name="code" placeholder="****"><button type="submit" class="btn btn-primary">Clique !!!!</button></div>
+            </form>
         </div>
     </div>
         </div><iframe allowfullscreen="" frameborder="0"

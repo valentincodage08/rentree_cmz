@@ -19,6 +19,20 @@
                 <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
                     aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
             </div>
+            <?php if(isset($_GET['success'])) {
+                if($_GET['success'] == 1) {?>
+                    <div class="alert alert-danger" role="alert">
+                    Votre code est faux, merci de réessayer.
+                    </div>
+                <?php } if($_GET['success'] == 2) {?>
+                    <div class="alert alert-danger" role="alert">
+                    Vous avez déjà effectué le quizz pour cet emplacement.
+                    </div>
+                <?php } if($_GET['success'] == 3) {?>
+                    <div class="alert alert-success" role="alert">
+                    Vos points ont été enregistrés, vous pouvez continuer la course!
+                    </div>
+            <?php }} ?>
             <div class="etape">
                 <h2 class="h4">
                     <span class="badge badge-pill badge-dark" style="padding: .5rem 1rem;">

@@ -30,16 +30,16 @@ include ('../../include/connexiondbval.php');
                 <?php $reponses = $bdd->prepare("SELECT * FROM reponses WHERE id_question = $test");
                 $reponses->execute();
                 while ($r = $reponses->fetch()) { ?>
-
-                    <div class="custom-control custom-checkbox mt-2">
-                        <input type="checkbox" name="reponse[<?=$r['reponse_id']?>]" id="customCheck<?=$r['reponse_id']?>" class="custom-control-input">
-                        <label class="custom-control-label" for="customCheck<?=$r['reponse_id']?>"><?= $r['reponse_name']?>
+                    <div class="custom-control custom-radio mt-2">
+                        <input type="radio" name="reponse[<?=$test?>]" id="customRadio<?=$r['reponse_id']?>" class="custom-control-input" value="<?=$r['reponse_id']?>">
+                        <label class="custom-control-label" for="customRadio<?=$r['reponse_id']?>"><?= $r['reponse_name']?>
                         </label>
                     </div>
                 <?php } ?>
                 </fieldset>
             </div>
         <?php }
+        
             ?>
         <div class="custom-control custom-checkbox mt-2"><input class="btn btn-primary" type="submit" value="Valider"></div>
     </form>

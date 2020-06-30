@@ -19,9 +19,6 @@ if(isset($_POST['reponse'])) {
                 var_dump($pointsforthisquestion);
             }
 
-            // Je fais une requete en liant l'id de la réponse et l'id de la question, si jamais une réponse a un statut
-            // à 0, vu que je la récup dans mes données c'est qu'elle est cochée, alors on ne va pas incrémenter note
-
             if ($reponse['statut'] == 1 ){ $note = $note + $reponse['points'];}
 
             //Le if deviendra mon else

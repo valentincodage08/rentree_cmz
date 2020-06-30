@@ -15,13 +15,13 @@ include ('../../include/connexiondbval.php');
 </head>
 
 <div class="header_img_quizz">
-    <div class="d-flex align-items-end justify-content-center" style="height:250px;"><h2 class="header_text display-2 text-white mx-auto my-auto"><strong>MAIRIE</strong></h2></div>
+    <div class="d-flex align-items-end justify-content-center" style="height:250px;"><h2 class="header_text display-2 text-white mx-auto my-auto"><strong>MEDIATHEQUE</strong></h2></div>
   </div>
 
 <body><center>
 
     <form action="resultatsmairie.php" method="post">
-<?php $questions = $bdd->prepare("SELECT * FROM questions WHERE emplacement='mairie' ");
+<?php $questions = $bdd->prepare("SELECT * FROM questions WHERE emplacement='mediatheque' ");
         $questions->execute();
         while ($data = $questions->fetch()) { $test = $data['question_id']; ?>
             <div>

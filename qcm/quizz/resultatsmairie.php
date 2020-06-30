@@ -2,7 +2,6 @@
 session_start();
 include ('../../include/connexiondbval.php');
 
-//$note = $_SESSION['note'];
 $note = 0;
 
 if(isset($_POST['reponse'])) {

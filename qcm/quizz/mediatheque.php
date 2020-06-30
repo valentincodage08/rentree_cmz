@@ -13,13 +13,12 @@ include ('../../include/connexiondbval.php');
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
-
-<div class="header_img_quizz">
-    <div class="d-flex align-items-end justify-content-center" style="height:250px;"><h2 class="header_text display-2 text-white mx-auto my-auto"><strong>MEDIATHEQUE</strong></h2></div>
-  </div>
-
 <body><center>
 
+<div class="d-flex align-items-center justify-content-center" style="background-color:#0062AD; height:150px;">
+    <div class="d-flex align-items-end justify-content-center" style="height:250px;"><h2 class="header_text display-2 text-white mx-auto my-auto"><strong>MEDIATHEQUE</strong></h2></div>
+  </div>
+  
     <form action="resultatsmairie.php" method="post">
 <?php $questions = $bdd->prepare("SELECT * FROM questions WHERE emplacement='mediatheque' ");
         $questions->execute();

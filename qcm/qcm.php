@@ -14,7 +14,7 @@
 
 <body style="background-color:#0062AD">
     <div class="container-fluid">
-        <div class="w-75 mx-auto border rounded m-5 d-flex flex-column justify-content-between align-items-center" style="background-color:white;box-shadow:0 0 1em white;">
+        <div class="mx-auto border rounded mt-5 mb-5 d-flex flex-column justify-content-between align-items-center" style="background-color:white;box-shadow:0 0 1em white;width:90%;">
             <div class="progress w-75 m-2">
                 <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
                     aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>

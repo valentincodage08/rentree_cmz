@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<?php session_start(); 
-echo $_SESSION['team'];?>
-<form action="traitements/codes.php" method="post">
-<input type="text" name="code">
-<button type="submit">Valider</button>
-</form>
-=======
 <?php session_start();?>
 
 <!DOCTYPE html>
@@ -40,4 +32,3 @@ echo $_SESSION['team'];?>
 </body>
 
 </html>
->>>>>>> 3258a07de571a007ae3f83be564ff93c8ff24df4

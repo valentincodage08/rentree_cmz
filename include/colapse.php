@@ -32,14 +32,14 @@
               <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse show">
                 <div class="card-body p-5">
                   <p class="font-weight-light m-0 collapsetxt"><u><strong>Si je suis habitant du territoire et toujours en étude dans un établissement qui ne se trouve pas sur la commune de Charleville-Mézières ou au sein du périmètre Ardenne Métropole, puis-je malgré tout participer à la Rentrée des étudiants ?</strong></u></p>
-                  <br><p class="font-weight-light m-0 collapsetxt">-> Non, désolé, cette manifestation est dédiée aux étudiants qui poursuivent une formation post bac sur le territoire de Charleville-Mézières et/ou sur le périmètre de Ardenne Métropole.</p>
-                  <br><p class="font-weight-light m-0 collapsetxt">-> Par contre, de nombreuses manifestations sont ouvertes au grand public comme la Gacolor, l’Escape Game… N’hésitez pas à vous renseigner via la programme. </p>
+                  <br><p class="font-weight-light m-0 collapsetxt">-> La Rentrée des étudiants est dédiée aux étudiants qui poursuivent une formation post bac sur le territoire de Charleville-Mézières et/ou sur le périmètre de Ardenne Métropole.</p>
+                  <br><p class="font-weight-light m-0 collapsetxt">-> En revanche, de nombreuses manifestations sont ouvertes au grand public comme la Gacolor, l’Escape Game… N’hésitez donc pas à vous renseigner via la programme complet. </p>
 
                   <br><p class="font-weight-light m-0 collapsetxt"><u><strong>Puis-je m’inscrire jusqu’au dernier moment ?</strong></u></p>
-                  <br><p class="font-weight-light m-0 collapsetxt">-> Les inscriptions seront closes quelques jours avant la manifestation afin d’assurer la bonne organisation des activités.</p>
+                  <br><p class="font-weight-light m-0 collapsetxt">-> Les inscriptions seront closes quelques jours avant la manifestation afin d’assurer la bonne organisation des activités. Un compteur, sur la page d’accueil, vous permettra de vérifier le moment de fermeture des inscriptions.</p>
 
                   <br><p class="font-weight-light m-0 collapsetxt"><u><strong>Est-ce que les inscriptions aux activités peuvent se faire via le « bouton » contact ?</strong></u></p>
-                  <br><p class="font-weight-light m-0 collapsetxt">-> Non, des formulaires d’inscription ont été créés spécifiquement pour s’inscrire aux activités. Seules les inscriptions validées via les formulaires dédiées seront acceptées.</p>
+                  <br><p class="font-weight-light m-0 collapsetxt">-> Non, des formulaires d’inscription ont été créés spécifiquement. Seules les inscriptions validées via les formulaires dédiées seront acceptées.</p>
 
                   <br><p class="font-weight-light m-0 collapsetxt"><u><strong>Est-ce que les activités sont payantes ?</strong></u></p>
                   <br><p class="font-weight-light m-0 collapsetxt">-> La grande majorité des activités proposée n’est pas payante comme le Carolo Express, Carolo Warrior, Concours de cuisine, le tournoi de basket… En revanche, les repas pique-nique nécessitent une participation de 3€ pour les 200 premières inscriptions puis 5€. La Gacolor et autres manifestations grands publics, organisées par nos partenaires, nécessitent une participation financière.</p>
@@ -63,10 +63,10 @@
                   <br><p class="font-weight-light m-0 collapsetxt">-> Pour la bonne organisation de ces animations, l’inscription à 5 personnes est obligatoire pour le Carolo Express et à 8 personnes pour le Carolo Warrior.</p>
 
                   <br><p class="font-weight-light m-0 collapsetxt"><u><strong>Peut-on venir de différents établissements pour composer une équipe au Carolo Express ou Carolo Warrior ?</strong></u></p>
-                  <br><p class="font-weight-light m-0 collapsetxt">-> Oui, il est possible que les membres d’une même équipe proviennent d’établissements différents.</p>
+                  <br><p class="font-weight-light m-0 collapsetxt">-> Oui, il est tout à fait possible que les membres d’une même équipe proviennent d’établissements différents.</p>
 
                   <br><p class="font-weight-light m-0 collapsetxt"><u><strong>Si je souhaite changer d’équipe, puis-je annuler mon inscription et recommencer ?</strong></u></p>
-                  <br><p class="font-weight-light m-0 collapsetxt">-> Pour la bonne organisation de ces animations, les annulations tardives ne pourront pas être acceptées. Ce faisant, prenez le temps de bien choisir vos « camarades » de jeu.</p>
+                  <br><p class="font-weight-light m-0 collapsetxt">-> Pour la bonne organisation de ces animations, les annulations tardives ne pourront pas être acceptées. Ce faisant, prenez le temps de bien choisir vos « camarades » d’équipe.</p>
                 </div>
               </div>
             </div>
@@ -82,6 +82,9 @@
                 <div class="card-body p-5">
                 <br><p class="font-weight-light m-0 collapsetxt"><u><strong>Puis-je m’inscrire à moins ou plus de 2 personnes au Concours de cuisine?</strong></u></p>
                 <br><p class="font-weight-light m-0 collapsetxt">-> Pour la bonne organisation de cette animation, l’inscription à 2 est obligatoire pour le Concours de cuisine.</p>
+
+                <br><p class="font-weight-light m-0 collapsetxt"><u><strong>Dois-je apporter du matériel pour participer à cette activités ?</strong></u></p>
+                  <br><p class="font-weight-light m-0 collapsetxt">-> Non, tout le matériel et les matières premières seront mis à disposition.</p>
                 </div>
               </div>
             </div>

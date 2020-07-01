@@ -147,8 +147,8 @@
 
                 <script>
                 var now = new Date();
-                var dates = [new Date("2020-08-15T13:40:00Z"), new Date("2020-09-15T13:50:10Z"), new Date("2020-09-24T19:40:20Z"), new Date("2021-05-14T12:00:00Z")];
-                var txts = ["Début des<br>inscriptions dans:<br>", "Fin des<br>inscriptions dans:<br>", "Début des<br>événements dans:<br>", "See you next year...<br>"];
+                var dates = [new Date("2020-09-03T05:59:59Z"), new Date("2020-09-20T21:30:00Z"), new Date("2020-09-24T12:00:00Z"), new Date("2020-09-27T16:00:00Z")];
+                var txts = ["Début des<br>inscriptions dans:<br>", "Fin des<br>inscriptions dans:<br>", "Début des<br>événements dans:<br>", "A l'année prochaine!<br>"];
                 var idx = 0;
 
                 for(const testtime of dates) {

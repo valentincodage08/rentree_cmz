@@ -165,7 +165,7 @@ if (date("dm") == "3006" && (date("H") >=12 && date("H") <= 16))
         <p class="policep text-center">Concours de Cuisine</p>
       </div></div>
       <div class="col-12 col-sm-6 col-lg-3 p-2 my-auto"><div class="polaroid mx-auto">
-        <a class="" href="event.php#galerie"><img class="img-fluid" src="img/event_2019/7.jpg"></a>
+        <a class="" href="event.php#galerie"><img class="img-fluid" src="img/event_2019/7.png"></a>
         <p class="policep text-center">Pique-Nique</p>
       </div></div>
     </div>

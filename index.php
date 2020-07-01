@@ -128,7 +128,7 @@ if (date("dm") == "3006" && (date("H") >=12 && date("H") <= 16))
                     </div>
                     <div class="col-1"></div>
                     <div class="testi-text col-md-12 col-lg-5 align-self-center" style="width:90%;border-width:2px;border-style:solid;border-color:#0C276A;background-color:rgba(255,255,255, .7);border-radius:5px;box-shadow: 0px 0px 30px #2337D2 inset;">
-                    <center><p class="testiresponsif"><strong><?= $testimonial['first_name'] ?>, <?= $testimonial['age'] ?> ans (<?= $testimonial['establishment'] ?></strong>) :</p><p class="testiresponsifmini mb-2"><?= $testimonial['text'] ?></p></center>
+                    <center><p class="testiresponsif"><strong><?= $testimonial['first_name'] ?></strong></p><p class="testiresponsifmini mb-2"><?= $testimonial['text'] ?></p></center>
                     </div>
                   </div>
                 </div>

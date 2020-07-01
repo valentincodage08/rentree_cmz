@@ -159,7 +159,7 @@ $(function(){
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="faq.php">FAQ</a>
-              <a class="dropdown-item" href="contact.php">Formulaire</a>
+              <a class="dropdown-item" href="contact.php">Formulaire contact</a>
             </div>
           </li>
         </ul>

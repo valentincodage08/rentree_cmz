@@ -47,7 +47,6 @@
   <!-- <div class="animindex bg-azur-light height-big text-center">Animation Slider</div> -->
   <?php include('include/slider2.php'); ?>
 
-
 <?php
 if (date("dm") == "3006" && (date("H") >=12 && date("H") <= 16))
 {?>

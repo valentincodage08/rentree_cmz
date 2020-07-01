@@ -100,7 +100,7 @@
                     <label class="label">Objet de la demande</label>
                 </div>
                 <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
-                    <input class="input-text js-input" type="text" name="message" tabindex="7" required>
+                    <textarea class="input-text js-input" type="text" name="message" tabindex="7" required></textarea>
                     <label class="label">Message</label>
                 </div>
                 <div class="form-field col-12">

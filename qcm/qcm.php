@@ -80,7 +80,7 @@
 			
 			<div class="col">
 				<script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
-				<center><h1><a href="https://learncodeweb.com/phonegap/how-to-use-instascan-an-html5-qr-scanner/">Scanner le QRCode</a></h1></center>
+				<center><h4 class="mb-3 mt-3">Scannez le QRCode</h4></center>
 				<div class="col-sm-12">
 					<video id="preview" class="p-1 border" style="width:100%;"></video>
 				</div>
@@ -119,10 +119,10 @@
 				</script><center>
 				<div class="btn-group btn-group-toggle mb-5" data-toggle="buttons">
 				  <label class="btn btn-primary active">
-					<input type="radio" name="options" value="1" autocomplete="off" checked> Front Camera
+					<input type="radio" name="options" value="1" autocomplete="off" checked> Camera Avant
 				  </label>
 				  <label class="btn btn-secondary">
-					<input type="radio" name="options" value="2" autocomplete="off"> Back Camera
+					<input type="radio" name="options" value="2" autocomplete="off"> Camera Arrière
 				  </label>
 				</div></center>
 			</div>
@@ -144,7 +144,8 @@
 		
 		</div>
 	</div>
-    <!-- fin qr code -->
+    <!-- fin q code -->
+            <center><h4 class="mb-3">Ou entrez le mot de passe</h4></center>
             <form action="traitements/codes.php" method="post">
                 <div class="form text-center m-2"><input type="text" placeholder="Entrez le code" name="code"><br><button type="submit"
                         class="btn btn-primary m-2">Valider</button></div>

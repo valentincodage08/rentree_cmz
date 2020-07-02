@@ -19,7 +19,7 @@ $idtestimonial = $_GET['id'];
 
 <?php
 
-$req = $bdd->prepare("SELECT * FROM RDETestimonials WHERE id_testimonial = $idtestimonial");
+$req = $bdd->prepare("SELECT * FROM rdetestimonials WHERE id_testimonial = $idtestimonial");
 $req->execute();
 
 

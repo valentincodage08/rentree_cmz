@@ -3,7 +3,7 @@
     <p class="footertitle">Partenaires</p>
     <div class="mx-auto container_footer">
 
-        <?php $req = $bdd->prepare("SELECT * FROM RDEPartners");
+        <?php $req = $bdd->prepare("SELECT * FROM rdepartners");
           $req->execute();
 
           while( $partner = $req->fetch() ) {

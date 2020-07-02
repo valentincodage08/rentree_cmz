@@ -11,7 +11,7 @@ $verifmail = !empty($_POST['verifmail']) ? $_POST['verifmail'] : NULL;
 
 if($mail == $verifmail) {
 
-    $balregistration = $bdd->prepare("INSERT INTO RDEPiqueniquetregister (name, first_name, phone, mail, establishment )
+    $balregistration = $bdd->prepare("INSERT INTO rdepiqueniquetregister (name, first_name, phone, mail, establishment )
                                       VALUES (:name, :first_name, :phone, :mail, :establishment)");
 
     $balregistration->execute(array(

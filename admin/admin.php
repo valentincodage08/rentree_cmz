@@ -75,7 +75,7 @@ include('../include/connexiondbval.php');
 
 
         <?php
-            $readtestimonials = $bdd->prepare("SELECT * FROM RDETestimonials");
+            $readtestimonials = $bdd->prepare("SELECT * FROM rdetestimonials");
             $readtestimonials->execute();
 
             while ($donnees = $readtestimonials->fetch())
@@ -116,7 +116,7 @@ $readtestimonials->closecursor();
 
 
         <?php
-            $readpartners = $bdd->prepare("SELECT * FROM RDEPartners");
+            $readpartners = $bdd->prepare("SELECT * FROM rdepartners");
             $readpartners->execute();
 
             while ($donnees = $readpartners->fetch())
@@ -157,7 +157,7 @@ $readtestimonials->closecursor();
 
 
         <?php
-            $readgallery = $bdd->prepare("SELECT * FROM RDEGallery");
+            $readgallery = $bdd->prepare("SELECT * FROM rdegallery");
             $readgallery->execute();
 
             while ($donnees = $readgallery->fetch())

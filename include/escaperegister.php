@@ -24,7 +24,7 @@ $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription es
         $count = $teamnameexist->rowCount();
         if($count==0) {
 
-            $part1 = $bdd->prepare("INSERT INTO RDEParticipants (name, first_name, phone, mail)
+            $part1 = $bdd->prepare("INSERT INTO rdeparticipants (name, first_name, phone, mail)
                                     VALUES ( :name, :first_name, :phone, :mail)");
 
             $part1->execute(array(
@@ -37,7 +37,7 @@ $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription es
             $idpart1 = $bdd->lastInsertId();
 
 
-            $escaperegistration = $bdd->prepare("INSERT INTO RDEEscaperegister (establishment, team_name, nbpart, id_participant)
+            $escaperegistration = $bdd->prepare("INSERT INTO rdeescaperegister (establishment, team_name, nbpart, id_participant)
                                                 VALUES ( :establishment, :team_name, :nbpart, :id_participant)");
 
             $escaperegistration->execute(array(

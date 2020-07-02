@@ -30,7 +30,7 @@ if(!isset($erreur)) //S'il n'y a pas d'erreur, on upload
      $fichier = preg_replace('/([^.a-z0-9]+)/i', '-', $fichier);
      if(move_uploaded_file($_FILES['avatar']['tmp_name'], $dossier . $fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
      {
-        $newpartner = $bdd->prepare("INSERT INTO RDEPartners (image, alt, website_link)
+        $newpartner = $bdd->prepare("INSERT INTO rdepartners (image, alt, website_link)
                                         VALUES ( :image, :alt, :website_link)");
 
         $newpartner->execute(array(

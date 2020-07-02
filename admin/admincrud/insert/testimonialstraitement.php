@@ -7,7 +7,7 @@ $establishment = !empty($_POST['establishment']) ? $_POST['establishment'] : NUL
 $text = !empty($_POST['text']) ? $_POST['text'] : NULL;
 
 
-$newtestimonial = $bdd->prepare("INSERT INTO RDETestimonials (first_name, age, establishment, text)
+$newtestimonial = $bdd->prepare("INSERT INTO rdetestimonials (first_name, age, establishment, text)
                               VALUES ( :first_name, :age, :establishment, :text)");
 
 $newtestimonial->execute(array(

@@ -48,7 +48,7 @@
   <section class="get-in-touch container-lg">
     <h1 class="title">Inscription au pique-nique</h1><br>
     <?php
-        $req = $bdd->prepare("SELECT * FROM RDEPiqueniquetregister");
+        $req = $bdd->prepare("SELECT * FROM rdepiqueniquetregister");
         $req->execute();
         $placescount = $req->rowCount();
         $placesrestantes = 200 - $placescount;

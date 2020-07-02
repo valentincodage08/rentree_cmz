@@ -53,7 +53,7 @@ $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription es
 
     if($mail1 == $verifmail1 && $mail2 == $verifmail2 && $mail3 == $verifmail3 && $mail4 == $verifmail4 && $mail5 == $verifmail5) {
 
-        $teamnameexist = $bdd->prepare("SELECT team_name FROM RDEBasketregister WHERE team_name = '$teamname'");
+        $teamnameexist = $bdd->prepare("SELECT team_name FROM rdebasketregister WHERE team_name = '$teamname'");
         $teamnameexist->execute();
 
         $count = $teamnameexist->rowCount();
@@ -61,7 +61,7 @@ $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription es
             header('location: ../event_register_basket.php?success=3');
             } else {
         
-            $part1 = $bdd->prepare("INSERT INTO RDEParticipants (name, first_name, phone, mail)
+            $part1 = $bdd->prepare("INSERT INTO rdeparticipants (name, first_name, phone, mail)
                                     VALUES ( :name, :first_name, :phone, :mail)");
 
             $part1->execute(array(
@@ -73,7 +73,7 @@ $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription es
             $part1->closeCursor();
             $idpart1 = $bdd->lastInsertId();
 
-            $part2 = $bdd->prepare("INSERT INTO RDEParticipants (name, first_name, phone, mail)
+            $part2 = $bdd->prepare("INSERT INTO rdeparticipants (name, first_name, phone, mail)
                                     VALUES ( :name, :first_name, :phone, :mail)");
 
             $part2->execute(array(
@@ -85,7 +85,7 @@ $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription es
             $part2->closeCursor();
             $idpart2 = $bdd->lastInsertId();
 
-            $part3 = $bdd->prepare("INSERT INTO RDEParticipants (name, first_name, phone, mail)
+            $part3 = $bdd->prepare("INSERT INTO rdeparticipants (name, first_name, phone, mail)
                                     VALUES ( :name, :first_name, :phone, :mail)");
 
             $part3->execute(array(
@@ -97,7 +97,7 @@ $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription es
             $part3->closeCursor();
             $idpart3 = $bdd->lastInsertId();
 
-            $part4 = $bdd->prepare("INSERT INTO RDEParticipants (name, first_name, phone, mail)
+            $part4 = $bdd->prepare("INSERT INTO rdeparticipants (name, first_name, phone, mail)
                                     VALUES ( :name, :first_name, :phone, :mail)");
 
             $part4->execute(array(
@@ -109,7 +109,7 @@ $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription es
             $part4->closeCursor();
             $idpart4 = $bdd->lastInsertId();
 
-            $part5 = $bdd->prepare("INSERT INTO RDEParticipants (name, first_name, phone, mail)
+            $part5 = $bdd->prepare("INSERT INTO rdeparticipants (name, first_name, phone, mail)
                                     VALUES ( :name, :first_name, :phone, :mail)");
 
             $part5->execute(array(
@@ -123,7 +123,7 @@ $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription es
 
             if($name6 != NULL && $firstname6 != NULL && $tel6 != NULL && $mail6 != NULL && $verifmail6 != NULL) {
 
-                $part6 = $bdd->prepare("INSERT INTO RDEParticipants (name, first_name, phone, mail)
+                $part6 = $bdd->prepare("INSERT INTO rdeparticipants (name, first_name, phone, mail)
                                     VALUES ( :name, :first_name, :phone, :mail)");
 
                 $part6->execute(array(
@@ -138,7 +138,7 @@ $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription es
 
             if($name7 != NULL && $firstname7 != NULL && $tel7 != NULL && $mail7 != NULL && $verifmail7 != NULL) {
 
-                $part7 = $bdd->prepare("INSERT INTO RDEParticipants (name, first_name, phone, mail)
+                $part7 = $bdd->prepare("INSERT INTO rdeparticipants (name, first_name, phone, mail)
                                     VALUES ( :name, :first_name, :phone, :mail)");
 
                 $part7->execute(array(
@@ -151,7 +151,7 @@ $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription es
                 $idpart7 = $bdd->lastInsertId();
             }
 
-            $basketregistration = $bdd->prepare("INSERT INTO RDEBasketregister (team_name, establishment)
+            $basketregistration = $bdd->prepare("INSERT INTO rdebasketregister (team_name, establishment)
                                                 VALUES ( :team_name, :establishment)");
 
             $basketregistration->execute(array(
@@ -160,7 +160,7 @@ $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription es
             ));
             $basketregistration->closeCursor();
 
-            $basketrelation1 = $bdd->prepare("INSERT INTO RDEBasketrelation (participant_id, name_team)
+            $basketrelation1 = $bdd->prepare("INSERT INTO rdebasketrelation (participant_id, name_team)
                                                 VALUES ( :participant_id, :name_team)");
 
             $basketrelation1->execute(array(
@@ -169,7 +169,7 @@ $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription es
             ));
             $basketrelation1->closeCursor();
 
-            $basketrelation2 = $bdd->prepare("INSERT INTO RDEBasketrelation (participant_id, name_team)
+            $basketrelation2 = $bdd->prepare("INSERT INTO rdebasketrelation (participant_id, name_team)
                                                 VALUES ( :participant_id, :name_team)");
 
             $basketrelation2->execute(array(
@@ -178,7 +178,7 @@ $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription es
             ));
             $basketrelation2->closeCursor();
 
-            $basketrelation3 = $bdd->prepare("INSERT INTO RDEBasketrelation (participant_id, name_team)
+            $basketrelation3 = $bdd->prepare("INSERT INTO rdebasketrelation (participant_id, name_team)
                                                 VALUES ( :participant_id, :name_team)");
 
             $basketrelation3->execute(array(
@@ -187,7 +187,7 @@ $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription es
             ));
             $basketrelation3->closeCursor();
 
-            $basketrelation4 = $bdd->prepare("INSERT INTO RDEBasketrelation (participant_id, name_team)
+            $basketrelation4 = $bdd->prepare("INSERT INTO rdebasketrelation (participant_id, name_team)
                                                 VALUES ( :participant_id, :name_team)");
 
             $basketrelation4->execute(array(
@@ -196,7 +196,7 @@ $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription es
             ));
             $basketrelation4->closeCursor();
 
-            $basketrelation5 = $bdd->prepare("INSERT INTO RDEBasketrelation (participant_id, name_team)
+            $basketrelation5 = $bdd->prepare("INSERT INTO rdebasketrelation (participant_id, name_team)
                                                 VALUES ( :participant_id, :name_team)");
 
             $basketrelation5->execute(array(
@@ -207,7 +207,7 @@ $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription es
 
             if($name6 != NULL && $firstname6 != NULL && $tel6 != NULL && $mail6 != NULL && $verifmail6 != NULL) {
 
-                $basketrelation6 = $bdd->prepare("INSERT INTO RDEBasketrelation (participant_id, name_team)
+                $basketrelation6 = $bdd->prepare("INSERT INTO rdebasketrelation (participant_id, name_team)
                                                 VALUES ( :participant_id, :name_team)");
 
                 $basketrelation6->execute(array(
@@ -219,7 +219,7 @@ $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription es
 
             if($name7 != NULL && $firstname7 != NULL && $tel7 != NULL && $mail7 != NULL && $verifmail7 != NULL) {
 
-                $basketrelation7 = $bdd->prepare("INSERT INTO RDEBasketrelation (participant_id, name_team)
+                $basketrelation7 = $bdd->prepare("INSERT INTO rdebasketrelation (participant_id, name_team)
                                                 VALUES ( :participant_id, :name_team)");
 
                 $basketrelation7->execute(array(

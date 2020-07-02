@@ -150,7 +150,7 @@
     </div>
     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
-        <img class="img-fluid" src="img/event_2019/7.jpg">
+        <img class="img-fluid" src="img/event_2019/7.png">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Pique-Nique</p>
         <hr class="style-five">
         <center><a href="event_register_piquenique.php" class="btn btn-secondary mb-2">S'inscrire</a></center>

@@ -19,7 +19,7 @@ $idgallery = $_GET['id'];
 
 <?php
 
-$req = $bdd->prepare("SELECT * FROM RDEGallery WHERE id_image = $idgallery");
+$req = $bdd->prepare("SELECT * FROM rdegallery WHERE id_image = $idgallery");
 $req->execute();
 
 

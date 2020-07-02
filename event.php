@@ -134,7 +134,7 @@
             <div class="row mb-5">
             <?php 
             
-            $req = $bdd->prepare("SELECT * FROM RDEGallery WHERE category = 'Carolo Express' ");
+            $req = $bdd->prepare("SELECT * FROM rdegallery WHERE category = 'Carolo Express' ");
             $req->execute();
 
             while( $img = $req->fetch() ) {
@@ -153,7 +153,7 @@
             <div class="row mb-5">
             <?php 
             
-            $req = $bdd->prepare("SELECT * FROM RDEGallery WHERE category = 'Carolo Warrior' ");
+            $req = $bdd->prepare("SELECT * FROM rdegallery WHERE category = 'Carolo Warrior' ");
             $req->execute();
 
             while( $img = $req->fetch() ) {
@@ -172,7 +172,7 @@
             <div class="row mb-5">
             <?php 
             
-            $req = $bdd->prepare("SELECT * FROM RDEGallery WHERE category = 'Concours de Cuisine' ");
+            $req = $bdd->prepare("SELECT * FROM rdegallery WHERE category = 'Concours de Cuisine' ");
             $req->execute();
 
             while( $img = $req->fetch() ) {
@@ -192,7 +192,7 @@
             <div class="row mb-5">
             <?php 
             
-            $req = $bdd->prepare("SELECT * FROM RDEGallery WHERE category = 'Pique-Nique' ");
+            $req = $bdd->prepare("SELECT * FROM rdegallery WHERE category = 'Pique-Nique' ");
             $req->execute();
 
             while( $img = $req->fetch() ) {

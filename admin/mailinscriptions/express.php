@@ -4,7 +4,7 @@ include('../../include/connexiondbval.php');
 $objet = !empty($_POST['objet']) ? $_POST['objet'] : NULL;
 $message = !empty($_POST['message']) ? $_POST['message'] : NULL;
 
-    $req = $bdd->prepare("SELECT * FROM RDEExpressregister, RDEExpressrelation, RDEParticipants WHERE RDEExpressrelation.participant_id = RDEParticipants.id_participant AND RDEExpressrelation.name_team = RDEExpressregister.team_name");
+    $req = $bdd->prepare("SELECT * FROM rdeexpressregister, rdeexpressrelation, rdeparticipants WHERE rdeexpressrelation.participant_id = rdeparticipants.id_participant AND rdeexpressrelation.name_team = rdeexpressregister.team_name");
      $req->execute();
 
     while ($donnees = $req->fetch())

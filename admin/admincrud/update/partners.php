@@ -19,7 +19,7 @@ $idpartner = $_GET['id'];
 
 <?php
 
-$req = $bdd->prepare("SELECT * FROM RDEPartners WHERE id_partner = $idpartner");
+$req = $bdd->prepare("SELECT * FROM rdepartners WHERE id_partner = $idpartner");
 $req->execute();
 
 

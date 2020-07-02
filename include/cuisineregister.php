@@ -21,7 +21,7 @@ $verifmail2 = !empty($_POST['verifmail2']) ? $_POST['verifmail2'] : NULL;
 $objetinscrip = utf8_decode("Confirmation d'inscription au Concours de Cuisine");
 $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription est bien prise en compte pour le Concours de Cuisine.");
 
-        $req = $bdd->prepare("SELECT * FROM RDECuisineregister");
+        $req = $bdd->prepare("SELECT * FROM rdecuisineregister");
         $req->execute();
         $placescount = $req->rowCount();
         $placesrestantes = 10 - $placescount;
@@ -31,7 +31,7 @@ if($placesrestantes>0) {
 
     if($mail1 == $verifmail1 && $mail2 == $verifmail2) {
 
-        $teamnameexist = $bdd->prepare("SELECT team_name FROM RDECuisineregister WHERE team_name = '$teamname'");
+        $teamnameexist = $bdd->prepare("SELECT team_name FROM rdecuisineregister WHERE team_name = '$teamname'");
         $teamnameexist->execute();
 
         $count = $teamnameexist->rowCount();
@@ -39,7 +39,7 @@ if($placesrestantes>0) {
             header('location: ../event_register_concourscuisine.php?success=3');
             } else {
         
-            $part1 = $bdd->prepare("INSERT INTO RDEParticipants (name, first_name, phone, mail)
+            $part1 = $bdd->prepare("INSERT INTO rdeparticipants (name, first_name, phone, mail)
                                     VALUES ( :name, :first_name, :phone, :mail)");
 
             $part1->execute(array(
@@ -51,7 +51,7 @@ if($placesrestantes>0) {
             $part1->closeCursor();
             $idpart1 = $bdd->lastInsertId();
 
-            $part2 = $bdd->prepare("INSERT INTO RDEParticipants (name, first_name, phone, mail)
+            $part2 = $bdd->prepare("INSERT INTO rdeparticipants (name, first_name, phone, mail)
                                     VALUES ( :name, :first_name, :phone, :mail)");
 
             $part2->execute(array(
@@ -63,7 +63,7 @@ if($placesrestantes>0) {
             $part2->closeCursor();
             $idpart2 = $bdd->lastInsertId();
 
-            $basketregistration = $bdd->prepare("INSERT INTO RDECuisineregister (team_name, establishment)
+            $basketregistration = $bdd->prepare("INSERT INTO rdecuisineregister (team_name, establishment)
                                                 VALUES ( :team_name, :establishment)");
 
             $basketregistration->execute(array(
@@ -72,7 +72,7 @@ if($placesrestantes>0) {
             ));
             $basketregistration->closeCursor();
 
-            $basketrelation1 = $bdd->prepare("INSERT INTO RDECuisinerelation (participant_id, name_team)
+            $basketrelation1 = $bdd->prepare("INSERT INTO rdecuisinerelation (participant_id, name_team)
                                                 VALUES ( :participant_id, :name_team)");
 
             $basketrelation1->execute(array(
@@ -81,7 +81,7 @@ if($placesrestantes>0) {
             ));
             $basketrelation1->closeCursor();
 
-            $basketrelation2 = $bdd->prepare("INSERT INTO RDECuisinerelation (participant_id, name_team)
+            $basketrelation2 = $bdd->prepare("INSERT INTO rdecuisinerelation (participant_id, name_team)
                                                 VALUES ( :participant_id, :name_team)");
 
             $basketrelation2->execute(array(

@@ -101,7 +101,7 @@ include('../include/connexiondbval.php');
 
 
                           <?php
-                              $req = $bdd->prepare("SELECT * FROM RDEExpressregister, RDEExpressrelation, RDEParticipants WHERE RDEExpressrelation.participant_id = RDEParticipants.id_participant AND RDEExpressrelation.name_team = RDEExpressregister.team_name ORDER BY RDEExpressregister.team_name ASC");
+                              $req = $bdd->prepare("SELECT * FROM rdeexpressregister, rdeexpressrelation, rdeparticipants WHERE rdeexpressrelation.participant_id = rdeparticipants.id_participant AND rdeexpressrelation.name_team = rdeexpressregister.team_name ORDER BY rdeexpressregister.team_name ASC");
                               $req->execute();
 
                               while ($donnees = $req->fetch())
@@ -150,7 +150,7 @@ include('../include/connexiondbval.php');
 
 
       <?php
-            $req2 = $bdd->prepare("SELECT * FROM RDEWarriorregister, RDEWarriorrelation, RDEParticipants WHERE RDEWarriorrelation.participant_id = RDEParticipants.id_participant AND RDEWarriorrelation.name_team = RDEWarriorregister.team_name ORDER BY RDEWarriorregister.team_name ASC");
+            $req2 = $bdd->prepare("SELECT * FROM rdewarriorregister, rdewarriorrelation, rdeparticipants WHERE rdewarriorrelation.participant_id = rdeparticipants.id_participant AND rdewarriorrelation.name_team = rdewarriorregister.team_name ORDER BY rdewarriorregister.team_name ASC");
             $req2->execute();
 
             while ($donnees = $req2->fetch())
@@ -184,7 +184,7 @@ include('../include/connexiondbval.php');
 
   <div class="tab-pane fade show container mt-2" id="cuisine" role="tabpanel" aria-labelledby="register1-tab">
   <?php
-        $req5 = $bdd->prepare("SELECT * FROM RDECuisineregister");
+        $req5 = $bdd->prepare("SELECT * FROM rdecuisineregister");
         $req5->execute();
         $placescuisine = $req5->rowCount();
         $req5->closeCursor();
@@ -208,7 +208,7 @@ include('../include/connexiondbval.php');
 
 
       <?php
-            $req3 = $bdd->prepare("SELECT * FROM RDECuisineregister, RDECuisinerelation, RDEParticipants WHERE RDECuisinerelation.participant_id = RDEParticipants.id_participant AND RDECuisinerelation.name_team = RDECuisineregister.team_name ORDER BY RDECuisineregister.team_name ASC");
+            $req3 = $bdd->prepare("SELECT * FROM rdecuisineregister, rdecuisinerelation, rdeparticipants WHERE rdecuisinerelation.participant_id = rdeparticipants.id_participant AND rdecuisinerelation.name_team = rdecuisineregister.team_name ORDER BY rdecuisineregister.team_name ASC");
             $req3->execute();
 
             while ($donnees = $req3->fetch())
@@ -242,7 +242,7 @@ include('../include/connexiondbval.php');
 
   <div class="tab-pane fade show container mt-2" id="piquenique" role="tabpanel" aria-labelledby="register1-tab">
         <?php
-            $req4 = $bdd->prepare("SELECT * FROM RDEPiqueniquetregister ORDER BY name ASC");
+            $req4 = $bdd->prepare("SELECT * FROM rdepiqueniquetregister ORDER BY name ASC");
             $req4->execute(); 
             $placescount = $req4->rowCount();
             $placesrestantes = 200 - $placescount;?>
@@ -308,7 +308,7 @@ include('../include/connexiondbval.php');
 
 
       <?php
-            $req6 = $bdd->prepare("SELECT * FROM RDEBasketregister, RDEBasketrelation, RDEParticipants WHERE RDEBasketrelation.participant_id = RDEParticipants.id_participant AND RDEBasketrelation.name_team = RDEBasketregister.team_name ORDER BY RDEBasketregister.team_name ASC");
+            $req6 = $bdd->prepare("SELECT * FROM rdebasketregister, rdebasketrelation, rdeparticipants WHERE rdebasketrelation.participant_id = rdeparticipants.id_participant AND rdebasketrelation.name_team = rdebasketregister.team_name ORDER BY rdebasketregister.team_name ASC");
             $req6->execute();
 
             while ($donnees = $req6->fetch())
@@ -355,7 +355,7 @@ include('../include/connexiondbval.php');
 
 
         <?php
-            // $req6 = $bdd->prepare("SELECT * FROM RDEBalregister, RDEParticipants WHERE RDEBalregister.participant_id = RDEParticipants.id_participant ORDER BY RDEParticipants.name ASC");
+            // $req6 = $bdd->prepare("SELECT * FROM RDEBalregister, rdeparticipants WHERE RDEBalregister.participant_id = rdeparticipants.id_participant ORDER BY rdeparticipants.name ASC");
             // $req6->execute();
 
             // while ($donnees = $req6->fetch())
@@ -394,7 +394,7 @@ include('../include/connexiondbval.php');
 
 
       <?php
-            $req7 = $bdd->prepare("SELECT * FROM RDEEscaperegister, RDEParticipants WHERE RDEEscaperegister.id_participant = RDEParticipants.id_participant ORDER BY RDEEscaperegister.id_participant ASC");
+            $req7 = $bdd->prepare("SELECT * FROM rdeescaperegister, rdeparticipants WHERE rdeescaperegister.id_participant = rdeparticipants.id_participant ORDER BY rdeescaperegister.id_participant ASC");
             $req7->execute();
 
             while ($donnees = $req7->fetch())

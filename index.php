@@ -115,7 +115,7 @@ if (date("dm") == "2409" && (date("H") >=6 && date("H") <= 17))
         style=" font-size:1.8em;width:80%;">
         <div class="carousel-inner">
       
-          <?php $req = $bdd->prepare("SELECT * FROM RDETestimonials");
+          <?php $req = $bdd->prepare("SELECT * FROM rdetestimonials");
           $req->execute();
       
           while( $testimonial = $req->fetch() ) { ?>

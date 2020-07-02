@@ -43,7 +43,7 @@ $messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription es
 
 
 
-$teamnameexist = $bdd->prepare("SELECT team_name FROM RDEExpressregister WHERE team_name = '$teamname'");
+$teamnameexist = $bdd->prepare("SELECT team_name FROM rdeexpressregister WHERE team_name = '$teamname'");
 $teamnameexist->execute();
 
 $count = $teamnameexist->rowCount();
@@ -51,7 +51,7 @@ if($count==0) {
     if($mail1 == $verifmail1 && $mail2 == $verifmail2 && $mail3 == $verifmail3 && $mail4 == $verifmail4 && $mail5 == $verifmail5) {
 
         if($password == $verifpassword) {
-            $part1 = $bdd->prepare("INSERT INTO RDEParticipants (name, first_name, phone, mail)
+            $part1 = $bdd->prepare("INSERT INTO rdeparticipants (name, first_name, phone, mail)
                                     VALUES ( :name, :first_name, :phone, :mail)");
 
             $part1->execute(array(
@@ -63,7 +63,7 @@ if($count==0) {
             $part1->closeCursor();
             $idpart1 = $bdd->lastInsertId();
 
-            $part2 = $bdd->prepare("INSERT INTO RDEParticipants (name, first_name, phone, mail)
+            $part2 = $bdd->prepare("INSERT INTO rdeparticipants (name, first_name, phone, mail)
                                     VALUES ( :name, :first_name, :phone, :mail)");
 
             $part2->execute(array(
@@ -75,7 +75,7 @@ if($count==0) {
             $part2->closeCursor();
             $idpart2 = $bdd->lastInsertId();
 
-            $part3 = $bdd->prepare("INSERT INTO RDEParticipants (name, first_name, phone, mail)
+            $part3 = $bdd->prepare("INSERT INTO rdeparticipants (name, first_name, phone, mail)
                                     VALUES ( :name, :first_name, :phone, :mail)");
 
             $part3->execute(array(
@@ -87,7 +87,7 @@ if($count==0) {
             $part3->closeCursor();
             $idpart3 = $bdd->lastInsertId();
 
-            $part4 = $bdd->prepare("INSERT INTO RDEParticipants (name, first_name, phone, mail)
+            $part4 = $bdd->prepare("INSERT INTO rdeparticipants (name, first_name, phone, mail)
                                     VALUES ( :name, :first_name, :phone, :mail)");
 
             $part4->execute(array(
@@ -99,7 +99,7 @@ if($count==0) {
             $part4->closeCursor();
             $idpart4 = $bdd->lastInsertId();
 
-            $part5 = $bdd->prepare("INSERT INTO RDEParticipants (name, first_name, phone, mail)
+            $part5 = $bdd->prepare("INSERT INTO rdeparticipants (name, first_name, phone, mail)
                                     VALUES ( :name, :first_name, :phone, :mail)");
 
             $part5->execute(array(
@@ -111,7 +111,7 @@ if($count==0) {
             $part5->closeCursor();
             $idpart5 = $bdd->lastInsertId();
 
-            $basketregistration = $bdd->prepare("INSERT INTO RDEExpressregister (team_name, establishment, password_manif)
+            $basketregistration = $bdd->prepare("INSERT INTO rdeexpressregister (team_name, establishment, password_manif)
                                                 VALUES ( :team_name, :establishment, :password_manif)");
 
             $basketregistration->execute(array(
@@ -121,7 +121,7 @@ if($count==0) {
             ));
             $basketregistration->closeCursor();
 
-            $basketrelation1 = $bdd->prepare("INSERT INTO RDEExpressrelation (participant_id, name_team)
+            $basketrelation1 = $bdd->prepare("INSERT INTO rdeexpressrelation (participant_id, name_team)
                                                 VALUES ( :participant_id, :name_team)");
 
             $basketrelation1->execute(array(
@@ -130,7 +130,7 @@ if($count==0) {
             ));
             $basketrelation1->closeCursor();
 
-            $basketrelation2 = $bdd->prepare("INSERT INTO RDEExpressrelation (participant_id, name_team)
+            $basketrelation2 = $bdd->prepare("INSERT INTO rdeexpressrelation (participant_id, name_team)
                                                 VALUES ( :participant_id, :name_team)");
 
             $basketrelation2->execute(array(
@@ -139,7 +139,7 @@ if($count==0) {
             ));
             $basketrelation2->closeCursor();
 
-            $basketrelation3 = $bdd->prepare("INSERT INTO RDEExpressrelation (participant_id, name_team)
+            $basketrelation3 = $bdd->prepare("INSERT INTO rdeexpressrelation (participant_id, name_team)
                                                 VALUES ( :participant_id, :name_team)");
 
             $basketrelation3->execute(array(
@@ -148,7 +148,7 @@ if($count==0) {
             ));
             $basketrelation3->closeCursor();
 
-            $basketrelation4 = $bdd->prepare("INSERT INTO RDEExpressrelation (participant_id, name_team)
+            $basketrelation4 = $bdd->prepare("INSERT INTO rdeexpressrelation (participant_id, name_team)
                                                 VALUES ( :participant_id, :name_team)");
 
             $basketrelation4->execute(array(
@@ -157,7 +157,7 @@ if($count==0) {
             ));
             $basketrelation4->closeCursor();
 
-            $basketrelation5 = $bdd->prepare("INSERT INTO RDEExpressrelation (participant_id, name_team)
+            $basketrelation5 = $bdd->prepare("INSERT INTO rdeexpressrelation (participant_id, name_team)
                                                 VALUES ( :participant_id, :name_team)");
 
             $basketrelation5->execute(array(

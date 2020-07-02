@@ -61,7 +61,7 @@
     <h1 class="title">Inscription Concours de cuisine</h1><br>
 
     <?php
-        $req = $bdd->prepare("SELECT * FROM RDECuisineregister");
+        $req = $bdd->prepare("SELECT * FROM rdecuisineregister");
         $req->execute();
         $placescount = $req->rowCount();
         $placesrestantes = 10 - $placescount;

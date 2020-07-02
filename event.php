@@ -40,8 +40,6 @@
       <div class="card-polaroid mx-auto">
         <img class="img-fluid" src="img/capture_rde/express_3.png">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Carolo Express</p>
-        <hr class="style-five">
-        <p class="card-text policecards text-center">Le Carolo Express permet aux étudiants de découvrir la ville autrement.</p>
         <div class="dropdown">
         <center><a href="events_express.php" class="btn btn-secondary mb-2">Voir plus</a></center>
         </div>
@@ -51,8 +49,6 @@
       <div class="card-polaroid mx-auto">
         <img class="img-fluid" src="img/capture_rde/warrior_11.png">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Carolo Warrior</p>
-        <hr class="style-five">
-        <p class="card-text policecards text-center">Carolo Warrior est un relai sportif composé de nombreuses activités sportives et/ou ludiques.</p>
         <center><a href="events_warrior.php" class="btn btn-secondary mb-2">Voir plus</a></center>
       </div>
     </div>
@@ -60,8 +56,6 @@
       <div class="card-polaroid mx-auto">
         <img class="img-fluid" src="img/capture_rde/cuisine.png">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Concours De Cuisine</p>
-        <hr class="style-five">
-        <p class="card-text policecards text-center">Concours de cuisine sur la Place Ducale en partenariat avec l’association INTERCampus.</p>
         <center><a href="events_cuisine.php" class="btn btn-secondary mb-2">Voir plus</a></center>
       </div>
     </div>
@@ -69,8 +63,6 @@
       <div class="card-polaroid mx-auto">
         <img class="img-fluid" src="img/event_2019/7.png">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Pique-Nique</p>
-        <hr class="style-five">
-        <p class="card-text policecards text-center">Vous avez la possibilité de venir avec votre déjeuner, des chaises et des tables seront à disposition.</p>
         <center><a href="events_pique-nique.php" class="btn btn-secondary mb-2">Voir plus</a></center>
       </div>
     </div>
@@ -78,17 +70,13 @@
       <div class="card-polaroid mx-auto">
         <img class="img-fluid" src="img/capture_rde/basket_2.png">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Tournoi de Basket</p>
-        <hr class="style-five">
-        <p class="card-text policecards text-center">Tournoi de basket, 5 à 7 participants.</p>
         <center><a href="events_basket.php" class="btn btn-secondary mb-2">Voir plus</a></center>
       </div>
     </div>
     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
-        <img class="img-fluid" src="img/gacolor.jpeg">
+        <img class="img-fluid" src="img/gacolor.png">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Gacolor</p>
-        <hr class="style-five">
-        <p class="card-text policecards text-center">Vous souhaitez passer un moment convivial, festif et haut en couleurs ?</p>
         <center><a href="events_gacolor.php" class="btn btn-secondary mb-2">Voir plus</a></center>
       </div>
     </div>
@@ -96,17 +84,14 @@
       <div class="card-polaroid mx-auto">
         <img class="img-fluid" src="img/event_2019/2.jpg">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Bal de Rentrée</p>
-        <hr class="style-five">
-        <p class="card-text policecards text-center">Le Bal de Rentrée est ouvert à tous les étudiants.</p>
+
         <center><a href="events_bal.php" class="btn btn-secondary mb-2">Voir plus</a></center>
       </div>
     </div>
     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
-        <img class="img-fluid" src="img/event_2019/9.jpg">
+        <img class="img-fluid" src="img/escape.jpg">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Escape Game</p>
-        <hr class="style-five">
-        <p class="card-text policecards text-center">Venez tester votre logique à notre nouvel Escape Game</p>
         <center><a href="events_escape.php" class="btn btn-secondary mb-2">Voir plus</a></center>
       </div>
     </div>

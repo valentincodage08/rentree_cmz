@@ -29,7 +29,7 @@
 
   <div class="row w-100 text-center">
       <div class="col-xl-6 col-mb-10 order-xl-3 order-4 p-0 m-auto">
-        <img class="evenementimg evenementimg-1 img-fluid d-block" src="img/gacolor.jpeg">
+        <img class="evenementimg evenementimg-1 img-fluid d-block" src="img/gacolor.png">
       </div>
       <div class="col-xl-6 col-mb-10 order-xl-4 order-3 my-auto p-0 m-0">
         <h2 class="text-center policetitres mt-5">Gacolor</h2>
@@ -90,7 +90,7 @@
     <div class="row my-4 justify-content-center align-items-center w-100 mx-auto">
     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
-        <img class="img-fluid" src="img/event_2019/1.jpg">
+        <img class="img-fluid" src="img/escape.jpg">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Escape Game</p>
         <hr class="style-five">
         <div class="dropdown">

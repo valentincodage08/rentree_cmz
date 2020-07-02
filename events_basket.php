@@ -33,16 +33,14 @@
       <div class="col-xl-6 col-mb-10 order-xl-4 order-3 my-auto p-0 m-0">
         <h2 class="text-center policetitres mt-5">Tournoi de Basket</h2>
         <div class="w-75 mx-auto">
-          <p class="policep">Pour ceux qui aiment cuisiner, un Concours de cuisine sera proposé sur
-                        la Place Ducale en partenariat avec l’association INTERCampus.
+          <p class="policep">Venez défendre les couleurs de votre école !
                         <br><br>
-                        Sur la base de quelques ingrédients, vous devrez concocter un bon petit plat ! Plusieurs équipes
-                        s’affronteront. Le matériel minimum nécessaire sera mis à disposition.
+                        (5 à 7 participants)<br><br>
+                        Ce tournoi de basket inter-établissements a pour but de contribuer à développer l’esprit étudiant au sein de la Ville de Charleville-Mézières et à faire reconnaître l’identité universitaire.
                         <br><br>
-                        Un jury à la fin notera et goûtera, pour le meilleur ou pour le pire, vos préparations.
+                        Ce tournoi est un évènement fédérateur réservé aux étudiants issus d’un des établissements d’enseignement supérieur du territoire de Ardenne Métropole.
                         <br><br>
-                        Afin de participer à cette manifestation, il est nécessaire au préalable de composer une équipe
-                        de 2 personnes.<p class="mb-5">
+                        Pour cette occasion, la salle Arena, salle de basket ball de Charleville-Mézières, sera mise à disposition des étudiants participants.<p class="mb-5">
         </div>
       </div>
     </div>
@@ -54,19 +52,19 @@
           <div class="col-xs-6 col-md-6 col-lg-6 col-xl-4">
               <div class="rounded-circle mx-auto my-auto">
                   <p class="text-center policetitres-proginc color-yellow-light">Date</p>
-                  <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong><span id="compteur1">27</span>/<span id="compteur2">09</span>/20<span id="compteur3">20</span></strong></p>
+                  <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong><span id="compteur1">25</span>/<span id="compteur2">09</span>/20<span id="compteur3">20</span></strong></p>
               </div>
           </div>
             <div class="col-xs-6 col-md-6 col-lg-6 col-xl-4 mb-1">
                 <div class="rounded-circle mx-auto my-auto">
                     <p class="text-center policetitres-proginc color-yellow-light">Horaires</p>
-                    <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong><span id="compteur4">14</span>h / <span id="compteur5">20</span>h</strong></p>
+                    <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong><span id="compteur4">17</span>h<span id="compteur5">30</span></strong></p>
                 </div>
             </div>
             <div class="col-xs-6 col-md-6 col-lg-6 col-xl-4 mb-1">
                 <div class="rounded-circle mx-auto my-auto">
                     <p class="text-center policetitres-proginc color-yellow-light">Lieu</p>
-                    <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong>Charleville-Mézières</strong></p>
+                    <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong>Salle Arena</strong></p>
                 </div>
             </div>
         </div>
@@ -174,7 +172,7 @@ function gocompteur(startcount, endcount, duration, idTarget) {
 var waypoint1 = new Waypoint({
   element: document.getElementById('compteur1'),
   handler: function(direction) {
-        gocompteur(0,27,1.4,"compteur1");
+        gocompteur(0,25,1.4,"compteur1");
   },
   offset: 'bottom-in-view' 
 })
@@ -198,7 +196,7 @@ var waypoint3 = new Waypoint({
 var waypoint4 = new Waypoint({
   element: document.getElementById('compteur4'),
   handler: function(direction) {
-        gocompteur(0,14,0.7,"compteur4");
+        gocompteur(0,17,0.7,"compteur4");
   },
   offset: 'bottom-in-view' 
 })
@@ -206,7 +204,7 @@ var waypoint4 = new Waypoint({
 var waypoint5 = new Waypoint({
   element: document.getElementById('compteur5'),
   handler: function(direction) {
-        gocompteur(0,20,1,"compteur5");
+        gocompteur(0,30,1.2,"compteur5");
   },
   offset: 'bottom-in-view' 
 })

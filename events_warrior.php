@@ -33,9 +33,11 @@
       <div class="col-xl-6 col-mb-10 order-xl-4 order-3 my-auto p-0 m-0">
         <h2 class="text-center policetitres mt-5">Carolo Warrior</h2>
         <div class="w-75 mx-auto">
-          <p class="policep">Carolo Warrior est un relai sportif composé de nombreuses activités sportives
-                    et/ou ludiques.
-                    Plusieurs activités composent le relais, à savoir :
+          <p class="policep">Le Carolo Warrior est un relai sportif & ludique composé de nombreuses activités. Il s’agit d’une course à obstacles avec de nombreuses activités.
+
+Pour participer au Carolo Warrior, il est nécessaire de composer une équipe de 8 personnes.
+                    <br><br>
+                    Le raid sera composé :
                     <br><br>
                     - Traversée en canoë/kayak<br>
                     - Slackline<br>

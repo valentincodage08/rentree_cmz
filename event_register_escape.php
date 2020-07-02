@@ -41,12 +41,18 @@
     <center><div class="alert alert-danger" role="alert">
     Au moins un des deux mails n'a pas été entré ou confirmé correctement.
     </div></center>
+    <?php } ?>
+  <?php if($_GET['success'] == 3 ) {?><br><br>
+    <center><div class="alert alert-danger" role="alert">
+      Ce nom d'équipe est déjà pris, veuillez en choisir un autre.
+    </div></center>
   <?php }} ?>
 
     <!-- Formulaire -->
 
     <section class="get-in-touch container-lg">
     <h1 class="title">Inscription Escape Game</h1><br>
+    <center><h6 class="mt-3 mx-auto mb-5">Pour l'inscription à l'Escape Game, veuillez ajouter les coordonnées de la personne référente à joindre.</h6></center>
     <h2 class="title2 mt-3">Etablissement</h2>
     <form id="inscription" class="contact-form row w-100 justify-content-center" action="include/escaperegister.php" method="post">
       <div class="form-field col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7">
@@ -73,6 +79,42 @@
           </select></center>
       </div>
 
+      <div class="contact-form row w-100 justify-content-center">
+        <div class="col-12 form-field">
+          <h2 class="title2">Nom de l'équipe (à votre choix)</h2>
+        </div>
+      </div>
+      <div class="contact-form row w-100 justify-content-center">
+        <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
+          <input id="name" class="input-text js-input" name="teamname" type="text" required>
+          <label class="label" for="name">Nom d'équipe</label>
+        </div>
+      </div>
+
+    <div class="contact-form row w-100 justify-content-center">
+      <div class="col-12 form-field">
+        <h2 class="title2 mt-5">Veuillez sélectionner le nombre de personnes participant à l'épreuve.</h2>
+      </div>
+    </div>
+
+    <div class="form-field col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7"><center>
+      <select class="custom-select" name="nbpart" required>
+      <option value="" disabled selected>Veuillez choisir un nombre de participants</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select>
+    </center></div>
+
+    <div class="contact-form row w-100 justify-content-center">
+      <div class="col-12 form-field">
+        <h2 class="title2 mt-5">Personne référente</h2>
+      </div>
+    </div>
 
       <div class="mb-5"></div>
         <div class="row justify-content-center">

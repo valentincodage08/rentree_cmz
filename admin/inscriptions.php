@@ -308,10 +308,10 @@ include('../include/connexiondbval.php');
 
 
       <?php
-            $req5 = $bdd->prepare("SELECT * FROM RDEBasketregister, RDEBasketrelation, RDEParticipants WHERE RDEBasketrelation.participant_id = RDEParticipants.id_participant AND RDEBasketrelation.name_team = RDEBasketregister.team_name ORDER BY RDEBasketregister.team_name ASC");
-            $req5->execute();
+            $req6 = $bdd->prepare("SELECT * FROM RDEBasketregister, RDEBasketrelation, RDEParticipants WHERE RDEBasketrelation.participant_id = RDEParticipants.id_participant AND RDEBasketrelation.name_team = RDEBasketregister.team_name ORDER BY RDEBasketregister.team_name ASC");
+            $req6->execute();
 
-            while ($donnees = $req5->fetch())
+            while ($donnees = $req6->fetch())
         { ?>
         <tr>
           <th scope="row"><?= $donnees['team_name']; ?></th>
@@ -322,7 +322,7 @@ include('../include/connexiondbval.php');
           <td><?= $donnees['mail']; ?></td>
         </tr>
         <?php
-            } $req5->closecursor();
+            } $req6->closecursor();
         ?>
       </tbody>
     </table>
@@ -381,7 +381,9 @@ include('../include/connexiondbval.php');
     <table class="table">
       <thead class="thead-light">
       <tr>
+      <th scope="row">Nom d'équipe</th>
           <th scope="col">Etablissement</th>
+          <th scope="col">Nombre de participants</th>
           <th scope="col">Nom</th>
           <th scope="col">Prénom</th>
           <th scope="col">Téléphone</th>
@@ -392,13 +394,15 @@ include('../include/connexiondbval.php');
 
 
       <?php
-            $req7 = $bdd->prepare("SELECT * FROM RDEEscaperegister, RDEParticipants WHERE RDEEscaperegister.participant_id = RDEParticipants.id_participant ORDER BY RDEEscaperegister.participant_id ASC");
+            $req7 = $bdd->prepare("SELECT * FROM RDEEscaperegister, RDEParticipants WHERE RDEEscaperegister.id_participant = RDEParticipants.id_participant ORDER BY RDEEscaperegister.id_participant ASC");
             $req7->execute();
 
             while ($donnees = $req7->fetch())
         { ?>
         <tr>
+        <th scope="row"><?= $donnees['team_name']; ?></th>
           <td><?= $donnees['establishment']; ?></td>
+          <td><?= $donnees['nbpart']; ?></td>
           <td><?= $donnees['name']; ?></td>
           <td><?= $donnees['first_name']; ?></td>
           <td><?= $donnees['phone']; ?></td>

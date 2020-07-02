@@ -147,7 +147,7 @@
 
                 <script>
                 var now = new Date();
-                var dates = [new Date("2020-09-03T05:59:59Z"), new Date("2020-09-20T21:30:00Z"), new Date("2020-09-24T12:00:00Z"), new Date("2020-09-27T16:00:00Z")];
+                var dates = [new Date("2020-09-03T05:59:59Z"), new Date("2020-09-20T21:30:00Z"), new Date("2020-09-24T07:30:00Z"), new Date("2020-09-27T16:00:00Z")];
                 var txts = ["Début des<br>inscriptions dans:<br>", "Fin des<br>inscriptions dans:<br>", "Début des<br>événements dans:<br>", "A l'année prochaine!<br>"];
                 var idx = 0;
 

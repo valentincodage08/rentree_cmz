@@ -34,16 +34,12 @@
       <div class="col-xl-6 col-mb-10 order-xl-4 order-3 my-auto p-0 m-0">
         <h2 class="text-center policetitres mt-5">Gacolor</h2>
         <div class="w-75 mx-auto">
-          <p class="policep">Pour ceux qui aiment cuisiner, un Concours de cuisine sera proposé sur
-                        la Place Ducale en partenariat avec l’association INTERCampus.
+          <p class="policep">La Gacolor est l’événement phare de la vie étudiante à Charleville-Mézières. Cette manifestation grand public est ouverte à tous.
                         <br><br>
-                        Sur la base de quelques ingrédients, vous devrez concocter un bon petit plat ! Plusieurs équipes
-                        s’affronteront. Le matériel minimum nécessaire sera mis à disposition.
+                        Fruit d’un partenariat entre la Ville de Charleville-Mézières et l’association Gaco Promotion, la Gacolor est une déambulation colorée, festive et un peu déjantée, d’environ 6km, pour tous ceux qui ont envie de passer un « bon moment ».
                         <br><br>
-                        Un jury à la fin notera et goûtera, pour le meilleur ou pour le pire, vos préparations.
-                        <br><br>
-                        Afin de participer à cette manifestation, il est nécessaire au préalable de composer une équipe
-                        de 2 personnes.<p class="mb-5">
+                        Billetterie en ligne accessible via HelloAsso (accès depuis la partie inscriptions).
+                        <p class="mb-5">
         </div>
       </div>
     </div>
@@ -61,7 +57,7 @@
             <div class="col-xs-6 col-md-6 col-lg-6 col-xl-4 mb-1">
                 <div class="rounded-circle mx-auto my-auto">
                     <p class="text-center policetitres-proginc color-yellow-light">Horaires</p>
-                    <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong><span id="compteur4">14</span>h / <span id="compteur5">20</span>h</strong></p>
+                    <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong><span id="compteur4">14</span>h - <span id="compteur5">20</span>h</strong></p>
                 </div>
             </div>
             <div class="col-xs-6 col-md-6 col-lg-6 col-xl-4 mb-1">

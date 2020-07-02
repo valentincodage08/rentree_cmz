@@ -3,6 +3,8 @@
 include('connexiondbval.php');
 
 $establishment = !empty($_POST['etablissement']) ? $_POST['etablissement'] : NULL;
+$teamname = !empty($_POST['teamname']) ? $_POST['teamname'] : NULL;
+$nbpart = !empty($_POST['nbpart']) ? $_POST['nbpart'] : NULL;
 
 $name1 = !empty($_POST['name1']) ? $_POST['name1'] : NULL;
 $firstname1 = !empty($_POST['firstname1']) ? $_POST['firstname1'] : NULL;
@@ -11,10 +13,16 @@ $mail1 = !empty($_POST['mail1']) ? $_POST['mail1'] : NULL;
 $verifmail1 = !empty($_POST['verifmail1']) ? $_POST['verifmail1'] : NULL;
 
 $objetinscrip = utf8_decode("Confirmation d'inscription à l'Escape Game");
-$messageinscrip = utf8_decode("Bonjour, votre inscription est bien prise en compte pour l'Escape Game.");
+$messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription est bien prise en compte pour l'Escape Game.");
 
 
     if($mail1 == $verifmail1) {
+
+        $teamnameexist = $bdd->prepare("SELECT team_name FROM rdeescaperegister WHERE team_name = '$teamname'");
+        $teamnameexist->execute();
+
+        $count = $teamnameexist->rowCount();
+        if($count==0) {
 
             $part1 = $bdd->prepare("INSERT INTO RDEParticipants (name, first_name, phone, mail)
                                     VALUES ( :name, :first_name, :phone, :mail)");
@@ -29,18 +37,23 @@ $messageinscrip = utf8_decode("Bonjour, votre inscription est bien prise en comp
             $idpart1 = $bdd->lastInsertId();
 
 
-            $escaperegistration = $bdd->prepare("INSERT INTO RDEEscaperegister (establishment, participant_id)
-                                                VALUES ( :establishment, :participant_id)");
+            $escaperegistration = $bdd->prepare("INSERT INTO RDEEscaperegister (establishment, team_name, nbpart, id_participant)
+                                                VALUES ( :establishment, :team_name, :nbpart, :id_participant)");
 
             $escaperegistration->execute(array(
             ':establishment' => $establishment,
-            ':participant_id' => $idpart1
+            ':team_name' => $teamname,
+            ':nbpart' => $nbpart,
+            ':id_participant' => $idpart1
             ));
             $escaperegistration->closeCursor();
 
             mail($mail1, $objetinscrip, $messageinscrip);
 
             header('location: ../event_register_escape.php?success=1');
+        } else {
+            header('location: ../event_register_escape.php?success=3');
+        }
     } else {
         header('location: ../event_register_escape.php?success=2');;
     }

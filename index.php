@@ -48,10 +48,10 @@
   <?php include('include/slider2.php'); ?>
 
 <?php
-if (date("dm") == "3006" && (date("H") >=12 && date("H") <= 16))
+if (date("dm") == "2409" && (date("H") >=6 && date("H") <= 17))
 {?>
-  
-  <center><a href="qcm/index.php">Accès au QCM Carolo Express</a></center>
+  <br><br>
+  <center><a href="qcm/index.php" class="btn btn-primary w-100"><h4>Accès au QCM Carolo Express</h4></a></center>
 
 <?php }?>
 

@@ -65,9 +65,7 @@ include('../include/connexiondbval.php');
     <table class="table">
       <thead class="thead-light">
         <tr>
-          <th scope="col">Prénom</th>
-          <th scope="col">Age</th>
-          <th scope="col">Etablissement</th>
+          <th scope="col">Identité</th>
           <th scope="col">Texte</th>
           <!-- <th scope="col">Modifier</th> -->
           <th scope="col">Supprimer</th>
@@ -84,8 +82,6 @@ include('../include/connexiondbval.php');
         { ?>
         <tr>
           <th scope="row"><?= $donnees['first_name']; ?></th>
-          <td><?= $donnees['age']; ?></td>
-          <td><?= $donnees['establishment']; ?></td>
           <td><?= substr($donnees['text'], 0, 60); ?>...</td>
 
           <!-- <td><a href="admincrud/update/testimonials.php?id= $donnees['id_testimonial'];" class="text-muted"><i

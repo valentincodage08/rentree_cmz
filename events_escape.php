@@ -34,16 +34,9 @@
       <div class="col-xl-6 col-mb-10 order-xl-4 order-3 my-auto p-0 m-0">
         <h2 class="text-center policetitres mt-5">Escape Game</h2>
         <div class="w-75 mx-auto">
-          <p class="policep">Pour ceux qui aiment cuisiner, un Concours de cuisine sera proposé sur
-                        la Place Ducale en partenariat avec l’association INTERCampus.
+          <p class="policep">1 équipe, 1 escape room, 1 heure  pour s'en sortir... Un savant mélange d'objets à trouver, d'énigmes à résoudre, de mécanismes et  cadenas à ouvrir et plein de surprises à découvrir...
                         <br><br>
-                        Sur la base de quelques ingrédients, vous devrez concocter un bon petit plat ! Plusieurs équipes
-                        s’affronteront. Le matériel minimum nécessaire sera mis à disposition.
-                        <br><br>
-                        Un jury à la fin notera et goûtera, pour le meilleur ou pour le pire, vos préparations.
-                        <br><br>
-                        Afin de participer à cette manifestation, il est nécessaire au préalable de composer une équipe
-                        de 2 personnes.<p class="mb-5">
+                        Inscription obligatoire.<p class="mb-5">
         </div>
       </div>
     </div>
@@ -55,19 +48,19 @@
           <div class="col-xs-6 col-md-6 col-lg-6 col-xl-4">
                 <div class="rounded-circle mx-auto my-auto">
                     <p class="text-center policetitres-proginc color-yellow-light">Date</p>
-                    <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong><span id="compteur1">27</span>/<span id="compteur2">09</span>/20<span id="compteur3">20</span></strong></p>
+                    <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong><span id="compteur1">24</span>/<span id="compteur2">09</span>/20<span id="compteur3">20</span></strong></p>
                 </div>
             </div>
             <div class="col-xs-6 col-md-6 col-lg-6 col-xl-4 mb-1">
                 <div class="rounded-circle mx-auto my-auto">
                     <p class="text-center policetitres-proginc color-yellow-light">Horaires</p>
-                    <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong><span id="compteur4">14</span>h / <span id="compteur5">20</span>h</strong></p>
+                    <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong><span id="compteur4">14</span>h</strong></p>
                 </div>
             </div>
             <div class="col-xs-6 col-md-6 col-lg-6 col-xl-4 mb-1">
                 <div class="rounded-circle mx-auto my-auto">
                     <p class="text-center policetitres-proginc color-yellow-light">Lieu</p>
-                    <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong>Charleville-Mézières</strong></p>
+                    <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong>Maison du Campus</strong></p>
                 </div>
             </div>
         </div>
@@ -173,7 +166,7 @@ function gocompteur(startcount, endcount, duration, idTarget) {
 var waypoint1 = new Waypoint({
   element: document.getElementById('compteur1'),
   handler: function(direction) {
-        gocompteur(0,27,1.4,"compteur1");
+        gocompteur(0,24,1.4,"compteur1");
   },
   offset: 'bottom-in-view' 
 })
@@ -198,14 +191,6 @@ var waypoint4 = new Waypoint({
   element: document.getElementById('compteur4'),
   handler: function(direction) {
         gocompteur(0,14,0.7,"compteur4");
-  },
-  offset: 'bottom-in-view' 
-})
-
-var waypoint5 = new Waypoint({
-  element: document.getElementById('compteur5'),
-  handler: function(direction) {
-        gocompteur(0,20,1,"compteur5");
   },
   offset: 'bottom-in-view' 
 })

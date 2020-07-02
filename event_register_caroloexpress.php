@@ -407,7 +407,7 @@ function changeType(x, type) {
     </div>
     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
-        <img class="img-fluid" src="img/event_2019/14.jpg">
+        <img class="img-fluid" src="img/bal.png">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Bal de Rentrée</p>
         <hr class="style-five">
         <center><a href="event_register_bal.php" class="btn btn-secondary mb-2">S'inscrire</a></center>

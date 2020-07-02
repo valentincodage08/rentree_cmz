@@ -29,7 +29,7 @@
 
   <div class="row w-100 text-center">
       <div class="col-xl-6 col-mb-10 order-xl-3 order-4 p-0 m-auto">
-        <img class="evenementimg evenementimg-1 img-fluid d-block" src="img/event_2019/1.jpg">
+        <img class="evenementimg evenementimg-1 img-fluid d-block" src="img/escape.jpg">
       </div>
       <div class="col-xl-6 col-mb-10 order-xl-4 order-3 my-auto p-0 m-0">
         <h2 class="text-center policetitres mt-5">Escape Game</h2>
@@ -122,7 +122,7 @@
     </div>
     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
-        <img class="img-fluid" src="img/event_2019/11.jpg">
+        <img class="img-fluid" src="img/bal.png">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Bal de rentrée</p>
         <hr class="style-five">
         <center><a href="events_bal.php" class="btn btn-secondary mb-2">Détails</a></center>

@@ -29,7 +29,7 @@
 
     <div class="row w-100 text-center">
       <div class="col-xl-6 col-mb-10 order-xl-3 order-4 p-0 m-auto">
-        <img class="evenementimg evenementimg-1 img-fluid d-block" src="img/event_2019/1.jpg">
+        <img class="evenementimg evenementimg-1 img-fluid d-block" src="img/bal.png">
       </div>
       <div class="col-xl-6 col-mb-10 order-xl-4 order-3 my-auto p-0 m-0">
         <h2 class="text-center policetitres mt-5">Bal de Rentrée</h2>

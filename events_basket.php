@@ -120,7 +120,7 @@
     </div>
     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
-        <img class="img-fluid" src="img/event_2019/11.jpg">
+        <img class="img-fluid" src="img/bal.png">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Bal de rentrée</p>
         <hr class="style-five">
         <center><a href="events_bal.php" class="btn btn-secondary mb-2">Détails</a></center>
@@ -128,7 +128,7 @@
     </div>
     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
-        <img class="img-fluid" src="img/gacolor.jpeg">
+        <img class="img-fluid" src="img/gacolor.png">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Gacolor</p>
         <hr class="style-five">
         <center><a href="events_gacolor.php" class="btn btn-secondary mb-2">Détails</a></center>
@@ -136,7 +136,7 @@
     </div>
     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
-        <img class="img-fluid" src="img/event_2019/9.jpg">
+        <img class="img-fluid" src="img/escape.jpg">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Escape Game</p>
         <hr class="style-five">
         <center><a href="events_escape.php" class="btn btn-secondary mb-2">Détails</a></center>

@@ -1,5 +1,5 @@
-<?php session_start();?>
-
+<?php session_start();
+include ('../include/connexiondbval.php'); ?>
 <!DOCTYPE html>
 <html>
 
@@ -32,9 +32,22 @@
 <body style="background-color:#0062AD">
     <div class="container-fluid">
         <div class="mx-auto border rounded mt-5 mb-5 d-flex flex-column justify-content-between align-items-center" style="background-color:white;box-shadow:0 0 1em white;width:90%;">
-            <div class="progress w-75 m-2">
-                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+			<div class="progress w-75 m-2">
+			<?php
+			$progressbar = $bdd->prepare("SELECT * FROM pointsqcm");
+			$progressbar->execute();
+
+			$count = $progressbar->rowCount();
+			if($count==0) {?>
+				<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+			<?php } elseif ($count==1) {?>
+				<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+			<?php } elseif ($count==2) {?>
+				<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+			<?php } ?>
             </div>
             <?php if(isset($_GET['success'])) {
                 if($_GET['success'] == 1) {?>
@@ -49,12 +62,28 @@
                     <div class="alert alert-success" role="alert">
                     Vos points ont été enregistrés, vous pouvez continuer la course!
                     </div>
+				<?php } if($_GET['success'] == 4) {?>
+                    <div class="alert alert-success" role="alert">
+                    Le qr code scanné ou le mot de passe entré est erroné.
+                    </div>
             <?php }} ?>
             <div class="etape">
                 <h2 class="h4">
-                    <span class="badge badge-pill badge-dark" style="padding: .5rem 1rem;">
-                        Étape <span class="cStep">1</span> / <span class="mStep">5</span>
-                    </span>
+					<?php if($count==0) {?>
+						<span class="badge badge-pill badge-dark" style="padding: .5rem 1rem;">
+							Étape <span class="cStep">0</span> / <span class="mStep">2</span>
+						</span>
+					<?php } elseif ($count==1) {?>
+						<span class="badge badge-pill badge-dark" style="padding: .5rem 1rem;">
+                        	Étape <span class="cStep">1</span> / <span class="mStep">2</span>
+						</span>
+					<?php } elseif ($count==2) {?>
+						<center><span class="badge badge-pill badge-dark" style="padding: .5rem 1rem;">
+                        	Étape <span class="cStep">2</span> / <span class="mStep">2</span>
+						</span></center>
+						<center>Félicitations, vous avez terminé le QCM ! Rendez-vous à la Place Ducale pour la fin de l'épreuve.</center>	
+					<?php } ?>
+					<?php $progressbar->closeCursor(); ?>
                 </h2>
             </div>
             <div class="logo m-2"><img src="../img/logoetudiantcarolo_bleu.png"

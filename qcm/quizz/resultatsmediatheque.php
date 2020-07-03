@@ -4,15 +4,14 @@ include ('../../include/connexiondbval.php');
 
 $team = $_SESSION['team'];
 $note = 0;
-$emplacement="mairie";
-
+$emplacement="mediatheque";
 date_default_timezone_set('Europe/Paris');
 $time = date("H:i:s");
 
 if(isset($_POST['reponse'])) {
 
     foreach ($_POST['reponse'] as $idquestion => $value) {
-        $statut = $bdd->prepare("SELECT statut, points, id_question FROM reponses WHERE reponse_id = $value");
+        $statut = $bdd->prepare("SELECT statut, points, id_question FROM reponses WHERE reponse_id = $idquestion");
         $statut->execute();
 
         while ($reponse = $statut->fetch()) {
@@ -28,7 +27,7 @@ if(isset($_POST['reponse'])) {
         }
     }
 
-    $dejafait = $bdd->prepare("SELECT * FROM pointsqcm WHERE team_name = '$team' AND emplacement = 'mairie'");
+    $dejafait = $bdd->prepare("SELECT * FROM pointsqcm WHERE team_name = '$team' AND emplacement = 'mediatheque'");
     $dejafait->execute();
 
     $count = $dejafait->rowCount();
@@ -58,7 +57,7 @@ if(isset($_POST['reponse'])) {
             ));
             $heuredefin->closeCursor();
         }
-
+        
         header('location: ../qcm.php?success=3');
     } else {
         header('location: ../qcm.php?success=2');

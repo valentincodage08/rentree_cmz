@@ -13,7 +13,7 @@ $note2 = 0;
 if(isset($_POST['reponse'])) {
 
     foreach ($_POST['reponse'] as $idquestion => $value) {
-        $statut = $bdd->prepare("SELECT statut, points, id_question FROM reponses WHERE reponse_id = $idquestion");
+        $statut = $bdd->prepare("SELECT statut, points, id_question FROM reponses WHERE reponse_id = $value");
         $statut->execute();
 
         while ($reponse = $statut->fetch()) {

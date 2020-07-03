@@ -90,8 +90,8 @@ include ('../include/connexiondbval.php'); ?>
                     style="width:150px;height:auto;"></div>
 
                     <!-- qr code -->
-
-                    <div class="container-fluid">
+					<center><h4 class="mb-3 mt-3">Scannez le QRCode</h4></center>
+                    <div class="container-fluid" id="a_masquer">
 		<div class="row">
 			<div class="col-sm-3">
 				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -109,7 +109,7 @@ include ('../include/connexiondbval.php'); ?>
 			
 			<div class="col">
 				<script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
-				<center><h4 class="mb-3 mt-3">Scannez le QRCode</h4></center>
+				
 				<div class="col-sm-12">
 					<video id="preview" class="p-1 border" style="width:100%;"></video>
 				</div>
@@ -173,6 +173,25 @@ include ('../include/connexiondbval.php'); ?>
 		
 		</div>
 	</div>
+
+	<input type="button" class="btn btn-primary" id="qrcode" value="Masquer la Camera" onclick="masquer_div('a_masquer');" />
+	<script>
+	function masquer_div(id)
+	{
+	  if (document.getElementById(id).style.display == 'none')
+	  {
+		   document.getElementById(id).style.display = 'block';
+		   document.getElementById('qrcode').value = 'Masquer la Camera';
+	  }
+	  else
+	  {
+		   document.getElementById(id).style.display = 'none';
+		   document.getElementById('qrcode').value = 'Afficher la Camera';
+		   document.getElementById('qrcode').style = 'margin-top:20px;';
+	  }
+	}
+	</script>
+	<br>
     <!-- fin q code -->
             <center><h4 class="mb-3">Ou entrez le mot de passe</h4></center>
             <form action="traitements/codes.php" method="post">

@@ -73,6 +73,9 @@ include('../include/connexiondbval.php');
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#escape" role="tab" aria-controls="home" aria-selected="true"><p class="tabgalerietxt inscripdesktop">Escape Game</p></a>
                 </li>
+                <li class="nav-item mr-2">
+                    <a class="nav-link" data-toggle="tab" href="#resultexpress" role="tab" aria-controls="home" aria-selected="true"><p class="tabgalerietxt inscripdesktop">Resultats qcm</p></a>
+                </li>
             </ul>
         </div>
     </div>
@@ -425,9 +428,43 @@ include('../include/connexiondbval.php');
     <br>
   </div>
 
+
+    <div class="tab-pane fade show container mt-2" id="resultexpress" role="tabpanel" aria-labelledby="register1-tab">
+    <table class="table">
+      <thead class="thead-light">
+      <tr>
+          <th scope="col">Nom de l'équipe</th>
+          <td>Heure de fin</td>
+          <td>Points</td>
+        </tr>
+      </thead>
+      <tbody>
+
+      <?php
+                              $reqpoints = $bdd->prepare("SELECT * FROM rdeexpressregister");
+                              $reqpoints->execute();
+
+                              while ($donnees = $reqpoints->fetch())
+                          { ?>
+                          <tr>
+                            <th scope="row"><?= $donnees['team_name']; ?></th>
+                            <?php if(!empty($donnees['heure_fin'])) {?>
+                              <td><?= $donnees['heure_fin']; ?></td>
+                            <?php } ?>
+                            <?php if(!empty($donnees['total'])) {?>
+                              <td><?= $donnees['total']; ?></td>
+                            <?php } ?>
+                            </tr>
+                          <?php
+                              } $reqpoints->closecursor();
+                          ?>
+                        </tbody>
+                      </table>
+                      <br>
+                    </div>
+                    
             </div>
         </div>
-    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
     integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">

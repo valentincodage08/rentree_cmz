@@ -8,6 +8,8 @@ $emplacement="mediatheque";
 date_default_timezone_set('Europe/Paris');
 $time = date("H:i:s");
 
+$note2 = 0;
+
 if(isset($_POST['reponse'])) {
 
     foreach ($_POST['reponse'] as $idquestion => $value) {
@@ -56,6 +58,23 @@ if(isset($_POST['reponse'])) {
                 'team_name' => $team
             ));
             $heuredefin->closeCursor();
+
+            $totalpoints = $bdd->prepare("SELECT points FROM pointsqcm WHERE team_name = '$team'");
+            $totalpoints->execute();
+
+            while ($data = $totalpoints->fetch()) {
+                $note2 = $note2 + $data['points'];
+            }
+            $totalpoints->closeCursor();
+
+            $insertpoints = $bdd->prepare("UPDATE rdeexpressregister
+                                            SET total = :total
+                                            WHERE team_name = :team_name");
+            $insertpoints->execute(array(
+            'total' => $note2,
+            'team_name' => $team
+            ));
+            $insertpoints->closeCursor();
         }
         
         header('location: ../qcm.php?success=3');

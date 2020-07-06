@@ -106,7 +106,7 @@
             <!-- LAYER NR. 7 -->
             <div class="tp-caption   tp-resizeme rs-parallaxlevel-2" id="slide-32-layer-2"
                 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                data-y="['center','center','center','center']" data-voffset="['-25','-25','-90','-90']"
+                data-y="['center','center','center','center']" data-voffset="['0','0','-60','-60']"
                 data-width="none" data-height="none" data-whitespace="nowrap" data-type="image"
                 data-responsive_offset="on"
                 data-frames='[{"delay":250,"speed":5000,"frame":"0","from":"y:100px;rZ:15deg;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
@@ -179,7 +179,7 @@
 
                 <div class="tp-caption   tp-resizeme rs-parallaxlevel-3" id="slide-32-layer-countdown"
                 data-x="['center','center','center','center']" data-hoffset="['0','50','25','0']"
-                data-y="['bottom','bottom','bottom','bottom']" data-voffset="['30','0','120','0']"
+                data-y="['bottom','bottom','bottom','bottom']" data-voffset="['0','0','120','0']"
                 data-fontsize="['40','30','25','18']" data-lineheight="['70','70','80','56']" data-width="none"
                 data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on"
                 data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"sX:2;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
@@ -343,6 +343,22 @@
                 2019</a>
 
             <!-- LAYER NR. 19 -->
+
+            <?php
+                if (date("dm") == "2409" && (date("H") >=6 && date("H") <= 17))
+            {?>
+                <a class="tp-caption  slidhover  tp-resizeme" href="#videoaccueil"
+                id="slide-32-layer-20" data-x="['center','center','center','center']"
+                data-hoffset="['450','450','370','100']" data-y="['bottom','bottom','bottom','bottom']"
+                data-voffset="['100','100','200','30']" data-fontsize="['30','30','26','22']"
+                data-lineheight="['28','28','23','23']" data-width="270" data-height="none" data-whitespace="nowrap"
+                data-type="text" data-actions='' data-responsive_offset="on"
+                data-frames='[{"delay":1400,"speed":1500,"frame":"0","from":"sX:2;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;fb:0px;","style":"c:rgba(255,255,255,1);"}]'
+                data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]"
+                data-paddingright="[0,0,0,0]" data-marginbottom="[-80,-80,-80,-10]" data-paddingleft="[0,0,0,0]"
+                style="z-index: 22; min-width: 270px; max-width: 270px; white-space: nowrap; font-size: 30px; line-height: 28px; font-weight: 300; color: rgba(39,49,127,1);font-family:Oswald;cursor:pointer;text-decoration: none;">Accéder<br />au 
+                QCM</a>
+            <?php } ?>
 
         </li>
     </ul>

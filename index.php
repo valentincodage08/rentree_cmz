@@ -46,14 +46,10 @@
 
   <!-- <div class="animindex bg-azur-light height-big text-center">Animation Slider</div> -->
   <?php include('include/slider2.php'); ?>
-
-<?php
-if (date("dm") == "2409" && (date("H") >=6 && date("H") <= 17))
-{?>
-  <br><br>
+  <!-- <br><br>
   <center><a href="qcm/index.php" class="btn btn-primary w-100"><h4>Accès au QCM Carolo Express</h4></a></center>
 
-<?php }?>
+ -->
 
   <!-- Texte RDE / Evenements -->
 

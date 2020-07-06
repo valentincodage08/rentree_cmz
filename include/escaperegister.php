@@ -13,7 +13,7 @@ $mail1 = !empty($_POST['mail1']) ? $_POST['mail1'] : NULL;
 $verifmail1 = !empty($_POST['verifmail1']) ? $_POST['verifmail1'] : NULL;
 
 $objetinscrip = utf8_decode("Confirmation d'inscription à l'Escape Game");
-$messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription est bien prise en compte pour l'Escape Game.");
+$messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription est bien prise en compte pour l'Escape Game. A très bientôt !");
 
 
     if($mail1 == $verifmail1) {

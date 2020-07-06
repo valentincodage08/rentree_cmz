@@ -138,7 +138,7 @@ $readtestimonials->closecursor();
     </table>
   </div>
 
-  <h3 class="font-weight-light text-black-50 mt-4 mb-5"><center>Galerie photos</center></h3>
+  <h3 class="font-weight-light text-black-50 mt-4 mb-5"><center>Galerie photos de l'édition 2019 (page tous les évènements)</center></h3>
 
   <center><a href="admincrud/insert/gallery.php" class="text-black-50">Ajouter une photo à la galerie <i class="fas fa-plus-circle mb-4"></i></a></center>
 

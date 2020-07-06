@@ -55,7 +55,7 @@ $mail8 = !empty($_POST['mail8']) ? $_POST['mail8'] : NULL;
 $verifmail8 = !empty($_POST['verifmail8']) ? $_POST['verifmail8'] : NULL;
 
 $objetinscrip = utf8_decode("Confirmation d'inscription au Carolo Warrior");
-$messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription est bien prise en compte pour le Carolo Warrior.");
+$messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription est bien prise en compte pour le Carolo Warrior. A très bientôt !");
 
     if($mail1 == $verifmail1 && $mail2 == $verifmail2 && $mail3 == $verifmail3 && $mail4 == $verifmail4 && $mail5 == $verifmail5 && $mail6 == $verifmail6 && $mail7 == $verifmail7 && $mail8 == $verifmail8) {
 

@@ -26,7 +26,7 @@ if($mail == $verifmail) {
 
     if ($idparticipant <= 200) {
         $objetinscrip = utf8_decode("Confirmation d'inscription au Pique-Nique");
-        $messageinscrip = utf8_decode("Bonjour, votre inscription est bien prise en compte pour le Pique-Nique, le prix de votre repas sera de 3 euros.");
+        $messageinscrip = utf8_decode("Bonjour, votre inscription est bien prise en compte pour le Pique-Nique, le prix de votre repas sera de 3 euros. A très bientôt !");
 
         mail($mail, $objetinscrip, $messageinscrip);
     } else {

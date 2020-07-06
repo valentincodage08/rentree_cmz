@@ -47,6 +47,14 @@ if ($_GET['token'] == "jhkhhisdjkfbh") {
             <script src="assets/bootstrap/js/bootstrap.min.js"></script>
             <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
             <script src="assets/js/Video-Parallax-Background-v2.js"></script>
+
+            <?php 
+	$lieux = $bdd->prepare("SELECT * FROM pointsqcm WHERE emplacement='mairie' AND team_name='$team'");
+	$lieux->execute();
+	$emplacement = $lieux->fetch();
+
+	echo $emplacement;
+	$count = $emplacement->rowCount();?>
     </body>
 
     </html>

@@ -1,5 +1,7 @@
 <?php session_start();
-include ('../include/connexiondbval.php'); ?>
+include ('../include/connexiondbval.php'); 
+$team = $_SESSION['team'];
+?>
 <!DOCTYPE html>
 <html>
 
@@ -201,7 +203,6 @@ include ('../include/connexiondbval.php'); ?>
     </script>
 	    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.0/build/ol.js"></script>
 
-	<script src="assets/js/process.js"></script>
 	<script>
         function showMap() {
             $('.blur').fadeOut();
@@ -236,13 +237,33 @@ var UserD = {
 
 var Markers = [
 
-    {
+	<?php 
+	$lieux = $bdd->prepare("SELECT * FROM pointsqcm WHERE emplacement='mairie' AND team_name='$team'");
+	$lieux->execute();
+	$count = $lieux->rowCount();
+    if($count==0) { ?>
+	{
         lat: 49.430915,
 
         lng: 4.843711,
 
         is_enabled: true,
-    },
+	},
+	<?php } $lieux->closeCursor(); ?>
+
+	<?php 
+	$lieux = $bdd->prepare("SELECT * FROM pointsqcm WHERE emplacement='mediatheque' AND team_name='$team'");
+	$lieux->execute();
+	$count = $lieux->rowCount();
+    if($count==0) { ?>
+	{
+        lat: 49.681322,
+
+        lng: 4.655526,
+
+        is_enabled: true,
+	},
+	<?php } $lieux->closeCursor(); ?>
 
     {
 

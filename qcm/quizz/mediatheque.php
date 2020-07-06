@@ -21,7 +21,7 @@ if ($_GET['token'] == "dtcfvyjgubkhnGUJlj58") {
     </div>
     
         <form action="resultatsmediatheque.php" method="post">
-        <?php $questions = $bdd->prepare("SELECT * FROM questions WHERE emplacement='mediatheque' ");
+        <?php $questions = $bdd->prepare("SELECT * FROM questions WHERE question_id=2 ");
             $questions->execute();
             while ($data = $questions->fetch()) { $test = $data['question_id']; ?>
                 <div>

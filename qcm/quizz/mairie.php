@@ -20,18 +20,18 @@ if ($_GET['token'] == "jhkhhisdjkfbh") {
     </div>
 
         <form action="resultatsmairie.php" method="post">
-    <?php $questions = $bdd->prepare("SELECT * FROM questions WHERE emplacement='mairie' ");
+    <?php $questions = $bdd->prepare("SELECT * FROM questions WHERE question_id=1 ");
             $questions->execute();
             while ($data = $questions->fetch()) { $test = $data['question_id']; ?>
                 <div>
                     <fieldset>
-                        <legend><?= utf8_decode($data['intitule'])?></legend>
+                        <legend><?= $data['intitule']?></legend>
                     <?php $reponses = $bdd->prepare("SELECT * FROM reponses WHERE id_question = $test");
                     $reponses->execute();
                     while ($r = $reponses->fetch()) { ?>
                         <div class="custom-control custom-radio mt-2">
                             <input type="radio" name="reponse[<?=$test?>]" id="customRadio<?=$r['reponse_id']?>" class="custom-control-input" value="<?=$r['reponse_id']?>">
-                            <label class="custom-control-label" for="customRadio<?=$r['reponse_id']?>"><?= utf8_decode($r['reponse_name'])?>
+                            <label class="custom-control-label" for="customRadio<?=$r['reponse_id']?>"><?= $r['reponse_name']?>
                             </label>
                         </div>
                     <?php } ?>

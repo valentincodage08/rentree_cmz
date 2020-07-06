@@ -21,6 +21,7 @@ include('../include/connexiondbval.php');
 <h1 class="text-center font-weight-light font-italic text-black-50 mt-4 mb-5">Ici vous pourrez voir les inscriptions effectuées sur les différents évènements</h1>
     <center><a href="../index.php" class="text-black-50 mb-5">Revenir à l'accueil</a></center>
     <center><a href="admin.php" class="text-black-50 mt-5 mb-5">Retour dans l'interface Administrateur</a></center>
+    <center><a href="resultats.php" class="text-black-50 mt-5 mb-5">Accès aux résultats détaillés du QCM</a></center>
 
     <?php if(isset($_GET['success'])){
                 if($_GET['success'] == 1) {?>
@@ -46,6 +47,26 @@ include('../include/connexiondbval.php');
         <?php } elseif($_GET['success'] == 6) { ?>
                     <div class="alert alert-secondary" role="alert">
                     <center>Les mails ont bien été envoyés pour l'Escape Game'.</center>
+                    </div>
+        <?php } elseif($_GET['success'] == 7) { ?>
+                    <div class="alert alert-secondary" role="alert">
+                    <center>Les mails ont bien été envoyés les équipes sélectionnées du Carolo Express.</center>
+                    </div>
+        <?php } elseif($_GET['success'] == 8) { ?>
+                    <div class="alert alert-secondary" role="alert">
+                    <center>Les mails ont bien été envoyés les équipes sélectionnées du Carolo Warrior.</center>
+                    </div>
+        <?php } elseif($_GET['success'] == 9) { ?>
+                    <div class="alert alert-secondary" role="alert">
+                    <center>Les mails ont bien été envoyés les équipes sélectionnées du Concours de cuisine.</center>
+                    </div>
+        <?php } elseif($_GET['success'] == 10) { ?>
+                    <div class="alert alert-secondary" role="alert">
+                    <center>Les mails ont bien été envoyés les équipes sélectionnées du Tournoi de Basket.</center>
+                    </div>
+        <?php } elseif($_GET['success'] == 11) { ?>
+                    <div class="alert alert-secondary" role="alert">
+                    <center>Les mails ont bien été envoyés les équipes sélectionnées de l'Escape Game.</center>
                     </div>
         <?php }} ?>
 
@@ -133,6 +154,25 @@ include('../include/connexiondbval.php');
                         </form>
                       </center>
                       <br>
+                      <br>
+                      <center>
+                        <h3>Envoyer un mail aux équipes sélectionnées</h3>
+                        <form action="mailinscriptions/groupeexpress.php" method="post">
+
+                          <?php
+                          $mailgroupeexpress = $bdd->prepare("SELECT team_name FROM rdeexpressregister");
+                          $mailgroupeexpress->execute();
+
+                          while ($data = $mailgroupeexpress->fetch()) {
+                          ?>
+                          <input type="checkbox" name="groupe[<?=$data['team_name']?>]"><?=$data['team_name']?></input><br>
+                          <?php } $mailgroupeexpress->closeCursor(); ?>
+                          <input type="text" class="form-control" name="objet" placeholder="Sujet"><br>
+                          <textarea class="form-control" name="message" placeholder="Message"></textarea><br>
+                          <input class="submit-btn" type="submit" value="Envoyer">
+                        </form>
+                        <br>
+                      </center>
                     </div>
 
   <!-- Warrior -->
@@ -181,6 +221,25 @@ include('../include/connexiondbval.php');
       </form>
     </center>
     <br>
+    <br>
+    <center>
+      <h3>Envoyer un mail aux équipes sélectionnées</h3>
+      <form action="mailinscriptions/groupewarrior.php" method="post">
+
+        <?php
+        $mailgroupewarrior = $bdd->prepare("SELECT team_name FROM rdewarriorregister");
+        $mailgroupewarrior->execute();
+
+        while ($data = $mailgroupewarrior->fetch()) {
+        ?>
+        <input type="checkbox" name="groupe[<?=$data['team_name']?>]"><?=$data['team_name']?></input><br>
+        <?php } $mailgroupewarrior->closeCursor(); ?>
+        <input type="text" class="form-control" name="objet" placeholder="Sujet"><br>
+        <textarea class="form-control" name="message" placeholder="Message"></textarea><br>
+        <input class="submit-btn" type="submit" value="Envoyer">
+      </form>
+      <br>
+    </center>
   </div>
 
   <!-- Cuisine -->
@@ -239,6 +298,25 @@ include('../include/connexiondbval.php');
       </form>
     </center>
     <br>
+    <br>
+    <center>
+      <h3>Envoyer un mail aux équipes sélectionnées</h3>
+      <form action="mailinscriptions/groupecuisine.php" method="post">
+
+        <?php
+        $mailgroupecuisine = $bdd->prepare("SELECT team_name FROM rdecuisineregister");
+        $mailgroupecuisine->execute();
+
+        while ($data = $mailgroupecuisine->fetch()) {
+        ?>
+        <input type="checkbox" name="groupe[<?=$data['team_name']?>]"><?=$data['team_name']?></input><br>
+        <?php } $mailgroupecuisine->closeCursor(); ?>
+        <input type="text" class="form-control" name="objet" placeholder="Sujet"><br>
+        <textarea class="form-control" name="message" placeholder="Message"></textarea><br>
+        <input class="submit-btn" type="submit" value="Envoyer">
+      </form>
+      <br>
+    </center>
   </div>
 
   <!-- Pique-nique -->
@@ -339,6 +417,25 @@ include('../include/connexiondbval.php');
       </form>
     </center>
     <br>
+    <br>
+    <center>
+      <h3>Envoyer un mail aux équipes sélectionnées</h3>
+      <form action="mailinscriptions/groupebasket.php" method="post">
+
+        <?php
+        $mailgroupebasket = $bdd->prepare("SELECT team_name FROM rdebasketregister");
+        $mailgroupebasket->execute();
+
+        while ($data = $mailgroupebasket->fetch()) {
+        ?>
+        <input type="checkbox" name="groupe[<?=$data['team_name']?>]"><?=$data['team_name']?></input><br>
+        <?php } $mailgroupebasket->closeCursor(); ?>
+        <input type="text" class="form-control" name="objet" placeholder="Sujet"><br>
+        <textarea class="form-control" name="message" placeholder="Message"></textarea><br>
+        <input class="submit-btn" type="submit" value="Envoyer">
+      </form>
+      <br>
+    </center>
   </div>
 
   <!-- Bal -->
@@ -426,6 +523,25 @@ include('../include/connexiondbval.php');
       </form>
     </center>
     <br>
+    <br>
+    <center>
+      <h3>Envoyer un mail aux équipes sélectionnées</h3>
+      <form action="mailinscriptions/groupeescape.php" method="post">
+
+        <?php
+        $mailgroupeescape = $bdd->prepare("SELECT team_name FROM rdeescaperegister");
+        $mailgroupeescape->execute();
+
+        while ($data = $mailgroupeescape->fetch()) {
+        ?>
+        <input type="checkbox" name="groupe[<?=$data['team_name']?>]"><?=$data['team_name']?></input><br>
+        <?php } $mailgroupeescape->closeCursor(); ?>
+        <input type="text" class="form-control" name="objet" placeholder="Sujet"><br>
+        <textarea class="form-control" name="message" placeholder="Message"></textarea><br>
+        <input class="submit-btn" type="submit" value="Envoyer">
+      </form>
+      <br>
+    </center>
   </div>
 
 

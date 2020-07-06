@@ -86,27 +86,13 @@ include ('../include/connexiondbval.php'); ?>
 					<?php $progressbar->closeCursor(); ?>
                 </h2>
             </div>
-            <div class="logo m-2"><img src="../img/logoetudiantcarolo_bleu.png"
-                    style="width:150px;height:auto;"></div>
+            <div class="logo m-2"><img src="../assets/img/mascotte_nuage.png"
+                    style="width:100%;height:auto;"></div>
 
                     <!-- qr code -->
 					<center><h4 class="mb-3 mt-3">Scannez le QRCode</h4></center>
                     <div class="container-fluid" id="a_masquer">
-		<div class="row">
-			<div class="col-sm-3">
-				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<!-- demo left sidebar -->
-				<ins class="adsbygoogle"
-					 style="display:block"
-					 data-ad-client="ca-pub-6724419004010752"
-					 data-ad-slot="7706376079"
-					 data-ad-format="auto"
-					 data-full-width-responsive="true"></ins>
-				<script>
-				(adsbygoogle = window.adsbygoogle || []).push({});
-				</script>
-			</div>
-			
+		<div class="row">			
 			<div class="col">
 				<script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
 				
@@ -146,7 +132,7 @@ include ('../include/connexiondbval.php'); ?>
 						alert(e);
 					});
 				</script><center>
-				<div class="btn-group btn-group-toggle mb-5" data-toggle="buttons">
+				<div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
 				  <label class="btn btn-primary active">
 					<input type="radio" name="options" value="1" autocomplete="off" checked> Camera Avant
 				  </label>
@@ -154,23 +140,7 @@ include ('../include/connexiondbval.php'); ?>
 					<input type="radio" name="options" value="2" autocomplete="off"> Camera Arrière
 				  </label>
 				</div></center>
-			</div>
-			
-			
-			<div class="col-sm-3">
-				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<!-- demo left sidebar -->
-				<ins class="adsbygoogle"
-					 style="display:block"
-					 data-ad-client="ca-pub-6724419004010752"
-					 data-ad-slot="7706376079"
-					 data-ad-format="auto"
-					 data-full-width-responsive="true"></ins>
-				<script>
-				(adsbygoogle = window.adsbygoogle || []).push({});
-				</script>
-			</div>
-		
+			</div>		
 		</div>
 	</div>
 

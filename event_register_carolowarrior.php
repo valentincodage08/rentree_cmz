@@ -138,7 +138,7 @@
                       <label class="label">Prénom</label>
                     </div>
                     <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
-                      <input name="tel1" class="input-text js-input" type="text" required>
+                      <input name="tel1" class="input-text js-input" type="tel" minlength="10" maxlength="10" required>
                       <label class="label">Mobile</label>
                     </div>
                     <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
@@ -172,7 +172,7 @@
                       <label class="label">Prénom</label>
                     </div>
                     <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
-                      <input name="tel2" class="input-text js-input" type="text" required>
+                      <input name="tel2" class="input-text js-input" type="tel" minlength="10" maxlength="10" required>
                       <label class="label">Mobile</label>
                     </div>
                     <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
@@ -207,7 +207,7 @@
                       <label class="label">Prénom</label>
                     </div>
                     <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
-                      <input name="tel3" class="input-text js-input" type="text" required>
+                      <input name="tel3" class="input-text js-input" type="tel" minlength="10" maxlength="10" required>
                       <label class="label">Mobile</label>
                     </div>
                     <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
@@ -243,7 +243,7 @@
                       <label class="label">Prénom</label>
                     </div>
                     <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
-                      <input name="tel4" class="input-text js-input" type="text" required>
+                      <input name="tel4" class="input-text js-input" type="tel" minlength="10" maxlength="10" required>
                       <label class="label">Mobile</label>
                     </div>
                     <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
@@ -277,7 +277,7 @@
                       <label class="label">Prénom</label>
                     </div>
                     <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
-                      <input name="tel5" class="input-text js-input" type="text" required>
+                      <input name="tel5" class="input-text js-input" type="tel" minlength="10" maxlength="10" required>
                       <label class="label">Mobile</label>
                     </div>
                     <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
@@ -311,7 +311,7 @@
                       <label class="label">Prénom</label>
                     </div>
                     <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
-                      <input name="tel6" class="input-text js-input" type="text" required>
+                      <input name="tel6" class="input-text js-input" type="tel" minlength="10" maxlength="10" required>
                       <label class="label">Mobile</label>
                     </div>
                     <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
@@ -345,7 +345,7 @@
                       <label class="label">Prénom</label>
                     </div>
                     <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
-                      <input name="tel7" class="input-text js-input" type="text" required>
+                      <input name="tel7" class="input-text js-input" type="tel" minlength="10" maxlength="10" required>
                       <label class="label">Mobile</label>
                     </div>
                     <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
@@ -379,7 +379,7 @@
                       <label class="label">Prénom</label>
                     </div>
                     <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
-                      <input name="tel8" class="input-text js-input" type="text" required>
+                      <input name="tel8" class="input-text js-input" type="tel" minlength="10" maxlength="10" required>
                       <label class="label">Mobile</label>
                     </div>
                     <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">

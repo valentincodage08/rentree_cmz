@@ -55,7 +55,7 @@
         $req->closeCursor();
       ?>
       <?php if ($placesrestantes > 20) {?>
-        <h2 class="title2 mt-3">Il reste <?= $placesrestantes ?> places pour les repas à 3€</h2>
+        <h2 class="title2 mt-3">Il reste <?= $placesrestantes ?> repas à 3€</h2>
       <?php } elseif ($placesrestantes > 1 AND $placesrestantes <=20) {?>
         <h2 class="title2 mt-3">Vite, il ne reste que <?= $placesrestantes ?> places pour les repas à 3€!</h2>
       <?php } elseif ($placesrestantes == 1) {?>
@@ -98,7 +98,7 @@
           <label class="label">Prénom</label>
         </div>
         <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
-          <input name="tel" class="input-text js-input" type="text" required>
+          <input name="tel" class="input-text js-input" type="tel" minlength="10" maxlength="10" required>
           <label class="label">Mobile</label>
         </div>
         <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">

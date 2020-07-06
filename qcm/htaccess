@@ -1,3 +1,4 @@
 RewriteEngine On
 RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://demandat.simplon-charleville.fr/rentree_cmz/qcm/$1 [R,L]
+RewriteCond %{REQUEST_URI} !
+RewriteRule ^(.*)$ https://www.demandat.simplon-charleville.fr/rentree_cmz/qcm/$1 [R=301,L]

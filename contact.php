@@ -92,7 +92,7 @@
                     <label class="label">Mail</label>
                 </div>
                 <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
-                    <input class="input-text js-input" type="text" name="tel" tabindex="5" required>
+                    <input class="input-text js-input" type="tel" minlength="10" maxlength="10" name="tel" tabindex="5" required>
                     <label class="label">Téléphone</label>
                 </div>
                 <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">

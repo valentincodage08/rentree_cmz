@@ -241,7 +241,7 @@ var Markers = [
 	$lieux->execute();
 	$count = $lieux->rowCount();
     if($count==0) { ?>
-	{
+	,{
         lat: 49.430915,
 
         lng: 4.843711,
@@ -255,7 +255,7 @@ var Markers = [
 	$lieux->execute();
 	$count = $lieux->rowCount();
     if($count==0) { ?>
-	{
+	,{
         lat: 49.681322,
 
         lng: 4.655526,
@@ -264,7 +264,7 @@ var Markers = [
 	},
 	<?php } $lieux->closeCursor(); ?>
 
-    {
+    ,{
 
         question_id: 55,
 

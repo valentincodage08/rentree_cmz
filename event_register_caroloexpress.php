@@ -101,11 +101,13 @@
         <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field mb-5">
           <input name="password" class="input-text js-input ici2" type="password" required>
           <button class="unmask" type="button" title="Mask/Unmask password to check content"></button>
+          <p class="unmask_text">Afficher</p>
           <label class="label">Mot de passe</label><a class="ici"></a>
         </div>
         <div class="col-11 col-sm-11 col-md-10 col-lg-8 col-xl-7 form-field">
           <input name="verifpassword" class="input-text js-input la2" type="password" required>
           <button class="unmask" type="button" title="Mask/Unmask password to check content"></button>
+          <p class="unmask_text">Afficher</p>
           <label class="label">Confirmer le mot de passe</label><a class="la"></a>
         </div>
       </div>

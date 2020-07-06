@@ -35,12 +35,13 @@ if(isset($_POST['reponse'])) {
     $count = $dejafait->rowCount();
     if($count==0) {
 
-        $insertpoints = $bdd->prepare("INSERT INTO pointsqcm (team_name, emplacement, points)
-                                        VALUES (:team_name, :emplacement, :points)");
+        $insertpoints = $bdd->prepare("INSERT INTO pointsqcm (team_name, emplacement, points, heure)
+                                        VALUES (:team_name, :emplacement, :points, :heure)");
         $insertpoints->execute(array(
             'team_name' => $team,
             'emplacement' => $emplacement,
-            'points' => $note
+            'points' => $note,
+            'heure' => $time
         ));
         $insertpoints->closeCursor();
 

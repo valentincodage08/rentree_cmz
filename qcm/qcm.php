@@ -15,10 +15,10 @@ $team = $_SESSION['team'];
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<script>
-	  (adsbygoogle = window.adsbygoogle || []).push({
+	(adsbygoogle = window.adsbygoogle || []).push({
 		google_ad_client: "ca-pub-6724419004010752",
 		enable_page_level_ads: true
-	  });
+	});
 	</script>
 <style type="text/css">
         #map {
@@ -39,7 +39,7 @@ $team = $_SESSION['team'];
 		<div id="demotext"><strong>Carolo Express</strong></div>
 			<div class="progress w-75 m-2">
 			<?php
-			$progressbar = $bdd->prepare("SELECT * FROM pointsqcm");
+			$progressbar = $bdd->prepare("SELECT * FROM pointsqcm WHERE team_name='$team'");
 			$progressbar->execute();
 
 			$count = $progressbar->rowCount();
@@ -202,7 +202,6 @@ $team = $_SESSION['team'];
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
 	    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.0/build/ol.js"></script>
-
 	<script>
         function showMap() {
             $('.blur').fadeOut();

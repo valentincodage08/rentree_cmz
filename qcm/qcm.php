@@ -18,19 +18,23 @@ include ('../include/connexiondbval.php'); ?>
 		enable_page_level_ads: true
 	  });
 	</script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131906273-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	  gtag('config', 'UA-131906273-1');
-	</script>
+<style type="text/css">
+        #map {
+            /* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */
+            height: 500px;
+            width: 100%;
+        }
+
+        #map canvas {
+            position: relative !important;
+        }
+    </style>
 </head>
 
-<body style="background-color:#0062AD">
+<body style="background-image:linear-gradient(50deg, #273180, #2591AA);">
     <div class="container-fluid">
-        <div class="mx-auto border rounded mt-5 mb-5 d-flex flex-column justify-content-between align-items-center" style="background-color:white;box-shadow:0 0 1em white;width:90%;">
+		<div class="mx-auto border rounded mt-5 mb-5 d-flex flex-column justify-content-between align-items-center" style="background-color:white;box-shadow:0 0 1em white;width:90%;">
+		<div id="demotext"><strong>Carolo Express</strong></div>
 			<div class="progress w-75 m-2">
 			<?php
 			$progressbar = $bdd->prepare("SELECT * FROM pointsqcm");
@@ -66,7 +70,7 @@ include ('../include/connexiondbval.php'); ?>
                     Le qr code scanné ou le mot de passe entré est erroné.
                     </div>
             <?php }} ?>
-            <div class="etape">
+            <div class="etape mt-2">
                 <h2 class="h4">
 					<?php if($count==0) {?>
 						<span class="badge badge-pill badge-dark" style="padding: .5rem 1rem;">
@@ -86,8 +90,7 @@ include ('../include/connexiondbval.php'); ?>
                 </h2>
             </div>
             <div class="logo m-2"><img src="../assets/img/mascotte_nuage.png"
-                    style="width:100%;height:auto;"></div>
-
+					style="width:100%;height:auto;"></div>
                     <!-- qr code -->
 					<center><h4 class="mb-3 mt-3">Scannez le QRCode</h4></center>
                     <div class="container-fluid" id="a_masquer">
@@ -159,6 +162,7 @@ include ('../include/connexiondbval.php'); ?>
 		   document.getElementById('qrcode').style = 'margin-top:20px;';
 	  }
 	}
+
 	</script>
 	<br>
     <!-- fin q code -->
@@ -170,9 +174,22 @@ include ('../include/connexiondbval.php'); ?>
         </div>
     </div>
 
-    <div class="maps mt-5 mx-auto" style="width:85%;">
-    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1EWmjwCaoJ6LaRPnHiKMLUj_26w6ogDTj" width="100%" height="550"></iframe>
+	<div class="map">
+        <div class="row mx-0 mb-4">
+            <div class="col-lg-3 col-md-2 col-sm-1 col-xs-0 col-0"></div>
+            <div class="col-lg-6 col-md-8 col-sm-10 col-xs-12 col-0 position-relative">
+                <div class="position-absolute blur">
+                    <div class="d-flex align-items-center justify-content-center h-100 w-100">
+                    </div>
+                </div>
+                <!-- <iframe class="shadow-lg" width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=4.679832458496095%2C49.75884086990659%2C4.751501083374023%2C49.78442298138881&amp;layer=transportmap" style="">
+                </iframe> -->
+                <div id="map"></div>
+            </div>
+            <div class="col-lg-3 col-md-2 col-sm-1 col-xs-0 col-0"></div>
+        </div>
     </div>
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
@@ -182,6 +199,481 @@ include ('../include/connexiondbval.php'); ?>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
+	    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.0/build/ol.js"></script>
+
+	<script src="assets/js/process.js"></script>
+	<script>
+        function showMap() {
+            $('.blur').fadeOut();
+        }
+    </script>
+	<script>
+	var lat = 49.77003;
+
+var lon = 4.71955;
+
+var macarte = null;
+
+var geolocation = null;
+
+var MarkerLayer = null;
+
+
+
+var UserD = {
+
+    Marker: null,
+
+    feature: null,
+
+    Latitude: 0,
+
+    Longitude: 0
+
+}
+
+
+
+var Markers = [
+
+    {
+        lat: 49.430915,
+
+        lng: 4.843711,
+
+        is_enabled: true,
+    },
+
+    {
+
+        question_id: 55,
+
+        lat: 49.77083,
+
+        lng: 4.71946,
+
+        is_enabled: true,
+
+    },
+
+    {
+
+        question_id: 56,
+
+        lat: 49.77148,
+
+        lng: 4.71953,
+
+        is_enabled: true,
+
+    },
+
+    {
+
+        question_id: 57,
+
+        lat: 49.77301,
+
+        lng: 4.72048,
+
+        is_enabled: true,
+
+    },
+
+    {
+
+        question_id: 58,
+
+        lat: 49.77353,
+
+        lng: 4.71985,
+
+        is_enabled: true,
+
+    }
+
+];
+
+
+
+var attribution = new ol.control.Attribution({
+
+    collapsible: false
+
+});
+
+
+
+function calcCrow(lat1, lon1, lat2, lon2) {
+
+    var R = 6371; // km
+
+    var dLat = toRad(lat2 - lat1);
+
+    var dLon = toRad(lon2 - lon1);
+
+    var lat1 = toRad(lat1);
+
+    var lat2 = toRad(lat2);
+
+
+
+    var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+
+        Math.sin(dLon / 2) * Math.sin(dLon / 2) * Math.cos(lat1) * Math.cos(lat2);
+
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+    var d = R * c;
+
+    return d;
+
+}
+
+
+
+function toRad(Value) {
+
+    return Value * Math.PI / 180;
+
+}
+
+
+
+function initMap() {
+
+    macarte = new ol.Map({
+
+        controls: ol.control.defaults({attribution: false}).extend([attribution]),
+
+        target: 'map',
+
+        layers: [
+
+            new ol.layer.Tile({
+
+                source: new ol.source.OSM()
+
+            })
+
+        ],
+
+        view: new ol.View({
+
+            center: ol.proj.fromLonLat([lon, lat]),
+
+            zoom: 14
+
+        })
+
+    });
+
+}
+
+
+
+function createMarkers() {
+
+    var features = [];
+
+
+
+    for (var i = 0; i < Markers.length; i++) {
+
+        var item = Markers[i];
+
+        var longitude = item.lng;
+
+        var latitude = item.lat;
+
+
+
+        if (item.is_enabled) {
+
+            var iconFeature = new ol.Feature({
+
+                geometry: new ol.geom.Point(ol.proj.transform([longitude, latitude], 'EPSG:4326', 'EPSG:3857'))
+
+            });
+
+
+
+            var iconStyle = new ol.style.Style({
+
+                image: new ol.style.Icon(({
+
+                    anchor: [0.5, 1],
+
+                    src: "http://cdn.mapmarker.io/api/v1/pin?size=32&hoffset=1&background=DB2B39"
+
+                }))
+
+            });
+
+
+
+            iconFeature.setStyle(iconStyle);
+
+            features.push(iconFeature);
+
+
+
+            Markers[i].Marker = iconFeature;
+
+        }
+
+    }
+
+
+
+    var vectorSource = new ol.source.Vector({
+
+        features: features
+
+    });
+
+
+
+    var vectorLayer = new ol.layer.Vector({
+
+        source: vectorSource
+
+    });
+
+
+
+    MarkerLayer = vectorLayer;
+
+    macarte.addLayer(vectorLayer);
+
+}
+
+
+
+function deleteMarker(QuestionId) {
+
+    var mDatas;
+
+    for (var i = 0; i < Markers.length; i++) {
+
+        var item = Markers[i];
+
+
+
+        if (item.question_id == QuestionId) {
+
+            mDatas = Markers[i];
+
+            Markers[i].is_enabled = false;
+
+        }
+
+    }
+
+
+
+    if (mDatas) {
+
+        macarte.removeLayer(MarkerLayer);
+
+        createMarkers();
+
+    }
+
+}
+
+
+
+function createUserMarker(User) {
+
+    var features = [];
+
+
+
+    var item = User;
+
+    var longitude = item.lng;
+
+    var latitude = item.lat;
+
+
+
+    var iconFeature = new ol.Feature({
+
+        geometry: new ol.geom.Point(ol.proj.transform([longitude, latitude], 'EPSG:4326', 'EPSG:3857'))
+
+    });
+
+
+
+    var iconStyle = new ol.style.Style({
+
+        image: new ol.style.Icon(({
+
+            anchor: [0.5, 1],
+
+            src: "http://cdn.mapmarker.io/api/v1/pin?size=32&hoffset=1&background=00ABE7"
+
+        }))
+
+    });
+
+
+
+    iconFeature.setStyle(iconStyle);
+
+    features.push(iconFeature);
+
+
+
+
+
+    var vectorSource = new ol.source.Vector({
+
+        features: features
+
+    });
+
+
+
+    var vectorLayer = new ol.layer.Vector({
+
+        source: vectorSource
+
+    });
+
+
+
+    UserD.Latitude = User.lat;
+
+    UserD.Longitude = User.lon;
+
+    UserD.Marker = vectorLayer;
+
+    UserD.feature = iconFeature;
+
+
+
+    macarte.addLayer(vectorLayer);
+
+}
+
+
+
+function checkDistance(QuestionId) {
+
+    var mDatas;
+
+   for (var i = 0; i < Markers.length; i++) {
+
+        var item = Markers[i];
+
+        
+
+        if (item.question_id == QuestionId) {
+
+            mDatas = Markers[i];
+
+        }
+
+   }
+
+
+
+    if (mDatas) {
+
+        var distance = calcCrow(mDatas.lat, mDatas.lng, UserD.Latitude, UserD.Longitude) * 1000
+
+        return distance;
+
+    }
+
+ }
+
+
+
+$(document).keypress(function() {
+    checkDistance(45);
+
+});
+
+
+
+$(document).ready(function() {
+
+    initMap();
+
+    createMarkers();
+
+
+
+    var view = new ol.View({
+
+        center: [lon, lat],
+
+        zoom: 2
+
+    });
+
+
+
+    geolocation = new ol.Geolocation({
+
+        trackingOptions: {
+
+            enableHighAccuracy: false
+
+        },
+
+        projection: view.getProjection()
+
+    });
+
+
+
+    geolocation.setTracking(true);
+
+
+
+   createUserMarker({
+
+      lat: lat,
+
+        lng: lon
+
+   })
+
+
+
+    geolocation.on('change:position', function () {
+
+        var coords = geolocation.position_;
+
+
+
+        macarte.setView(new ol.View({
+
+           center: ol.proj.fromLonLat([coords[0], coords[1]]),
+
+            zoom: 16
+        }));
+
+
+
+       var pos = { longitude: coords[0], latitude: coords[1] }
+
+        UserD.Latitude = pos.latitude;
+
+        UserD.Longitude = pos.longitude;
+
+
+
+        UserD.feature.setGeometry(new ol.geom.Point(geolocation.getPosition()));
+
+    });
+
+});
+</script>
 </body>
 
 </html>

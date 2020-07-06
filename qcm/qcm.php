@@ -63,7 +63,7 @@ include ('../include/connexiondbval.php'); ?>
                     Vos points ont été enregistrés, vous pouvez continuer la course!
                     </div>
 				<?php } if($_GET['success'] == 4) {?>
-                    <div class="alert alert-success" role="alert">
+                    <div class="alert alert-danger" role="alert">
                     Le qr code scanné ou le mot de passe entré est erroné.
                     </div>
             <?php }} ?>

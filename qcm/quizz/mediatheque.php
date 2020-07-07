@@ -1,6 +1,7 @@
 <?php
 session_start();
 include ('../../include/connexiondbval.php');
+$team = $_SESSION['team'];
 if ($_GET['token'] == "dtcfvyjgubkhnGUJlj58") {
     ?>
     <!DOCTYPE html>

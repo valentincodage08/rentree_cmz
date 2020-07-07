@@ -274,7 +274,26 @@ var Markers = [
         is_enabled: true,
 
 	},
-	<?php } else{} ?>
+    <?php } else{} ?>
+
+    {
+
+        lat: 49.681247,
+
+        lng: 4.655524,
+
+        is_enabled: true,
+
+    },
+    {
+
+        lat: 49.430910,
+
+        lng: 4.843672,
+
+        is_enabled: true,
+
+    },
 
 ];
 

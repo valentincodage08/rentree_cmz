@@ -36,7 +36,7 @@ $team = $_SESSION['team'];
 <body style="background-image:linear-gradient(50deg, #273180, #2591AA);">
     <div class="container-fluid">
 		<div class="mx-auto border rounded mt-5 mb-5 d-flex flex-column justify-content-between align-items-center" style="background-color:white;box-shadow:0 0 1em white;width:90%;">
-		<div id="demotext"><strong>Carolo Express</strong></div>
+		
 			<div class="progress w-75 m-2">
 			<?php
 			$progressbar = $bdd->prepare("SELECT * FROM pointsqcm WHERE team_name='$team'");

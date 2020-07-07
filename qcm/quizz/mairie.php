@@ -19,7 +19,7 @@ if ($_GET['token'] == "jhkhhisdjkfbh") {
         <div class="d-flex align-items-end justify-content-center" style="height:250px;"><h2 class="header_text display-2 text-white mx-auto my-auto"><strong>MAIRIE</strong></h2></div>
     </div>
 
-        <form action="resultatsmairie.php" method="post">
+        <form action="resultatsmairie.php" method="post" enctype="multipart/form-data">
     <?php $questions = $bdd->prepare("SELECT * FROM questions WHERE question_id=1 ");
             $questions->execute();
             while ($data = $questions->fetch()) { $test = $data['question_id']; ?>
@@ -38,8 +38,12 @@ if ($_GET['token'] == "jhkhhisdjkfbh") {
                     </fieldset>
                 </div>
             <?php }
-            
                 ?>
+                <br><br>
+                <h2>Prenez une photo de vous devant la mairie !!</h2>
+                <br>
+                <input type="file" name="image" accept="image/*" capture> 
+                <br><br>
             <div class="custom-control custom-checkbox mt-2"><input class="btn btn-primary" type="submit" value="Valider"></div>
         </form>
             </center>

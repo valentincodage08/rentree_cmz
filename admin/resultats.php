@@ -51,6 +51,7 @@ include('../include/connexiondbval.php');
                         <th scope="col">Points pour l'emplacement</th>
                         <th scope="col">Heure de validation</th>
                         <th scope="col">Réponse donnée</th>
+                        <th scope="col">Photo challenge</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -68,6 +69,7 @@ include('../include/connexiondbval.php');
                         <td><?= $donnees['points']; ?></td>
                         <td><?= $donnees['heure']; ?></td>
                         <td><?= $donnees['reponse_name']; ?></td>
+                        <td><img src="../qcm/img_user/<?= $donnees['image']; ?>" style="width:auto;height:200px;"></td>
                         </tr>
                         <?php
                             } $req->closecursor();

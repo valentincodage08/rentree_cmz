@@ -184,8 +184,8 @@ $team = $_SESSION['team'];
                     <div class="d-flex align-items-center justify-content-center h-100 w-100">
                     </div>
                 </div>
-                <!-- <iframe class="shadow-lg" width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=4.679832458496095%2C49.75884086990659%2C4.751501083374023%2C49.78442298138881&amp;layer=transportmap" style="">
-                </iframe> -->
+                <iframe class="shadow-lg" width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=4.679832458496095%2C49.75884086990659%2C4.751501083374023%2C49.78442298138881&amp;layer=transportmap" style="">
+                </iframe>
                 <div id="map"></div>
             </div>
             <div class="col-lg-3 col-md-2 col-sm-1 col-xs-0 col-0"></div>

@@ -8,6 +8,7 @@ $team = $_SESSION['team'];
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Express</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -101,7 +102,7 @@ $team = $_SESSION['team'];
 				<script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
 				
 				<div class="col-sm-12">
-					<video id="preview" class="p-1 border" style="width:100%;"></video>
+					<video id="preview" class="p-1 border video-back" style="width:100%;" playsinline></video>
 				</div>
 				<script type="text/javascript">
 					var scanner = new Instascan.Scanner({ video: document.getElementById('preview'), scanPeriod: 5, mirror: false });
@@ -657,6 +658,9 @@ $(document).ready(function() {
 
 });
 	</script>
+    <script type="text/javascript" src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+
+
 </body>
 
 </html>

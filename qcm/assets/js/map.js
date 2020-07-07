@@ -320,7 +320,7 @@ function createMarkers() {
 
                     anchor: [0.5, 1],
 
-                    src: "http://cdn.mapmarker.io/api/v1/pin?size=32&hoffset=1&background=DB2B39"
+                    src: "https://cdn.mapmarker.io/api/v1/pin?size=32&hoffset=1&background=DB2B39"
 
                 }))
 
@@ -428,7 +428,7 @@ function createUserMarker(User) {
 
             anchor: [0.5, 1],
 
-            src: "http://cdn.mapmarker.io/api/v1/pin?size=32&hoffset=1&background=00ABE7"
+            src: "https://cdn.mapmarker.io/api/v1/pin?size=32&hoffset=1&background=00ABE7"
 
         }))
 

@@ -8,11 +8,13 @@ $emplacement="mairie";
 $image = !empty($_POST['image']) ? $_POST['image'] : NULL;
 
 $dossier = '../img_user/';
-$fichier = basename($_FILES['image']['name']);
+$fichier = rand(0,49525285) . basename($_FILES['image']['name']);
 $taille_maxi = 3000000;
 $taille = filesize($_FILES['image']['tmp_name']);
 $extensions = array('.png', '.gif', '.jpg', '.jpeg');
 $extension = strrchr($_FILES['image']['name'], '.'); 
+
+echo $fichier;
 
 
 date_default_timezone_set('Europe/Paris');

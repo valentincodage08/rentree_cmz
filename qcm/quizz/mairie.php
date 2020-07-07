@@ -53,7 +53,6 @@ if ($_GET['token'] == "jhkhhisdjkfbh") {
             <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
             <script src="assets/js/Video-Parallax-Background-v2.js"></script>
     </body>
-
     </html>
     <?php } else {
         header('location: ../qcm.php?success=4');

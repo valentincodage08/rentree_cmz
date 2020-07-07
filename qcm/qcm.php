@@ -207,6 +207,7 @@ $team = $_SESSION['team'];
             $('.blur').fadeOut();
         }
     </script>
+    
 	<script>
 	var lat = 49.77003;
 

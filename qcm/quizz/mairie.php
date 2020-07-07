@@ -1,6 +1,7 @@
 <?php
 session_start();
 include ('../../include/connexiondbval.php');
+$team = $_SESSION['team'];
 if ($_GET['token'] == "jhkhhisdjkfbh") {
     ?>
     <!DOCTYPE html>
@@ -51,7 +52,6 @@ if ($_GET['token'] == "jhkhhisdjkfbh") {
             <script src="assets/bootstrap/js/bootstrap.min.js"></script>
             <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
             <script src="assets/js/Video-Parallax-Background-v2.js"></script>
-
     </body>
 
     </html>

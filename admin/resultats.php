@@ -69,7 +69,7 @@ include('../include/connexiondbval.php');
                         <td><?= $donnees['points']; ?></td>
                         <td><?= $donnees['heure']; ?></td>
                         <td><?= $donnees['reponse_name']; ?></td>
-                        <td><img src="../qcm/img_user/<?= $donnees['image']; ?>" style="width:auto;height:200px;"></td>
+                        <td><img src="../qcm/img_user/<?= $donnees['image']; ?>" style="width:auto;height:200px;"><br><center><a href="../qcm/img_user/<?= $donnees['image']; ?>" download="<?= $donnees['image']; ?>">Télécharger</a></center></td>
                         </tr>
                         <?php
                             } $req->closecursor();

@@ -21,7 +21,6 @@ include('../include/connexiondbval.php');
 <h1 class="text-center font-weight-light font-italic text-black-50 mt-4 mb-5">Ici vous pourrez voir les inscriptions effectuées sur les différents évènements</h1>
     <center><a href="../index.php" class="text-black-50 mb-5">Revenir à l'accueil</a></center>
     <center><a href="admin.php" class="text-black-50 mt-5 mb-5">Retour dans l'interface Administrateur</a></center>
-    <center><a href="resultats.php" class="text-black-50 mt-5 mb-5">Accès aux résultats détaillés du QCM</a></center>
 
     <?php if(isset($_GET['success'])){
                 if($_GET['success'] == 1) {?>
@@ -563,7 +562,7 @@ include('../include/connexiondbval.php');
                               while ($donnees = $reqpoints->fetch())
                           { ?>
                           <tr>
-                            <th scope="row"><?= $donnees['team_name']; ?></th>
+                            <th scope="row"><a href="resultats.php?team=<?= $donnees['team_name']; ?>" style="text-decoration:none;"><?= $donnees['team_name']; ?></a></th>
                             <?php if(!empty($donnees['heure_fin'])) {?>
                               <td><?= $donnees['heure_fin']; ?></td>
                             <?php } ?>

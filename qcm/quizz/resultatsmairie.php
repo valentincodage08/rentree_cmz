@@ -14,9 +14,6 @@ $taille = filesize($_FILES['image']['tmp_name']);
 $extensions = array('.png', '.gif', '.jpg', '.jpeg');
 $extension = strrchr($_FILES['image']['name'], '.'); 
 
-echo $fichier;
-
-
 date_default_timezone_set('Europe/Paris');
 $time = date("H:i:s");
 

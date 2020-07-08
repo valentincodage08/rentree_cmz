@@ -54,12 +54,11 @@ html {
     top:7px;
 }
 .unmask {
-    position:absolute;
+    position: absolute;
+    top: 2px;
     right: 20px;
-    top: 7px;
+    font-size: 21px;
     width: 25px;
-    height: 25px;
-    text-indent: -9999px;
   }
   .unmask:before {
     content: "";

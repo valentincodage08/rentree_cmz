@@ -52,6 +52,7 @@ include('../include/connexiondbval.php');
                         <th scope="col">Heure de validation</th>
                         <th scope="col">Réponse donnée</th>
                         <th scope="col">Photo challenge</th>
+                        <th scope="col">télécharger la photo</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -69,7 +70,8 @@ include('../include/connexiondbval.php');
                         <td><?= $donnees['points']; ?></td>
                         <td><?= $donnees['heure']; ?></td>
                         <td><?= $donnees['reponse_name']; ?></td>
-                        <td><img src="../qcm/img_user/<?= $donnees['image']; ?>" style="width:auto;height:200px;"><br><center><a href="../qcm/img_user/<?= $donnees['image']; ?>" download="<?= $donnees['image']; ?>">Télécharger</a></center></td>
+                        <td><img src="../qcm/img_user/<?= $donnees['image']; ?>" style="width:auto;height:200px;"></td>
+                        <td><center><a class="btn btn-primary" href="../qcm/img_user/<?= $donnees['image']; ?>" download="<?= $donnees['image']; ?>">Télécharger</a></center></td>
                         </tr>
                         <?php
                             } $req->closecursor();

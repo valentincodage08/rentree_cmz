@@ -68,7 +68,7 @@ class TP_flickr {
 		}
 
 		//call the API and decode the response
-		$url = "https://api.flickr.com/services/rest/?".implode('&', $encoded_params);
+		$url = "http://api.flickr.com/services/rest/?".implode('&', $encoded_params);
 		$rsp = json_decode(file_get_contents($url));
 		return $rsp;
 	}

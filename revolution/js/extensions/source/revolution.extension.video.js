@@ -467,18 +467,18 @@ jQuery.extend(true,_R, {
 	},
 
 	checkVideoApis : function(_nc,opt,addedApis) {		
-		var httpprefix = location.protocol === 'https:' ? "https" : "http";
+		var httpprefix = location.protocol === 'http:' ? "https" : "http";
 				
 		if ((_nc.data('ytid')!=undefined  || _nc.find('iframe').length>0 && _nc.find('iframe').attr('src').toLowerCase().indexOf('youtube')>0)) opt.youtubeapineeded = true;
 		if ((_nc.data('ytid')!=undefined  || _nc.find('iframe').length>0 &&  _nc.find('iframe').attr('src').toLowerCase().indexOf('youtube')>0) && addedApis.addedyt==0) {
 			opt.youtubestarttime = jQuery.now();
 			addedApis.addedyt=1;
 			var s = document.createElement("script");								
-			s.src = "https://www.youtube.com/iframe_api"; /* Load Player API*/
+			s.src = "http://www.youtube.com/iframe_api"; /* Load Player API*/
 			var before = document.getElementsByTagName("script")[0],
 				loadit = true;
 			jQuery('head').find('*').each(function(){
-				if (jQuery(this).attr('src') == "https://www.youtube.com/iframe_api")
+				if (jQuery(this).attr('src') == "http://www.youtube.com/iframe_api")
 				   loadit = false;
 			});
 			if (loadit) before.parentNode.insertBefore(s, before);
@@ -494,10 +494,10 @@ jQuery.extend(true,_R, {
 			var f = document.createElement("script"),
 				before = document.getElementsByTagName("script")[0],
 				loadit = true;
-			f.src = "https://player.vimeo.com/api/player.js"; /* Load Player API*/							
+			f.src = "http://player.vimeo.com/api/player.js"; /* Load Player API*/							
 
 			jQuery('head').find('*').each(function(){
-				if (jQuery(this).attr('src') == "https://player.vimeo.com/api/player.js")
+				if (jQuery(this).attr('src') == "http://player.vimeo.com/api/player.js")
 				   loadit = false;
 			});
 			if (loadit)
@@ -620,7 +620,7 @@ jQuery.extend(true,_R, {
 			break;
 			case "youtube":
 				httpprefix = "https";	
-			/*	if (location.protocol === 'https:')	
+			/*	if (location.protocol === 'http:')	
 					httpprefix = "https";		*/
 				if (videocontrols=="none") {					
 			 		vida = vida.replace("controls=1","controls=0");
@@ -655,7 +655,7 @@ jQuery.extend(true,_R, {
 			break;
 
 			case "vimeo":
-			//	if (location.protocol === 'https:')
+			//	if (location.protocol === 'http:')
 				httpprefix = "https";	
 
 				_nc.data('videomarkup','<iframe src="'+httpprefix+'://player.vimeo.com/video/'+vimeoid+'?'+vida+'" webkitallowfullscreen mozallowfullscreen allowfullscreen width="100%" height="100%" style="opacity:0;visibility:hidden;width:100%;height:100%"></iframe>');

@@ -71,13 +71,13 @@ class TP_twitter {
     $twitter = new \TwitterPhp\RestApi($this->consumer_key,$this->consumer_secret,$this->access_token,$this->access_token_secret);
     /*
      * Connect as application
-     * https://dev.twitter.com/docs/auth/application-only-auth
+     * http://dev.twitter.com/docs/auth/application-only-auth
      */
     $connection = $twitter->connectAsApplication();
 
     /*
      * Collection of the most recent Tweets posted by the user indicated by the screen_name, without replies
-     * https://dev.twitter.com/docs/api/1.1/get/statuses/user_timeline
+     * http://dev.twitter.com/docs/api/1.1/get/statuses/user_timeline
      */
     $tweets = $connection->get('/statuses/user_timeline',array('screen_name' => $twitter_account,  'entities' => 1, 'trim_user' => 0 , 'exclude_replies' => 'true'));
     //var_dump($tweets);

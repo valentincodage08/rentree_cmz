@@ -46,7 +46,7 @@ class Application extends Base
     /**
      * Get Bearer token
      *
-     * @link https://dev.twitter.com/docs/auth/application-only-auth
+     * @link http://dev.twitter.com/docs/auth/application-only-auth
      *
      * @throws \TwitterPhp\RestApiException
      * @return string

@@ -165,7 +165,7 @@ include('../include/connexiondbval.php');
 
                           while ($data = $mailgroupeexpress->fetch()) {
                           ?>
-                          <input type="checkbox" name="groupe[<?=$data['team_name']?>]"><?=$data['team_name']?></input><br>
+                          <input type="checkbox" name="groupe[<?=$data['team_name']?>]">&nbsp;&nbsp;<?=$data['team_name']?></input><br>
                           <?php } $mailgroupeexpress->closeCursor(); ?>
                           <input type="text" class="form-control" name="objet" placeholder="Sujet"><br>
                           <textarea class="form-control" name="message" placeholder="Message"></textarea><br>
@@ -232,7 +232,7 @@ include('../include/connexiondbval.php');
 
         while ($data = $mailgroupewarrior->fetch()) {
         ?>
-        <input type="checkbox" name="groupe[<?=$data['team_name']?>]"><?=$data['team_name']?></input><br>
+        <input type="checkbox" name="groupe[<?=$data['team_name']?>]">&nbsp;&nbsp;<?=$data['team_name']?></input><br>
         <?php } $mailgroupewarrior->closeCursor(); ?>
         <input type="text" class="form-control" name="objet" placeholder="Sujet"><br>
         <textarea class="form-control" name="message" placeholder="Message"></textarea><br>
@@ -309,7 +309,7 @@ include('../include/connexiondbval.php');
 
         while ($data = $mailgroupecuisine->fetch()) {
         ?>
-        <input type="checkbox" name="groupe[<?=$data['team_name']?>]"><?=$data['team_name']?></input><br>
+        <input type="checkbox" name="groupe[<?=$data['team_name']?>]">&nbsp;&nbsp;<?=$data['team_name']?></input><br>
         <?php } $mailgroupecuisine->closeCursor(); ?>
         <input type="text" class="form-control" name="objet" placeholder="Sujet"><br>
         <textarea class="form-control" name="message" placeholder="Message"></textarea><br>
@@ -428,7 +428,7 @@ include('../include/connexiondbval.php');
 
         while ($data = $mailgroupebasket->fetch()) {
         ?>
-        <input type="checkbox" name="groupe[<?=$data['team_name']?>]"><?=$data['team_name']?></input><br>
+        <input type="checkbox" name="groupe[<?=$data['team_name']?>]">&nbsp;&nbsp;<?=$data['team_name']?></input><br>
         <?php } $mailgroupebasket->closeCursor(); ?>
         <input type="text" class="form-control" name="objet" placeholder="Sujet"><br>
         <textarea class="form-control" name="message" placeholder="Message"></textarea><br>
@@ -534,7 +534,7 @@ include('../include/connexiondbval.php');
 
         while ($data = $mailgroupeescape->fetch()) {
         ?>
-        <input type="checkbox" name="groupe[<?=$data['team_name']?>]"><?=$data['team_name']?></input><br>
+        <input type="checkbox" name="groupe[<?=$data['team_name']?>]">&nbsp;&nbsp;<?=$data['team_name']?></input><br>
         <?php } $mailgroupeescape->closeCursor(); ?>
         <input type="text" class="form-control" name="objet" placeholder="Sujet"><br>
         <textarea class="form-control" name="message" placeholder="Message"></textarea><br>

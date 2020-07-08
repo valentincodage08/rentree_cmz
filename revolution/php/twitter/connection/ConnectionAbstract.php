@@ -11,12 +11,12 @@ abstract class Base
     /**
      * Url for Twitter api
      */
-    const TWITTER_API_URL = 'https://api.twitter.com';
+    const TWITTER_API_URL = 'http://api.twitter.com';
 
     /**
      * Twitter URL that authenticates bearer tokens
      */
-    const TWITTER_API_AUTH_URL = 'https://api.twitter.com/oauth2/token/';
+    const TWITTER_API_AUTH_URL = 'http://api.twitter.com/oauth2/token/';
 
     /**
      * Version of Twitter api
@@ -50,7 +50,7 @@ abstract class Base
     /**
      * Do GET request to Twitter api
      *
-     * @link https://dev.twitter.com/docs/api/1.1
+     * @link http://dev.twitter.com/docs/api/1.1
      *
      * @param $resource
      * @param array $parameters
@@ -72,7 +72,7 @@ abstract class Base
     /**
      * Do POST request to Twitter api
      *
-     * @link https://dev.twitter.com/docs/api/1.1
+     * @link http://dev.twitter.com/docs/api/1.1
      *
      * @param $resource
      * @param array $parameters

@@ -2,7 +2,7 @@
 /**
  * @author   Albert Kozlowski <vojant@gmail.com>
  * @license  MIT License
- * @link     https://github.com/vojant/Twitter-php
+ * @link     http://github.com/vojant/Twitter-php
  */
 
 namespace TwitterPhp;
@@ -66,7 +66,7 @@ class RestApi
 
     /**
      * Connect to Twitter API as application.
-     * @link https://dev.twitter.com/docs/auth/application-only-auth
+     * @link http://dev.twitter.com/docs/auth/application-only-auth
      *
      * @return \TwitterPhp\Connection\Application
      */
@@ -77,7 +77,7 @@ class RestApi
 
     /**
      * Connect to Twitter API as user.
-     * @link https://dev.twitter.com/docs/auth/oauth/single-user-with-examples
+     * @link http://dev.twitter.com/docs/auth/oauth/single-user-with-examples
      *
      * @return \TwitterPhp\Connection\User
      * @throws TwitterRestApiException

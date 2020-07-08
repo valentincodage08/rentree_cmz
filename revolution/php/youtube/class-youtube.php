@@ -49,7 +49,7 @@ class TP_youtube {
 	 */
 	public function get_playlists(){
 		//call the API and decode the response
-		$url = "https://www.googleapis.com/youtube/v3/playlists?part=snippet&channelId=".$this->channel_id."&key=".$this->api_key;
+		$url = "http://www.googleapis.com/youtube/v3/playlists?part=snippet&channelId=".$this->channel_id."&key=".$this->api_key;
 		$rsp = json_decode(file_get_contents($url));
 		return $rsp->items;
 	}
@@ -63,7 +63,7 @@ class TP_youtube {
 	 */
 	public function show_playlist_videos($playlist_id,$count=50){
 		//call the API and decode the response
-		$url = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=".$playlist_id."&maxResults=".$count."&fields=items%2Fsnippet&key=".$this->api_key;
+		$url = "http://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=".$playlist_id."&maxResults=".$count."&fields=items%2Fsnippet&key=".$this->api_key;
 		$rsp = json_decode(file_get_contents($url));
 		return $rsp->items;
 	}
@@ -76,7 +76,7 @@ class TP_youtube {
 	 */
 	public function show_channel_videos($count=50){
 		//call the API and decode the response
-		$url = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=".$this->channel_id."&maxResults=".$count."&key=".$this->api_key."&order=date";
+		$url = "http://www.googleapis.com/youtube/v3/search?part=snippet&channelId=".$this->channel_id."&maxResults=".$count."&key=".$this->api_key."&order=date";
 		echo $url;
 		$rsp = json_decode(file_get_contents($url));
 		return $rsp->items;

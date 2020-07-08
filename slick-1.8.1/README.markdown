@@ -1,21 +1,21 @@
 slick
 -------
 
-[1]: <https://github.com/kenwheeler/slick>
+[1]: <http://github.com/kenwheeler/slick>
 
 _the last carousel you'll ever need_
 
 #### Demo
 
-[https://kenwheeler.github.io/slick](https://kenwheeler.github.io/slick/)
+[http://kenwheeler.github.io/slick](http://kenwheeler.github.io/slick/)
 
 #### CDN
 
 To start working with Slick right away, there's a couple of CDN choices availabile
 to serve the files as close, and fast as possible to your users:
 
-- https://cdnjs.com/libraries/slick-carousel
-- https://www.jsdelivr.com/projects/jquery.slick
+- http://cdnjs.com/libraries/slick-carousel
+- http://www.jsdelivr.com/projects/jquery.slick
 
 ##### Example using jsDelivr
 
@@ -231,9 +231,9 @@ Method | Argument | Description
 `slickUnfilter` | | Removes applied filter
 `slickGetOption` | option : string(option name) | Gets an option value.
 `slickSetOption` | change an option, `refresh` is always `boolean` and will update UI changes...
- | `option, value, refresh` | change a [single `option`](https://github.com/kenwheeler/slick#settings) to given `value`; `refresh` is optional.
+ | `option, value, refresh` | change a [single `option`](http://github.com/kenwheeler/slick#settings) to given `value`; `refresh` is optional.
  | `"responsive", [{ breakpoint: n, settings: {} }, ... ], refresh` | change or add [whole sets of responsive options](#responsive-option-example)
- | `{ option: value, option: value, ... }, refresh` | change  [multiple `option`s](https://github.com/kenwheeler/slick#settings) to corresponding `value`s.
+ | `{ option: value, option: value, ... }, refresh` | change  [multiple `option`s](http://github.com/kenwheeler/slick#settings) to corresponding `value`s.
 
 
 #### Example

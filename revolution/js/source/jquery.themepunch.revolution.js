@@ -2528,7 +2528,7 @@ var waitForCurrentImages = function(nextli,opt,callback) {
 			if (jQuery.now()-opt.youtubestarttime>5000 && opt.youtubewarning!=true) {
 				opt.youtubewarning = true;
 				var txt = "YouTube Api Could not be loaded !";
-				if (location.protocol === 'https:') txt = txt + " Please Check and Renew SSL Certificate !";
+				if (location.protocol === 'http:') txt = txt + " Please Check and Renew SSL Certificate !";
 				console.error(txt); 
 				opt.c.append('<div style="position:absolute;top:50%;width:100%;color:#e74c3c;  font-size:16px; text-align:center; padding:15px;background:#000; display:block;"><strong>'+txt+'</strong></div>')				 				
 			}
@@ -2539,7 +2539,7 @@ var waitForCurrentImages = function(nextli,opt,callback) {
 			if (jQuery.now()-opt.vimeostarttime>5000 && opt.vimeowarning!=true) {
 				opt.vimeowarning= true;
 				var txt = "Vimeo Api Could not be loaded !";
-				if (location.protocol === 'https:') txt = txt + " Please Check and Renew SSL Certificate !";
+				if (location.protocol === 'http:') txt = txt + " Please Check and Renew SSL Certificate !";
 				console.error(txt); 
 				opt.c.append('<div style="position:absolute;top:50%;width:100%;color:#e74c3c;  font-size:16px; text-align:center; padding:15px;background:#000; display:block;"><strong>'+txt+'</strong></div>')				 
 			}

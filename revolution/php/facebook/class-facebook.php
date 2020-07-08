@@ -38,7 +38,7 @@ class TP_facebook {
 	 */
 	public function get_photo_sets($user_id,$item_count=10){
 		//photoset params
-		$url = "https://graph.facebook.com/$user_id/albums";
+		$url = "http://graph.facebook.com/$user_id/albums";
 		$photo_sets_list = json_decode(file_get_contents($url));
 		return $photo_sets_list->data;
 	}
@@ -51,7 +51,7 @@ class TP_facebook {
 	 * @param    int       $item_count 	number of photos to pull
 	 */
 	public function get_photo_set_photos($photo_set_id,$item_count=10){
-		$url = "https://graph.facebook.com/v2.0/$photo_set_id?fields=photos";
+		$url = "http://graph.facebook.com/v2.0/$photo_set_id?fields=photos";
 		$photo_set_photos = json_decode(file_get_contents($url));
 		return $photo_set_photos->photos->data;
 	}
@@ -64,8 +64,8 @@ class TP_facebook {
 	 * @param    int       $item_count 	number of itmes to pull
 	 */
 	public function get_post_feed($user,$app_id,$app_secret,$item_count=10){
-		$oauth = file_get_contents("https://graph.facebook.com/oauth/access_token?type=client_cred&client_id=".$app_id."&client_secret=".$app_secret);
-		$url = "https://graph.facebook.com/$user/feed?".$oauth."&fields=id,from,message,picture,link,name,icon,privacy,type,status_type,object_id,application,created_time,updated_time,is_hidden,is_expired,likes,comments";
+		$oauth = file_get_contents("http://graph.facebook.com/oauth/access_token?type=client_cred&client_id=".$app_id."&client_secret=".$app_secret);
+		$url = "http://graph.facebook.com/$user/feed?".$oauth."&fields=id,from,message,picture,link,name,icon,privacy,type,status_type,object_id,application,created_time,updated_time,is_hidden,is_expired,likes,comments";
 		$feed = json_decode(file_get_contents($url));
 		return $feed->data;
 	}

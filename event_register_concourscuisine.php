@@ -86,6 +86,7 @@
             <option value="INSPE">Institut national Supérieur du Professorat et de l’Education (INSPÉ)</option>
             <option value="EGC">Ecole de gestion et de commerce (EGC)</option>
             <option value="SIMPLON">Ecole Simplon</option>
+            <option value="SCBS">SCBS – Y Schools</option>
             <option value="ISCEE">Institut supérieur de comptabilité et d’économie des entreprises (ISCEE)</option>
             <option value="ESNAM">Ecole supérieure nationale des Arts de la marionnettes (ESNAM)</option>
             <option value="IFSI">Institut de formation en soins infirmiers (IFSI)</option>
@@ -98,7 +99,7 @@
             <option value="LJBC">Lycée JB Clément</option>
             <option value="LPB">Lycée Pierre Bayle</option>
             <option value="LSV">Lycée Simone Veil</option>
-            <option value="SCBS">SCBS – Y Schools</option>
+            <option value="IFAG">IFAG</option>
           </select></center>
       </div>
       <div class="contact-form row w-100 justify-content-center">

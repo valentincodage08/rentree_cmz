@@ -10,6 +10,9 @@ $msg = !empty($_POST['message']) ? $_POST['message'] : NULL;
 $destinataire = "valentin_mg08@hotmail.fr";
 $message = "Nom : $nom \rPrénom : $prenom \rEtablissement : $etablissement \rAdresse mail : $mail \rTéléphone : $tel \r\rMessage : \r$msg";
 
+$objet = utf8_decode($objet);
+$message = utf8_decode($message);
+
 if(!empty($nom) AND !empty($prenom) AND !empty($etablissement) AND !empty($mail) AND !empty($tel) AND !empty($objet) AND !empty($msg) AND !empty($destinataire) AND !empty($message) ) {
 
     mail($destinataire, $objet, $message);

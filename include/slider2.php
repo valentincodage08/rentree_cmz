@@ -349,14 +349,14 @@
             {?>
                 <a class="tp-caption  slidhover  tp-resizeme" href="#videoaccueil"
                 id="slide-32-layer-20" data-x="['center','center','center','center']"
-                data-hoffset="['450','450','370','100']" data-y="['bottom','bottom','bottom','bottom']"
-                data-voffset="['100','100','200','30']" data-fontsize="['30','30','26','22']"
+                data-hoffset="['450','450','370','160']" data-y="['bottom','bottom','bottom','bottom']"
+                data-voffset="['100','100','200','86']" data-fontsize="['30','30','26','22']"
                 data-lineheight="['28','28','23','23']" data-width="270" data-height="none" data-whitespace="nowrap"
                 data-type="text" data-actions='' data-responsive_offset="on"
                 data-frames='[{"delay":1400,"speed":1500,"frame":"0","from":"sX:2;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;fb:0px;","style":"c:rgba(255,255,255,1);"}]'
                 data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]"
                 data-paddingright="[0,0,0,0]" data-marginbottom="[-80,-80,-80,-10]" data-paddingleft="[0,0,0,0]"
-                style="z-index: 22; min-width: 270px; max-width: 270px; white-space: nowrap; font-size: 30px; line-height: 28px; font-weight: 300; color: rgba(39,49,127,1);font-family:Oswald;cursor:pointer;text-decoration: none;">Accéder<br />au 
+                style="z-index: 22; min-width: 270px; max-width: 270px; white-space: nowrap; font-size: 30px; line-height: 28px; font-weight: 300; color: red;font-family:Oswald;cursor:pointer;text-decoration: none;">Accéder<br />au 
                 QCM</a>
             <?php } ?>
 

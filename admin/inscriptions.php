@@ -67,32 +67,72 @@ include('../include/connexiondbval.php');
                     <div class="alert alert-secondary" role="alert">
                     <center>Les mails ont bien été envoyés les équipes sélectionnées de l'Escape Game.</center>
                     </div>
+        <?php } elseif($_GET['success'] == 'delete') { ?>
+                    <div class="alert alert-secondary" role="alert">
+                    <center>La suppression d'équipe(s) a bien été validée.</center>
+                    </div>
         <?php }} ?>
 
     <div class="container-fluid mt-5">
         <div class="row justify-content-center">
             <ul class="nav nav-tabs" id="register" role="tablist">
+              <?php 
+                $nbequipesexpress = $bdd->prepare("SELECT * FROM rdeexpressregister");
+                $nbequipesexpress->execute();
+                $nb = $nbequipesexpress->rowCount();
+              ?>
                 <li class="nav-item mr-2">
-                    <a class="nav-link active" data-toggle="tab" href="#express" role="tab" aria-controls="home" aria-selected="true"><p class="tabgalerietxt inscripdesktop">Carolo Express</p></a>
+                    <a class="nav-link active" data-toggle="tab" href="#express" role="tab" aria-controls="home" aria-selected="true"><p class="tabgalerietxt inscripdesktop">Carolo Express(<?= $nb ?>)</p></a>
                 </li>
+              <?php 
+                $nbequipesexpress->closeCursor();
+                $nbequipeswarrior = $bdd->prepare("SELECT * FROM rdewarriorregister");
+                $nbequipeswarrior->execute();
+                $nb2 = $nbequipeswarrior->rowCount();
+              ?>
                 <li class="nav-item mr-2">
-                    <a class="nav-link" data-toggle="tab" href="#warrior" role="tab" aria-controls="home" aria-selected="true"><p class="tabgalerietxt inscripdesktop">Carolo Warrior</p></a>
+                    <a class="nav-link" data-toggle="tab" href="#warrior" role="tab" aria-controls="home" aria-selected="true"><p class="tabgalerietxt inscripdesktop">Carolo Warrior(<?= $nb2 ?>)</p></a>
                 </li>
+              <?php 
+                $nbequipeswarrior->closeCursor();
+                $nbequipescuisine = $bdd->prepare("SELECT * FROM rdecuisineregister");
+                $nbequipescuisine->execute();
+                $nb3 = $nbequipescuisine->rowCount();
+              ?>
                 <li class="nav-item mr-2">
-                    <a class="nav-link" data-toggle="tab" href="#cuisine" role="tab" aria-controls="home" aria-selected="true"><p class="tabgalerietxt inscripdesktop">Concours de Cuisine</p></a>
+                    <a class="nav-link" data-toggle="tab" href="#cuisine" role="tab" aria-controls="home" aria-selected="true"><p class="tabgalerietxt inscripdesktop">Concours de Cuisine(<?= $nb3 ?>)</p></a>
                 </li>
+              <?php 
+                $nbequipescuisine->closeCursor();
+                $nbequipesgraille = $bdd->prepare("SELECT * FROM rdepiqueniquetregister");
+                $nbequipesgraille->execute();
+                $nb4 = $nbequipesgraille->rowCount();
+              ?>
                 <li class="nav-item mr-2">
-                    <a class="nav-link" data-toggle="tab" href="#piquenique" role="tab" aria-controls="home" aria-selected="true"><p class="tabgalerietxt inscripdesktop">Pique-Nique</p></a>
+                    <a class="nav-link" data-toggle="tab" href="#piquenique" role="tab" aria-controls="home" aria-selected="true"><p class="tabgalerietxt inscripdesktop">Pique-Nique(<?= $nb4 ?>)</p></a>
                 </li>
+              <?php 
+                $nbequipesgraille->closeCursor();
+                $nbequipesbasket = $bdd->prepare("SELECT * FROM rdebasketregister");
+                $nbequipesbasket->execute();
+                $nb5 = $nbequipesbasket->rowCount();
+              ?>
                 <li class="nav-item mr-2">
-                    <a class="nav-link" data-toggle="tab" href="#basket" role="tab" aria-controls="home" aria-selected="true"><p class="tabgalerietxt inscripdesktop">Tournoi de Basket</p></a>
+                    <a class="nav-link" data-toggle="tab" href="#basket" role="tab" aria-controls="home" aria-selected="true"><p class="tabgalerietxt inscripdesktop">Tournoi de Basket(<?= $nb5 ?>)</p></a>
                 </li>
                 <!-- <li class="nav-item mr-2">
                     <a class="nav-link" data-toggle="tab" href="#bal" role="tab" aria-controls="home" aria-selected="true"><p class="tabgalerietxt inscripdesktop">Bal de la rentrée</p></a>
                 </li> -->
+              <?php 
+                $nbequipesbasket->closeCursor();
+                $nbequipesescape = $bdd->prepare("SELECT * FROM rdeescaperegister");
+                $nbequipesescape->execute();
+                $nb6 = $nbequipesescape->rowCount();
+              ?>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#escape" role="tab" aria-controls="home" aria-selected="true"><p class="tabgalerietxt inscripdesktop">Escape Game</p></a>
+                    <a class="nav-link" data-toggle="tab" href="#escape" role="tab" aria-controls="home" aria-selected="true"><p class="tabgalerietxt inscripdesktop">Escape Game(<?= $nb6 ?>)</p></a>
                 </li>
+                <?php $nbequipesescape->closeCursor(); ?>
                 <li class="nav-item mr-2">
                     <a class="nav-link" data-toggle="tab" href="#resultexpress" role="tab" aria-controls="home" aria-selected="true"><p class="tabgalerietxt inscripdesktop">Resultats qcm</p></a>
                 </li>
@@ -172,6 +212,25 @@ include('../include/connexiondbval.php');
                         </form>
                         <br>
                       </center>
+                      <br>
+                      <br>
+                      <center>
+                        <h3>Suppression d'équipe(s)</h3>
+                        <form action="deleteteams/express.php" method="post">
+
+                          <?php
+                          $deletegroupeexpress = $bdd->prepare("SELECT team_name FROM rdeexpressregister");
+                          $deletegroupeexpress->execute();
+
+                          while ($data = $deletegroupeexpress->fetch()) {
+                          ?>
+                          <input type="checkbox" name="groupe[<?=$data['team_name']?>]">&nbsp;&nbsp;<?=$data['team_name']?></input><br>
+                          <?php } $deletegroupeexpress->closeCursor(); ?>
+                          <br>
+                          <input class="submit-btn" type="submit" value="Supprimer">
+                        </form>
+                        <br>
+                      </center>
                     </div>
 
   <!-- Warrior -->
@@ -236,6 +295,25 @@ include('../include/connexiondbval.php');
         <input type="text" class="form-control" name="objet" placeholder="Sujet"><br>
         <textarea class="form-control" name="message" placeholder="Message"></textarea><br>
         <input class="submit-btn" type="submit" value="Envoyer">
+      </form>
+      <br>
+    </center>
+    <br>
+    <br>
+    <center>
+      <h3>Suppression d'équipe(s)</h3>
+      <form action="deleteteams/warrior.php" method="post">
+
+        <?php
+        $deletegroupewarrior = $bdd->prepare("SELECT team_name FROM rdewarriorregister");
+        $deletegroupewarrior->execute();
+
+        while ($data = $deletegroupewarrior->fetch()) {
+        ?>
+        <input type="checkbox" name="groupe[<?=$data['team_name']?>]">&nbsp;&nbsp;<?=$data['team_name']?></input><br>
+        <?php } $deletegroupewarrior->closeCursor(); ?>
+        <br>
+        <input class="submit-btn" type="submit" value="Supprimer">
       </form>
       <br>
     </center>
@@ -316,6 +394,25 @@ include('../include/connexiondbval.php');
       </form>
       <br>
     </center>
+    <br>
+    <br>
+    <center>
+      <h3>Suppression d'équipe(s)</h3>
+      <form action="deleteteams/cuisine.php" method="post">
+
+        <?php
+        $deletegroupecuisine = $bdd->prepare("SELECT team_name FROM rdecuisineregister");
+        $deletegroupecuisine->execute();
+
+        while ($data = $deletegroupecuisine->fetch()) {
+        ?>
+        <input type="checkbox" name="groupe[<?=$data['team_name']?>]">&nbsp;&nbsp;<?=$data['team_name']?></input><br>
+        <?php } $deletegroupecuisine->closeCursor(); ?>
+        <br>
+        <input class="submit-btn" type="submit" value="Supprimer">
+      </form>
+      <br>
+    </center>
   </div>
 
   <!-- Pique-nique -->
@@ -332,6 +429,7 @@ include('../include/connexiondbval.php');
     <table class="table">
       <thead class="thead-light">
         <tr>
+          <th scope="col">N°</th>
           <th scope="col">Etablissement</th>
           <th scope="col">Nom</th>
           <th scope="col">Prénom</th>
@@ -343,16 +441,17 @@ include('../include/connexiondbval.php');
 
 
 
-            <?php while ($donnees = $req4->fetch())
-        { ?>
-        <tr>
-          <th scope="row"><?= $donnees['establishment']; ?></th>
-          <td><?= $donnees['name']; ?></td>
-          <td><?= $donnees['first_name']; ?></td>
-          <td><?= $donnees['phone']; ?></td>
-          <td><?= $donnees['mail']; ?></td>
-        </tr>
-        <?php
+            <?php $i = 1;
+            while ($donnees = $req4->fetch()) { ?>
+            <tr>
+              <th scope="row"><?= $i; ?></th>
+              <td><?= $donnees['establishment']; ?></td>
+              <td><?= $donnees['name']; ?></td>
+              <td><?= $donnees['first_name']; ?></td>
+              <td><?= $donnees['phone']; ?></td>
+              <td><?= $donnees['mail']; ?></td>
+            </tr>
+            <?php $i++;
             }
             $req4->closecursor();
         ?>
@@ -432,6 +531,25 @@ include('../include/connexiondbval.php');
         <input type="text" class="form-control" name="objet" placeholder="Sujet"><br>
         <textarea class="form-control" name="message" placeholder="Message"></textarea><br>
         <input class="submit-btn" type="submit" value="Envoyer">
+      </form>
+      <br>
+    </center>
+    <br>
+    <br>
+    <center>
+      <h3>Suppression d'équipe(s)</h3>
+      <form action="deleteteams/basket.php" method="post">
+
+        <?php
+        $deletegroupebasket = $bdd->prepare("SELECT team_name FROM rdebasketregister");
+        $deletegroupebasket->execute();
+
+        while ($data = $deletegroupebasket->fetch()) {
+        ?>
+        <input type="checkbox" name="groupe[<?=$data['team_name']?>]">&nbsp;&nbsp;<?=$data['team_name']?></input><br>
+        <?php } $deletegroupebasket->closeCursor(); ?>
+        <br>
+        <input class="submit-btn" type="submit" value="Supprimer">
       </form>
       <br>
     </center>
@@ -538,6 +656,25 @@ include('../include/connexiondbval.php');
         <input type="text" class="form-control" name="objet" placeholder="Sujet"><br>
         <textarea class="form-control" name="message" placeholder="Message"></textarea><br>
         <input class="submit-btn" type="submit" value="Envoyer">
+      </form>
+      <br>
+    </center>
+    <br>
+    <br>
+    <center>
+      <h3>Suppression d'équipe(s)</h3>
+      <form action="deleteteams/escape.php" method="post">
+
+        <?php
+        $deletegroupeescape = $bdd->prepare("SELECT team_name FROM rdeescaperegister");
+        $deletegroupeescape->execute();
+
+        while ($data = $deletegroupeescape->fetch()) {
+        ?>
+        <input type="checkbox" name="groupe[<?=$data['team_name']?>]">&nbsp;&nbsp;<?=$data['team_name']?></input><br>
+        <?php } $deletegroupeescape->closeCursor(); ?>
+        <br>
+        <input class="submit-btn" type="submit" value="Supprimer">
       </form>
       <br>
     </center>

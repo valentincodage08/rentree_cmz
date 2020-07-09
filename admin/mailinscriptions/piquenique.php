@@ -4,6 +4,9 @@ include('../../include/connexiondbval.php');
 $objet = !empty($_POST['objet']) ? $_POST['objet'] : NULL;
 $message = !empty($_POST['message']) ? $_POST['message'] : NULL;
 
+$objet = utf8_decode($objet);
+$message = utf8_decode($message);
+
     $req4 = $bdd->prepare("SELECT * FROM rdepiqueniquetregister");
     $req4->execute(); 
 

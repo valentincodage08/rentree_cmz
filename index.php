@@ -46,10 +46,6 @@
 
   <!-- <div class="animindex bg-azur-light height-big text-center">Animation Slider</div> -->
   <?php include('include/slider2.php'); ?>
-  <!-- <br><br>
-  <center><a href="qcm/index.php" class="btn btn-primary w-100"><h4>Accès au QCM Carolo Express</h4></a></center>
-
- -->
 
   <!-- Texte RDE / Evenements -->
 

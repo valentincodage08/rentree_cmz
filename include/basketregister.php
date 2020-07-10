@@ -49,7 +49,7 @@ $mail7 = !empty($_POST['mail7']) ? $_POST['mail7'] : NULL;
 $verifmail7 = !empty($_POST['verifmail7']) ? $_POST['verifmail7'] : NULL;
 
 $objetinscrip = utf8_decode("Confirmation d'inscription au Tournoi de Basket");
-$messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription est bien prise en compte pour le Tournoi de Basket. A très bientôt !");
+$messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription est bien prise en compte pour le Tournoi de Basket. A très bientôt ! <br><br>Merci de ne pas répondre à ce mail, pour toute demande merci de vous rendre sur la page contact du site prévue à cet effet.");
 
     if($mail1 == $verifmail1 && $mail2 == $verifmail2 && $mail3 == $verifmail3 && $mail4 == $verifmail4 && $mail5 == $verifmail5) {
 

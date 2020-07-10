@@ -441,10 +441,10 @@ include('../include/connexiondbval.php');
 
 
 
-            <?php $i = 1;
+            <?php $i = 1; 
             while ($donnees = $req4->fetch()) { ?>
             <tr>
-              <th scope="row"><?= $i; ?></th>
+              <th scope="row"><?= $i ?></th>
               <td><?= $donnees['establishment']; ?></td>
               <td><?= $donnees['name']; ?></td>
               <td><?= $donnees['first_name']; ?></td>

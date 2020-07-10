@@ -39,7 +39,7 @@ $mail5 = !empty($_POST['mail5']) ? $_POST['mail5'] : NULL;
 $verifmail5 = !empty($_POST['verifmail5']) ? $_POST['verifmail5'] : NULL;
 
 $objetinscrip = utf8_decode("Confirmation d'inscription au Carolo Express");
-$messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription est bien prise en compte pour le Carolo Express. A très bientôt !");
+$messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription est bien prise en compte pour le Carolo Express. A très bientôt ! <br><br>Merci de ne pas répondre à ce mail, pour toute demande merci de vous rendre sur la page contact du site prévue à cet effet.");
 
 
 

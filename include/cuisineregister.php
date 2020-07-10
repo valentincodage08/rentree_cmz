@@ -19,7 +19,7 @@ $mail2 = !empty($_POST['mail2']) ? $_POST['mail2'] : NULL;
 $verifmail2 = !empty($_POST['verifmail2']) ? $_POST['verifmail2'] : NULL;
 
 $objetinscrip = utf8_decode("Confirmation d'inscription au Concours de Cuisine");
-$messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription est bien prise en compte pour le Concours de Cuisine. A très bientôt !");
+$messageinscrip = utf8_decode("Bonjour l'équipe $teamname, votre inscription est bien prise en compte pour le Concours de Cuisine. A très bientôt ! <br><br>Merci de ne pas répondre à ce mail, pour toute demande merci de vous rendre sur la page contact du site prévue à cet effet.");
 
         $req = $bdd->prepare("SELECT * FROM rdecuisineregister");
         $req->execute();

@@ -8,7 +8,7 @@ $tel = !empty($_POST['tel']) ? $_POST['tel'] : NULL;
 $objet = !empty($_POST['objet']) ? $_POST['objet'] : NULL;
 $msg = !empty($_POST['message']) ? $_POST['message'] : NULL;
 $destinataire = "valentin_mg08@hotmail.fr";
-$message = "Nom : $nom \rPrénom : $prenom \rEtablissement : $etablissement \rAdresse mail : $mail \rTéléphone : $tel \r\rMessage : \r$msg";
+$message = "Nom : $nom \rPrénom : $prenom \rEtablissement : $etablissement \rAdresse mail : $mail \rTéléphone : $tel \r\rMessage : \r$msg <br><br>Merci de ne pas répondre à ce mail, pour toute demande merci de vous rendre sur la page contact du site prévue à cet effet.";
 
 $objet = utf8_decode($objet);
 $message = utf8_decode($message);

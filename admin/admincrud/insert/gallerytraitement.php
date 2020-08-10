@@ -30,16 +30,16 @@ if(!isset($erreur)) //S'il n'y a pas d'erreur, on upload
      $fichier = preg_replace('/([^.a-z0-9]+)/i', '-', $fichier);
      if(move_uploaded_file($_FILES['avatar']['tmp_name'], $dossier . $fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
      {
-        $newimage = $bdd->prepare("INSERT INTO rdegallery (image_link, alt, category)
-        VALUES ( :avatar, :alt, :category)");
+     $newimage = $bdd->prepare("INSERT INTO rdegallery (image_link, alt, category)
+     VALUES ( :avatar, :alt, :category)");
 
-        $newimage->execute(array(
-        ':avatar' => $fichier,
-        ':alt' => $alt,
-        ':category' => $category
-        ));
+     $newimage->execute(array(
+     ':avatar' => $fichier,
+     ':alt' => $alt,
+     ':category' => $category
+     ));
 
-        header("Location: ../../admin.php?success=galleryadd");
+     header("Location: ../../admin.php?success=galleryadd");
 
      }
      else //Sinon (la fonction renvoie FALSE).

@@ -52,13 +52,13 @@
         <center><a href="events_warrior.php" class="btn btn-secondary mb-2">Voir plus</a></center>
       </div>
     </div>
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
+    <!-- <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
         <img class="img-fluid" src="img/capture_rde/cuisine.png">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Concours De Cuisine</p>
         <center><a href="events_cuisine.php" class="btn btn-secondary mb-2">Voir plus</a></center>
       </div>
-    </div>
+    </div> -->
     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
         <img class="img-fluid" src="img/event_2019/7.png">
@@ -73,7 +73,7 @@
         <center><a href="events_basket.php" class="btn btn-secondary mb-2">Voir plus</a></center>
       </div>
     </div>
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
+    <!-- <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
         <img class="img-fluid" src="img/gacolor.png">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Gacolor</p>
@@ -94,7 +94,7 @@
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Escape Game</p>
         <center><a href="events_escape.php" class="btn btn-secondary mb-2">Voir plus</a></center>
       </div>
-    </div>
+    </div> -->
   </div>
 
 <!-- parallax -->

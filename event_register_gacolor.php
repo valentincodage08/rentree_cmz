@@ -32,13 +32,13 @@
 
     <!-- Formulaire -->
 
-    <section class="get-in-touch container-lg">
+    <!-- <section class="get-in-touch container-lg">
         <h1 class="title">Inscription Gacolor</h1><br>
         <p class="policep text-center">Pour opérer votre inscription, merci de cliquer sur le lien ci-dessous & de
             vous laisser guider :<br><br>
         <center><a href="https://www.helloasso.com/associations/gacolor/evenements/gacolor-2020" target="_blank"><button class="btn btn-secondary"><h2 class="policetitres-proginc" style="color: var(--color-yellow-middle); margin-bottom: 0!important;">S'inscrire</h2></button></a></center>
            
-    </section>
+    </section> -->
 
     <!-- Parrallaxe -->
     <?php include('include/parallax.php')?>

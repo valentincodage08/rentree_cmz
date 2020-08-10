@@ -49,11 +49,53 @@ $team = $_SESSION['team'];
                     aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
 			<?php } elseif ($count==1) {?>
 				<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                    aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+                    aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 6.25%"></div>
 			<?php } elseif ($count==2) {?>
 				<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 12.5%"></div>
+			<?php } elseif ($count==3) {?>
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 18.75%"></div>
+            <?php } elseif ($count==4) {?>
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
+            <?php } elseif ($count==5) {?>
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 31.25%"></div>
+            <?php } elseif ($count==6) {?>
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 37.5%"></div>
+            <?php } elseif ($count==7) {?>
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 43.75%"></div>
+            <?php } elseif ($count==8) {?>
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+            <?php } elseif ($count==9) {?>
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 56.25%"></div>
+            <?php } elseif ($count==10) {?>
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 62.5%"></div>
+            <?php } elseif ($count==11) {?>
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 68.75%"></div>
+            <?php } elseif ($count==12) {?>
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+            <?php } elseif ($count==13) {?>
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 81.25%"></div>
+            <?php } elseif ($count==14) {?>
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 87.5%"></div>
+            <?php } elseif ($count==15) {?>
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 93.75%"></div>
+            <?php } elseif ($count==16) {?>
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
                     aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
-			<?php } ?>
+            <?php } ?>
             </div>
             <?php if(isset($_GET['success'])) {
                 if($_GET['success'] == 1) {?>
@@ -77,15 +119,71 @@ $team = $_SESSION['team'];
                 <h2 class="h4">
 					<?php if($count==0) {?>
 						<span class="badge badge-pill badge-dark" style="padding: .5rem 1rem;">
-							Étape <span class="cStep">0</span> / <span class="mStep">2</span>
+							Étape <span class="cStep">0</span> / <span class="mStep">16</span>
 						</span>
 					<?php } elseif ($count==1) {?>
 						<span class="badge badge-pill badge-dark" style="padding: .5rem 1rem;">
-                        	Étape <span class="cStep">1</span> / <span class="mStep">2</span>
+                        	Étape <span class="cStep">1</span> / <span class="mStep">16</span>
 						</span>
-					<?php } elseif ($count==2) {?>
+                    <?php } elseif ($count==2) {?>
+						<span class="badge badge-pill badge-dark" style="padding: .5rem 1rem;">
+                        	Étape <span class="cStep">2</span> / <span class="mStep">16</span>
+						</span>
+                    <?php } elseif ($count==3) {?>
+						<span class="badge badge-pill badge-dark" style="padding: .5rem 1rem;">
+                        	Étape <span class="cStep">3</span> / <span class="mStep">16</span>
+						</span>
+                    <?php } elseif ($count==4) {?>
+						<span class="badge badge-pill badge-dark" style="padding: .5rem 1rem;">
+                        	Étape <span class="cStep">4</span> / <span class="mStep">16</span>
+						</span>
+                    <?php } elseif ($count==5) {?>
+						<span class="badge badge-pill badge-dark" style="padding: .5rem 1rem;">
+                        	Étape <span class="cStep">5</span> / <span class="mStep">16</span>
+						</span>
+                    <?php } elseif ($count==6) {?>
+						<span class="badge badge-pill badge-dark" style="padding: .5rem 1rem;">
+                        	Étape <span class="cStep">6</span> / <span class="mStep">16</span>
+						</span>
+                    <?php } elseif ($count==7) {?>
+						<span class="badge badge-pill badge-dark" style="padding: .5rem 1rem;">
+                        	Étape <span class="cStep">7</span> / <span class="mStep">16</span>
+						</span>
+                    <?php } elseif ($count==8) {?>
+						<span class="badge badge-pill badge-dark" style="padding: .5rem 1rem;">
+                        	Étape <span class="cStep">8</span> / <span class="mStep">16</span>
+						</span>
+                    <?php } elseif ($count==9) {?>
+						<span class="badge badge-pill badge-dark" style="padding: .5rem 1rem;">
+                        	Étape <span class="cStep">9</span> / <span class="mStep">16</span>
+						</span>
+                    <?php } elseif ($count==10) {?>
+						<span class="badge badge-pill badge-dark" style="padding: .5rem 1rem;">
+                        	Étape <span class="cStep">10</span> / <span class="mStep">16</span>
+						</span>
+                    <?php } elseif ($count==11) {?>
+						<span class="badge badge-pill badge-dark" style="padding: .5rem 1rem;">
+                        	Étape <span class="cStep">11</span> / <span class="mStep">16</span>
+						</span>
+                    <?php } elseif ($count==12) {?>
+						<span class="badge badge-pill badge-dark" style="padding: .5rem 1rem;">
+                        	Étape <span class="cStep">12</span> / <span class="mStep">16</span>
+						</span>
+                    <?php } elseif ($count==13) {?>
+						<span class="badge badge-pill badge-dark" style="padding: .5rem 1rem;">
+                        	Étape <span class="cStep">13</span> / <span class="mStep">16</span>
+						</span>
+                    <?php } elseif ($count==14) {?>
+						<span class="badge badge-pill badge-dark" style="padding: .5rem 1rem;">
+                        	Étape <span class="cStep">14</span> / <span class="mStep">16</span>
+						</span>
+                    <?php } elseif ($count==15) {?>
+						<span class="badge badge-pill badge-dark" style="padding: .5rem 1rem;">
+                        	Étape <span class="cStep">15</span> / <span class="mStep">16</span>
+						</span>
+					<?php } elseif ($count==16) {?>
 						<center><span class="badge badge-pill badge-dark" style="padding: .5rem 1rem;">
-                        	Étape <span class="cStep">2</span> / <span class="mStep">2</span>
+                        	Étape <span class="cStep">16</span> / <span class="mStep">16</span>
 						</span></center>
 						<center>Félicitations, vous avez terminé le QCM ! Rendez-vous à la Place Ducale pour la fin de l'épreuve.</center>	
 					<?php } ?>
@@ -257,24 +355,24 @@ var Markers = [
         is_enabled: true,
 
 	},
-	<?php } else{} ?>
+	<?php } ?>
 
 	<?php 
-	$lieux = $bdd->prepare("SELECT * FROM pointsqcm WHERE emplacement='mediatheque' AND team_name='$team'");
+	$lieux = $bdd->prepare("SELECT * FROM pointsqcm WHERE emplacement='hotel de ville' AND team_name='$team'");
 	$lieux->execute();
 	$count = $lieux->rowCount();
 
 	if($count==0){?>
     {
 
-        lat: 49.774575,
+        lat: 49.760273,
 
-        lng: 4.724282,
+        lng: 4.719268,
 
         is_enabled: true,
 
 	},
-    <?php } else{} ?>
+    <?php } ?>
 
     {
 

@@ -147,7 +147,7 @@
 
                 <script>
                 var now = new Date();
-                var dates = [new Date("2020-09-03T05:59:59Z"), new Date("2020-09-20T21:30:00Z"), new Date("2020-09-24T07:30:00Z"), new Date("2020-09-27T16:00:00Z")];
+                var dates = [new Date("2020-09-07T05:59:59Z"), new Date("2020-09-20T21:30:00Z"), new Date("2020-09-24T07:30:00Z"), new Date("2020-09-24T18:00:00Z")];
                 var txts = ["Début des<br>inscriptions dans:<br>", "Fin des<br>inscriptions dans:<br>", "Début des<br>événements dans:<br>", "A l'année prochaine!<br>"];
                 var idx = 0;
 
@@ -186,7 +186,7 @@
                 data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]"
                 data-paddingright="[0,0,0,0]" data-marginbottom="[100,100,100,200]" data-paddingleft="[0,0,0,0]"
                 style="z-index: 9; white-space: nowrap;  line-height: 90px; font-weight: 200; color: rgba(39,49,127,1);font-family:Bangers;letter-spacing:+5px;">
-                <div style="transform: rotateZ(-3deg);">Du jeudi 24 au dimanche 27 septembre</div></div>
+                <div style="transform: rotateZ(-3deg);">Jeudi 24 Septembre</div></div>
 
             <!-- LAYER NR. 8 -->
             <!-- <a class="tp-caption slidhover  tp-resizeme" href="#evenements"

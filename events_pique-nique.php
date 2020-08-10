@@ -25,6 +25,13 @@
     <div class="header_img">
     <div class="d-flex align-items-end justify-content-center" style="height:250px;"><h2 class="header_text display-2 text-white"><strong>Pique-Nique</strong></h2></div>
   </div>
+
+  <!-- port du masque obligatoire -->
+
+  <div class="container mask-1">
+    <div class="mask mt-3 w-100 d-flex justify-content-between"><p class="mask_text mx-auto my-auto w-50 m-2 text-center text-danger">Pour la sécurité de tous, le port du masque est obligatoire ainsi que le respect des gestes barrières</p><img class="m-2 mask_img" style="" src="img/mask.webp"></div>
+  </div>
+
     <div class="row w-100 text-center">
       <div class="col-xl-6 col-mb-10 order-xl-3 order-4 p-0 m-auto">
         <img class="evenementimg evenementimg-1 img-fluid d-block" src="img/event_2019/5.jpg">
@@ -87,7 +94,7 @@
     <?php include('include/parallax.php')?>
 
     <div class="row my-4 justify-content-center align-items-center w-100 mx-auto">
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
+    <!-- <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
         <img class="img-fluid" src="img/escape.jpg">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Escape Game</p>
@@ -96,7 +103,7 @@
         <center><a href="events_escape.php" class="btn btn-secondary mb-2">Détails</a></center>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
         <img class="img-fluid" src="img/capture_rde/warrior_11.png">
@@ -121,7 +128,7 @@
         <center><a href="events_express.php" class="btn btn-secondary mb-2">Détails</a></center>
       </div>
     </div>
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
+    <!-- <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
         <img class="img-fluid" src="img/bal.png">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Bal de rentrée</p>
@@ -144,7 +151,7 @@
         <hr class="style-five">
         <center><a href="events_cuisine.php" class="btn btn-secondary mb-2">Détails</a></center>
       </div>
-    </div>
+    </div> -->
   </div>
 
     <?php include('include/footer.php')?>

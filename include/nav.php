@@ -118,12 +118,12 @@ $(function(){
               <a class="dropdown-item" href="event.php">Tous les évènements</a>
               <a class="dropdown-item" href="events_express.php">Carolo Express</a>
               <a class="dropdown-item" href="events_warrior.php">Carolo Warrior</a>
-              <a class="dropdown-item" href="events_cuisine.php">Concours de Cuisine</a>
+              <!-- <a class="dropdown-item" href="events_cuisine.php">Concours de Cuisine</a> -->
               <a class="dropdown-item" href="events_pique-nique.php">Pique-Nique</a>
               <a class="dropdown-item" href="events_basket.php">Tournoi de basket</a>
-              <a class="dropdown-item" href="events_gacolor.php">Gacolor</a>
+              <!-- <a class="dropdown-item" href="events_gacolor.php">Gacolor</a>
               <a class="dropdown-item" href="events_bal.php">Bal de rentrée</a>
-              <a class="dropdown-item" href="events_escape.php">Escape game</a>
+              <a class="dropdown-item" href="events_escape.php">Escape game</a> -->
             </div>
           </li>
         </ul>
@@ -141,11 +141,11 @@ $(function(){
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="event_register_caroloexpress.php">Carolo Express</a>
               <a class="dropdown-item" href="event_register_carolowarrior.php">Carolo Warrior</a>
-              <a class="dropdown-item" href="event_register_concourscuisine.php">Concours de Cuisine</a>
+              <!-- <a class="dropdown-item" href="event_register_concourscuisine.php">Concours de Cuisine</a> -->
               <a class="dropdown-item" href="event_register_piquenique.php">Pique-Nique</a>
               <a class="dropdown-item" href="event_register_basket.php">Tournoi de basket</a>
-              <a class="dropdown-item" href="event_register_gacolor.php">Gacolor</a>
-              <a class="dropdown-item" href="event_register_escape.php">Escape game</a>
+              <!-- <a class="dropdown-item" href="event_register_gacolor.php">Gacolor</a>
+              <a class="dropdown-item" href="event_register_escape.php">Escape game</a> -->
             </div>
           </li>
         </ul>

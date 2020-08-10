@@ -26,7 +26,7 @@ $p = $_GET['team'];
 
 
     <div class="mb-5"></div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center container mx-auto">
             <div class="tab-content" id="myTabContent">
 
             <!-- Mairie -->
@@ -37,9 +37,9 @@ $p = $_GET['team'];
                         <th scope="col">Emplacement</th>
                         <th scope="col">Points pour l'emplacement</th>
                         <th scope="col">Heure de validation</th>
-                        <th scope="col">Réponse donnée</th>
-                        <th scope="col">Photo challenge</th>
-                        <th scope="col">télécharger la photo</th>
+                        <th scope="col">Réponse</th>
+                        <!-- <th scope="col">Photo challenge</th>
+                        <th scope="col">Télécharger la photo</th> -->
                         </tr>
                     </thead>
                     <tbody>
@@ -57,10 +57,10 @@ $p = $_GET['team'];
                         <td><?= $donnees['points']; ?></td>
                         <td><?= $donnees['heure']; ?></td>
                         <td><?= $donnees['reponse_name']; ?></td>
-                        <?php if(!empty($donnees['image'])){?>
-                        <td><img src="../qcm/img_user/<?= $donnees['image']; ?>" style="width:auto;height:200px;"></td>
-                        <td><center><a class="btn btn-primary" href="../qcm/img_user/<?= $donnees['image']; ?>" download="<?= $donnees['image']; ?>">Télécharger</a></center></td><?php } ?>
-                        </tr>
+                        <!-- 
+                        <td><img src="../qcm/img_user/" style="width:auto;height:200px;"></td>
+                        <td><center><a class="btn btn-primary" href="../qcm/img_user/" download="">Télécharger</a></center></td>
+                        </tr> -->
                         <?php
                             } $req->closecursor();
                         ?>

@@ -12,9 +12,6 @@
 
 <!-- Fonts CSS -->
 <link href="https://fonts.googleapis.com/css?family=Bangers|Days+One&display=swap" rel="stylesheet">
-<!-- Slick pour carousel partenaires -->
-<link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css" />
-<link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css" />
 
 <!-- FontAwesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
@@ -46,6 +43,12 @@
 
   <!-- <div class="animindex bg-azur-light height-big text-center">Animation Slider</div> -->
   <?php include('include/slider2.php'); ?>
+
+  <!-- port du masque obligatoire -->
+
+  <div class="container mask-1">
+    <div class="mask mt-3 w-100 d-flex justify-content-between"><p class="mask_text mx-auto my-auto w-50 m-2 text-center text-danger">Pour la sécurité de tous, le port du masque est obligatoire ainsi que le respect des gestes barrières</p><img class="m-2 mask_img" style="" src="img/mask.webp"></div>
+  </div>
 
   <!-- Texte RDE / Evenements -->
 
@@ -182,39 +185,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
   </script>
-  <!-- Scripts required carousel slick -->
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
-  <!-- Script carousel slick -->
-  <script type="text/javascript">
-    $('.slicktest').slick({
-      centerMode: true,
-      centerPadding: '60px',
-      slidesToShow: 3,
-      responsive: [{
-          breakpoint: 768,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 3
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 1
-          }
-        }
-      ]
-
-    });
-  </script>
-
 <script>
   $(document).ready(function() {
   //Preloader

@@ -57,17 +57,11 @@
       <div class="col-xl-6 my-auto col-mb-10 order-1 p-0 m-0">
         <h2 class="text-center policetitres">Quésaco ?</h2>
         <div class="w-75 mx-auto"><center>
-          <p class="policep indentp">A l'initiative de la Ville de Charleville-Mézières et en partenariat avec les associations étudiantes, la « Rentrée des étudiants » vise à souhaiter la bienvenue à tous les étudiants du territoire. Cet événement est une occasion festive, ludique, sportive et culturelle de découvrir la ville, de rencontrer d'autres étudiants issus des différents établissements du territoire et d’affirmer notre ambition étudiante. </p>
+          <p class="policep indentp">A l'initiative de la Ville de Charleville-Mézières et en partenariat avec les associations étudiantes, la Rentrée des étudiants vise à souhaiter la bienvenue à tous les étudiants du territoire. Cet événement est une occasion festive, ludique, sportive et culturelle de découvrir la ville, de rencontrer d'autres étudiants issus des différents établissements du territoire et d’affirmer notre ambition étudiante. </p>
 
-          <p class="policep indentp">Ainsi, nous vous proposons cette année un format XXL de la <strong>Rentrée des étudiants</strong> (l’édition 2020 se tiendra en effet sur 4 jours) avec les incontournables Carolo Express et Carolo Warrior mais également le Tournoi de basket inter-établissements, un Escape Game, le Bal de Rentrée, la fameuse et attendue GACOLOR et bien d’autres manifestations !</p>
+          <p class="policep indentp">Ainsi, nous vous proposons cette année une <strong>Rentrée des étudiants</strong> avec les incontournables Carolo Express, Carolo Warrior mais également la présence de structures gonflables sur la Place Ducale, la remise des chéquiers étudiant…</p>
 
-          <p class="policep indentp"><strong>La Rentrée des étudiants</strong> est une manifestation ouverte à tous les étudiants du territoire mais également à tous ceux qui veulent fêter les étudiants en participant notamment à la Gacolor, événement coloré et grand public.</p>
-
-          <p class="policep indentp"><strong>La Rentrée des étudiants</strong> est ouverte à tous les étudiants du territoire de Charleville-Mézières jusqu’à Sedan. </p>
-
-          <p class="policep indentp">Tous les étudiants qui entament ou poursuivent une formation post bac sur le territoire peuvent participer à cette manifestation. Aussi, quelques manifestations sont ouvertes au grand public. Ce faisant, n’hésitez pas à vous renseigner.</p>
-        
-          <p class="policep indentp mb-5 mb-xl-0">La Rentrée des étudiants 2020 aura lieu du jeudi 24 septembre jusqu’au dimanche 27 septembre. Durant 4 jours, la Ville de Charleville-Mézières sera 100% festive, 100% étudiante !</p></center>
+          <p class="policep indentp">Charleville-Mézières sera 100% festive, 100% étudiante !</p>
         </div>
       </div>
       <div class="col-xl-6 col-mb-10 order-2 p-0 m-auto">
@@ -85,13 +79,11 @@
         <h2 class="text-center policetitres">Qui ? Quand ? Où ?</h2>
         <div class="w-75 mx-auto"><center>
           <p class="policep indentp"><strong>La Rentrée des étudiants</strong> est proposée à tous les étudiants du territoire de Charleville-Mézières jusqu’à Sedan. </p>
-          <p class="policep indentp">Tous les étudiants qui entament ou poursuivent une formation post bac sur le territoire peuvent participer à cette manifestation. Par ailleurs, quelques manifestations sont ouvertes au grand public. Ce faisant, n’hésitez pas à vous renseigner.</p>
+          <p class="policep indentp">Tous les étudiants qui entament ou poursuivent une formation post bac sur le territoire peuvent participer à cette manifestation.</p>
 
-          <p class="policep indentp"><strong>La Rentrée des étudiants</strong> 2020 aura lieu du jeudi 24 septembre avec pour commencer le « Carolo Express » jusqu’au dimanche 27 septembre avec la fameuse GACOLOR. </p>
+          <p class="policep indentp"><strong>La Rentrée des étudiants</strong> 2020 aura lieu le jeudi 24 septembre avec, pour commencer, le « Carolo Express ».</p>
 
-          <p class="policep indentp">Toutes les manifestations de l’édition 2020 se dérouleront à Charleville-Mézières dans l’hyper-centre, à la Plaine du Mont Olympe, au Campus Sup Ardenne et dans toute la ville.</p>
-
-          <p class="policep indentp  mb-5 mb-xl-0">Durant 4 jours, la Ville de Charleville-Mézières sera 100% festive, 100% étudiante !</p></center>
+          <p class="policep indentp  mb-5 mb-xl-0">Toutes les manifestations de l’édition 2020 se dérouleront à Charleville-Mézières mais également à la Plaine du Mont Olympe (voir programme).</p></center>
         </div>
       </div>
     </div>
@@ -110,13 +102,7 @@
         style=" font-size:1.8em;width:80%;">
         <div class="carousel-inner">
       
-          <?php $req = $bdd->prepare("SELECT * FROM rdetestimonials");
-          $req->execute();
-      
-          while( $testimonial = $req->fetch() ) { ?>
-      
                 <div class="carousel-item mt-4 mb-4">
-                  <!-- Ici chaque item -->
                   <div class="row d-flex my-auto">
                     <div class="col-2"></div>
                     <div class="col-2 carou_img my-auto">
@@ -124,12 +110,127 @@
                     </div>
                     <div class="col-1"></div>
                     <div class="testi-text col-md-12 col-lg-5 align-self-center" style="width:90%;border-width:2px;border-style:solid;border-color:#0C276A;background-color:rgba(255,255,255, .7);border-radius:5px;box-shadow: 0px 0px 30px #2337D2 inset;">
-                    <center><p class="testiresponsif"><strong><?= $testimonial['first_name'] ?></strong></p><p class="testiresponsifmini mb-2"><?= $testimonial['text'] ?></p></center>
+                    <center><p class="testiresponsif"><strong>Isa Brangantini – GACO / IUT RCC</strong></p><p class="testiresponsifmini mb-2">« Carolo express, Carolo Warrio, concours de cuisine, activités sur la Place Ducale… j’ai participé à toutes les activités. C’était une journée TOP, j’en garde de très bons souvenirs et encourage tous les étudiants à y participer nombreux. »</p></center>
                     </div>
                   </div>
                 </div>
-      
-          <?php } $req->closeCursor(); ?>
+
+                <div class="carousel-item mt-4 mb-4">
+                  <div class="row d-flex my-auto">
+                    <div class="col-2"></div>
+                    <div class="col-2 carou_img my-auto">
+                      <img src="img/logoetudiantcarolo_bleu.png" class="d-block w-100 my-auto">
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="testi-text col-md-12 col-lg-5 align-self-center" style="width:90%;border-width:2px;border-style:solid;border-color:#0C276A;background-color:rgba(255,255,255, .7);border-radius:5px;box-shadow: 0px 0px 30px #2337D2 inset;">
+                    <center><p class="testiresponsif"><strong>Hicham Kallouche – GACO / IUT RCC</strong></p><p class="testiresponsifmini mb-2">« Evénement bien organisé avec de nombreuses activités toute la journée. Il y en a pour tous les goûts ! »</p></center>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item mt-4 mb-4">
+                  <div class="row d-flex my-auto">
+                    <div class="col-2"></div>
+                    <div class="col-2 carou_img my-auto">
+                      <img src="img/logoetudiantcarolo_bleu.png" class="d-block w-100 my-auto">
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="testi-text col-md-12 col-lg-5 align-self-center" style="width:90%;border-width:2px;border-style:solid;border-color:#0C276A;background-color:rgba(255,255,255, .7);border-radius:5px;box-shadow: 0px 0px 30px #2337D2 inset;">
+                    <center><p class="testiresponsif"><strong>Adeline Guillaume – INSPE / URCA</strong></p><p class="testiresponsifmini mb-2">« J’étais dans l’équipe de l’INSPE pour le Carolo Warrior. Bel après-midi autour de nombreuses activités sportives ! Pas nécessaire d’être un grand ou une grande sportive. C’est à la portée de toutes et tous. Ce faisant, n’hésitez pas.. Foncez, inscrivez-vous ! »</p></center>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item mt-4 mb-4">
+                  <div class="row d-flex my-auto">
+                    <div class="col-2"></div>
+                    <div class="col-2 carou_img my-auto">
+                      <img src="img/logoetudiantcarolo_bleu.png" class="d-block w-100 my-auto">
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="testi-text col-md-12 col-lg-5 align-self-center" style="width:90%;border-width:2px;border-style:solid;border-color:#0C276A;background-color:rgba(255,255,255, .7);border-radius:5px;box-shadow: 0px 0px 30px #2337D2 inset;">
+                    <center><p class="testiresponsif"><strong>Sami Benbekkou – GACO / IUT RCC</strong></p><p class="testiresponsifmini mb-2">« Très belle journée qui a, je pense, fédéré les étudiants entre eux ! Aussi, la remise de récompenses et la signature de la charte « Etudiants Responsables » sont des excellentes initiatives. »</p></center>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item mt-4 mb-4">
+                  <div class="row d-flex my-auto">
+                    <div class="col-2"></div>
+                    <div class="col-2 carou_img my-auto">
+                      <img src="img/logoetudiantcarolo_bleu.png" class="d-block w-100 my-auto">
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="testi-text col-md-12 col-lg-5 align-self-center" style="width:90%;border-width:2px;border-style:solid;border-color:#0C276A;background-color:rgba(255,255,255, .7);border-radius:5px;box-shadow: 0px 0px 30px #2337D2 inset;">
+                    <center><p class="testiresponsif"><strong>Flavie MASSE – GACO / IUT RCC</strong></p><p class="testiresponsifmini mb-2">« J’ai vraiment apprécié toutes les manifestations de la Rentrée des étudiants. Je n’ai pas participé aux activités mais j’ai soutenu les équipes de mon école toute la journée. Le pique-nique collectif le midi est vraiment sympa ainsi que la remise du chéquier étudiant à tout le monde. Bonne organisation. A refaire sans hésitation… »</p></center>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item mt-4 mb-4">
+                  <div class="row d-flex my-auto">
+                    <div class="col-2"></div>
+                    <div class="col-2 carou_img my-auto">
+                      <img src="img/logoetudiantcarolo_bleu.png" class="d-block w-100 my-auto">
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="testi-text col-md-12 col-lg-5 align-self-center" style="width:90%;border-width:2px;border-style:solid;border-color:#0C276A;background-color:rgba(255,255,255, .7);border-radius:5px;box-shadow: 0px 0px 30px #2337D2 inset;">
+                    <center><p class="testiresponsif"><strong>Pierre Mabilat – HSE / IUT RCC</strong></p><p class="testiresponsifmini mb-2">« J’ai participé au Carolo Warrior ! Cette activité a permis d’intégrer tous les nouveaux étudiants de Charleville-Mézières, de créer de la cohésion entre les filières tout en apportant une touche de compétition. Je recommande à tous les étudiants de participer à la Rentrée des étudiants »</p></center>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item mt-4 mb-4">
+                  <div class="row d-flex my-auto">
+                    <div class="col-2"></div>
+                    <div class="col-2 carou_img my-auto">
+                      <img src="img/logoetudiantcarolo_bleu.png" class="d-block w-100 my-auto">
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="testi-text col-md-12 col-lg-5 align-self-center" style="width:90%;border-width:2px;border-style:solid;border-color:#0C276A;background-color:rgba(255,255,255, .7);border-radius:5px;box-shadow: 0px 0px 30px #2337D2 inset;">
+                    <center><p class="testiresponsif"><strong>Sofiane Brahimi – HSE / IUT RCC</strong></p><p class="testiresponsifmini mb-2">« Je recommande à 100% ! J’ai, pour ma part, participé au Carolo Express. Cette activité de groupe m’a permis de découvrir de nombreux lieux que je ne connaissais pas. Cette journée est une bonne occasion de brasser les étudiants entre eux. Si c’était à refaire, ce serait un grand OUI pour moi ! »</p></center>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item mt-4 mb-4">
+                  <div class="row d-flex my-auto">
+                    <div class="col-2"></div>
+                    <div class="col-2 carou_img my-auto">
+                      <img src="img/logoetudiantcarolo_bleu.png" class="d-block w-100 my-auto">
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="testi-text col-md-12 col-lg-5 align-self-center" style="width:90%;border-width:2px;border-style:solid;border-color:#0C276A;background-color:rgba(255,255,255, .7);border-radius:5px;box-shadow: 0px 0px 30px #2337D2 inset;">
+                    <center><p class="testiresponsif"><strong>Jeannelle COUTEL – HSE / IUT RCC</strong></p><p class="testiresponsifmini mb-2">« J’étais de toutes les épreuves. Très belle initiatives de la Ville d’organiser cette journée dédiée aux étudiants. C’est une belle occasion de rencontrer d’autres étudiants, de découvrir la ville autrement, de gagner des lots sympa pour les meilleurs et tout simplement montrer que Charleville-Mézières est aussi une ville étudiante dynamique »</p></center>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item mt-4 mb-4">
+                  <div class="row d-flex my-auto">
+                    <div class="col-2"></div>
+                    <div class="col-2 carou_img my-auto">
+                      <img src="img/logoetudiantcarolo_bleu.png" class="d-block w-100 my-auto">
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="testi-text col-md-12 col-lg-5 align-self-center" style="width:90%;border-width:2px;border-style:solid;border-color:#0C276A;background-color:rgba(255,255,255, .7);border-radius:5px;box-shadow: 0px 0px 30px #2337D2 inset;">
+                    <center><p class="testiresponsif"><strong>Clément Vautrin – GACO / IUT RCC</strong></p><p class="testiresponsifmini mb-2">« J’ai adoré le Carolo Warrior, un raid sportif à faire en groupe ! C’est accessible à tous. Donc, il ne faut pas hésiter et y participer ! »</p></center>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item mt-4 mb-4">
+                  <div class="row d-flex my-auto">
+                    <div class="col-2"></div>
+                    <div class="col-2 carou_img my-auto">
+                      <img src="img/logoetudiantcarolo_bleu.png" class="d-block w-100 my-auto">
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="testi-text col-md-12 col-lg-5 align-self-center" style="width:90%;border-width:2px;border-style:solid;border-color:#0C276A;background-color:rgba(255,255,255, .7);border-radius:5px;box-shadow: 0px 0px 30px #2337D2 inset;">
+                    <center><p class="testiresponsif"><strong>Alicia Vilvandre – HSE / IUT RCC</strong></p><p class="testiresponsifmini mb-2">« Je me suis inscrite au Concours de cuisine. Très sympa de jouer à la Top chef au milieu de la Place Ducale. Bonne ambiance et la journée m’a permis de rencontrer d’autres étudiants que je ne connaissais pas encore »</p></center>
+                    </div>
+                  </div>
+                </div>
 
           <a class="carousel-control-prev" href="#carouseltestimonials" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

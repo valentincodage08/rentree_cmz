@@ -374,24 +374,243 @@ var Markers = [
 	},
     <?php } ?>
 
+    <?php 
+	$lieux = $bdd->prepare("SELECT * FROM pointsqcm WHERE emplacement='grand marionnettiste' AND team_name='$team'");
+	$lieux->execute();
+	$count = $lieux->rowCount();
+
+	if($count==0){?>
     {
 
-        lat: 49.681247,
+        lat: 49.772551,
 
-        lng: 4.655524,
+        lng: 4.721591,
 
         is_enabled: true,
 
-    },
+	},
+    <?php } ?>
+
+    <?php 
+	$lieux = $bdd->prepare("SELECT * FROM pointsqcm WHERE emplacement='tour du roy' AND team_name='$team'");
+	$lieux->execute();
+	$count = $lieux->rowCount();
+
+	if($count==0){?>
     {
 
-        lat: 49.430910,
+        lat: 49.760958,
 
-        lng: 4.843672,
+        lng: 4.713752,
 
         is_enabled: true,
 
-    },
+	},
+    <?php } ?>
+
+    <?php 
+	$lieux = $bdd->prepare("SELECT * FROM pointsqcm WHERE emplacement='theatre municipal' AND team_name='$team'");
+	$lieux->execute();
+	$count = $lieux->rowCount();
+
+	if($count==0){?>
+    {
+
+        lat: 49.773315,
+
+        lng: 4.718862,
+
+        is_enabled: true,
+
+	},
+    <?php } ?>
+
+    <?php 
+	$lieux = $bdd->prepare("SELECT * FROM pointsqcm WHERE emplacement='basilique notre-dame d esperance' AND team_name='$team'");
+	$lieux->execute();
+	$count = $lieux->rowCount();
+
+	if($count==0){?>
+    {
+
+        lat: 49.761090,
+
+        lng: 4.715662,
+
+        is_enabled: true,
+
+	},
+    <?php } ?>
+
+    <?php 
+	$lieux = $bdd->prepare("SELECT * FROM pointsqcm WHERE emplacement='la macerienne' AND team_name='$team'");
+	$lieux->execute();
+	$count = $lieux->rowCount();
+
+	if($count==0){?>
+    {
+
+        lat: 49.762488,
+
+        lng: 4.713150,
+
+        is_enabled: true,
+
+	},
+    <?php } ?>
+
+    <?php 
+	$lieux = $bdd->prepare("SELECT * FROM pointsqcm WHERE emplacement='le square mialeret' AND team_name='$team'");
+	$lieux->execute();
+	$count = $lieux->rowCount();
+
+	if($count==0){?>
+    {
+
+        lat: 49.762450,
+
+        lng: 4.715311,
+
+        is_enabled: true,
+
+	},
+    <?php } ?>
+
+    <?php 
+	$lieux = $bdd->prepare("SELECT * FROM pointsqcm WHERE emplacement='rue du moulin' AND team_name='$team'");
+	$lieux->execute();
+	$count = $lieux->rowCount();
+
+	if($count==0){?>
+    {
+
+        lat: 49.774697,
+
+        lng: 4.721434,
+
+        is_enabled: true,
+
+	},
+    <?php } ?>
+
+    <?php 
+	$lieux = $bdd->prepare("SELECT * FROM pointsqcm WHERE emplacement='fresque ophelie' AND team_name='$team'");
+	$lieux->execute();
+	$count = $lieux->rowCount();
+
+	if($count==0){?>
+    {
+
+        lat: 49.773713,
+
+        lng: 4.716480,
+
+        is_enabled: true,
+
+	},
+    <?php } ?>
+
+    <?php 
+	$lieux = $bdd->prepare("SELECT * FROM pointsqcm WHERE emplacement='musee de l ardenne' AND team_name='$team'");
+	$lieux->execute();
+	$count = $lieux->rowCount();
+
+	if($count==0){?>
+    {
+
+        lat: 49.773196,
+
+        lng: 4.721242,
+
+        is_enabled: true,
+
+	},
+    <?php } ?>
+
+    <?php 
+	$lieux = $bdd->prepare("SELECT * FROM pointsqcm WHERE emplacement='maison des ailleurs' AND team_name='$team'");
+	$lieux->execute();
+	$count = $lieux->rowCount();
+
+	if($count==0){?>
+    {
+
+        lat: 49.775674,
+
+        lng: 4.721509,
+
+        is_enabled: true,
+
+	},
+    <?php } ?>
+
+    <?php 
+	$lieux = $bdd->prepare("SELECT * FROM pointsqcm WHERE emplacement='rue beregovoy' AND team_name='$team'");
+	$lieux->execute();
+	$count = $lieux->rowCount();
+
+	if($count==0){?>
+    {
+
+        lat: 49.771074,
+
+        lng: 4.719511,
+
+        is_enabled: true,
+
+	},
+    <?php } ?>
+
+    <?php 
+	$lieux = $bdd->prepare("SELECT * FROM pointsqcm WHERE emplacement='mediatheque voyelles' AND team_name='$team'");
+	$lieux->execute();
+	$count = $lieux->rowCount();
+
+	if($count==0){?>
+    {
+
+        lat: 49.774584,
+
+        lng: 4.724119,
+
+        is_enabled: true,
+
+	},
+    <?php } ?>
+
+    <?php 
+	$lieux = $bdd->prepare("SELECT * FROM pointsqcm WHERE emplacement='esnam' AND team_name='$team'");
+	$lieux->execute();
+	$count = $lieux->rowCount();
+
+	if($count==0){?>
+    {
+
+        lat: 49.769842,
+
+        lng: 4.720470,
+
+        is_enabled: true,
+
+	},
+    <?php } ?>
+
+    <?php 
+	$lieux = $bdd->prepare("SELECT * FROM pointsqcm WHERE emplacement='atelier d henri louis' AND team_name='$team'");
+	$lieux->execute();
+	$count = $lieux->rowCount();
+
+	if($count==0){?>
+    {
+
+        lat: 49.763095,
+
+        lng: 4.719830,
+
+        is_enabled: true,
+
+	},
+    <?php } ?>
 
 ];
 

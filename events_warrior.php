@@ -39,23 +39,22 @@
       <div class="col-xl-6 col-mb-10 order-xl-4 order-3 my-auto p-0 m-0">
         <h2 class="text-center policetitres mt-5">Carolo Warrior</h2>
         <div class="w-75 mx-auto">
-          <p class="policep">Le Carolo Warrior est un relai sportif & ludique composé de nombreuses activités. Il s’agit d’une course à obstacles avec de nombreuses activités.
-
-Pour participer au Carolo Warrior, il est nécessaire de composer une équipe de 8 personnes.
+          <p class="policep mb-5">Le Carolo Warrior est une épreuve composée de plusieurs activités sportives & ludiques. Pour participer au Carolo Warrior, il est nécessaire de composer une équipe de 8 personnes.
                     <br><br>
-                    Le raid sera composé :
+                    Cette épreuve sera composée des activités suivantes :
                     <br><br>
-                    - Traversée en canoë/kayak<br>
-                    - Slackline<br>
-                    - Lancers francs de basket<br>
-                    - Tir<br>
-                    - Pédalo de cirque<br>
-                    - Pétanque<br>
-                    - Parcours sac à patates<br>
-                    - Blind Foot<br>
-                    - Course<br>
-                    - Activité aquatique<br>
-                    - Course & passage d’obstacles<p class="mb-5">
+                    - Tir à l’arc<br>
+                    - Lutte<br>
+                    - Tir sportif<br>
+                    - Badminton<br>
+                    - Ultimate<br>
+                    - Mini Tennis<br>
+                    - Parcours motricité<br>
+                    - Handisport<br>
+                    - Teqball<br>
+                    - Ufolep<br>
+                    - Avi-Fit<br>
+                    - Cross-Training</p>
         </div>
       </div>
     </div>
@@ -73,13 +72,13 @@ Pour participer au Carolo Warrior, il est nécessaire de composer une équipe de
             <div class="col-xs-6 col-md-6 col-lg-6 col-xl-4 mb-1">
                 <div class="rounded-circle mx-auto my-auto">
                     <p class="text-center policetitres-proginc color-yellow-light">Horaires</p>
-                    <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong><span id="compteur4">14</span>h / <span id="compteur5">20</span>h</strong></p>
+                    <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong><span id="compteur4">14</span>h / <span id="compteur5">17</span>h<span id="compteur6">30</span></strong></p>
                 </div>
             </div>
             <div class="col-xs-6 col-md-6 col-lg-6 col-xl-4 mb-1">
                 <div class="rounded-circle mx-auto my-auto">
                     <p class="text-center policetitres-proginc color-yellow-light">Lieu</p>
-                    <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong>Charleville-Mézières</strong></p>
+                    <p class="text-center policep" style="color: white; font-size: 1.5rem;"><strong>Plaine du Mont Olympe</strong></p>
                 </div>
             </div>
         </div>
@@ -118,14 +117,14 @@ Pour participer au Carolo Warrior, il est nécessaire de composer une équipe de
         <center><a href="events_pique-nique.php" class="btn btn-secondary mb-2">Détails</a></center>
       </div>
     </div>
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
+    <!-- <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
         <img class="img-fluid" src="img/capture_rde/basket_2.png">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Tournoi de Basket</p>
         <hr class="style-five">
         <center><a href="events_basket.php" class="btn btn-secondary mb-2">Détails</a></center>
       </div>
-    </div>
+    </div> -->
     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
         <img class="img-fluid" src="img/capture_rde/express_3.png">
@@ -219,7 +218,15 @@ var waypoint4 = new Waypoint({
 var waypoint5 = new Waypoint({
   element: document.getElementById('compteur5'),
   handler: function(direction) {
-        gocompteur(0,20,1,"compteur5");
+        gocompteur(0,17,1,"compteur5");
+  },
+  offset: 'bottom-in-view' 
+})
+
+var waypoint6 = new Waypoint({
+  element: document.getElementById('compteur6'),
+  handler: function(direction) {
+        gocompteur(0,30,1.6,"compteur6");
   },
   offset: 'bottom-in-view' 
 })

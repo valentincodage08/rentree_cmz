@@ -66,13 +66,13 @@
         <center><a href="events_pique-nique.php" class="btn btn-secondary mb-2">Voir plus</a></center>
       </div>
     </div>
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
+    <!-- <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
         <img class="img-fluid" src="img/capture_rde/basket_2.png">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Tournoi de Basket</p>
         <center><a href="events_basket.php" class="btn btn-secondary mb-2">Voir plus</a></center>
       </div>
-    </div>
+    </div> -->
     <!-- <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
         <img class="img-fluid" src="img/gacolor.png">
@@ -140,7 +140,7 @@
             while( $img = $req->fetch() ) {
             
             ?>
-              <div class="col-lg-3 col-md-6 col-sm-6 photogallerytabs mx-auto my-auto mb-3 hovergallery"><a href="img/<?= $img['image_link'] ?>" rel="prettyPhoto[Gallery]" data-lightbox="mygallery"><img src="img/<?= $img['image_link'] ?>" class="img-fluid mt-1" alt="<?= $img['alt'] ?>"></a></div>
+              <div class="col-lg-3 col-md-6 col-sm-6 photogallerytabs mx-auto my-auto mb-3 hovergallery"><a href="img/event_2019/<?= $img['image_link'] ?>" rel="prettyPhoto[Gallery]" data-lightbox="mygallery"><img src="img/event_2019/<?= $img['image_link'] ?>" class="img-fluid mt-1" alt="<?= $img['alt'] ?>"></a></div>
               <?php } ?>
             </div>
           </div>
@@ -159,7 +159,7 @@
             while( $img = $req->fetch() ) {
             
             ?>
-              <div class="col-lg-3 col-md-6 col-sm-6 photogallerytabs mx-auto my-auto mb-3 hovergallery"><a href="img/<?= $img['image_link'] ?>" rel="prettyPhoto[Gallery]" data-lightbox="mygallery"><img src="img/<?= $img['image_link'] ?>" class="img-fluid mt-1" alt="<?= $img['alt'] ?>"></a></div>
+              <div class="col-lg-3 col-md-6 col-sm-6 photogallerytabs mx-auto my-auto mb-3 hovergallery"><a href="img/event_2019/<?= $img['image_link'] ?>" rel="prettyPhoto[Gallery]" data-lightbox="mygallery"><img src="img/event_2019/<?= $img['image_link'] ?>" class="img-fluid mt-1" alt="<?= $img['alt'] ?>"></a></div>
               <?php } ?>
             </div>
           </div>
@@ -178,7 +178,7 @@
             while( $img = $req->fetch() ) {
             
             ?>
-              <div class="col-lg-3 col-md-6 col-sm-6 photogallerytabs mx-auto my-auto mb-3 hovergallery"><a href="img/<?= $img['image_link'] ?>" rel="prettyPhoto[Gallery]" data-lightbox="mygallery"><img src="img/<?= $img['image_link'] ?>" class="img-fluid mt-1" alt="<?= $img['alt'] ?>"></a></div>
+              <div class="col-lg-3 col-md-6 col-sm-6 photogallerytabs mx-auto my-auto mb-3 hovergallery"><a href="img/event_2019/<?= $img['image_link'] ?>" rel="prettyPhoto[Gallery]" data-lightbox="mygallery"><img src="img/event_2019/<?= $img['image_link'] ?>" class="img-fluid mt-1" alt="<?= $img['alt'] ?>"></a></div>
 
               <?php } ?>
             </div>
@@ -198,7 +198,7 @@
             while( $img = $req->fetch() ) {
             
             ?>
-              <div class="col-lg-3 col-md-6 col-sm-6 photogallerytabs mx-auto my-auto mb-3 hovergallery"><a href="img/<?= $img['image_link'] ?>" rel="prettyPhoto[Gallery]" data-lightbox="mygallery"><img src="img/<?= $img['image_link'] ?>" class="img-fluid mt-1" alt="<?= $img['alt'] ?>"></a></div>
+              <div class="col-lg-3 col-md-6 col-sm-6 photogallerytabs mx-auto my-auto mb-3 hovergallery"><a href="img/event_2019/<?= $img['image_link'] ?>" rel="prettyPhoto[Gallery]" data-lightbox="mygallery"><img src="img/event_2019/<?= $img['image_link'] ?>" class="img-fluid mt-1" alt="<?= $img['alt'] ?>"></a></div>
 
               <?php } ?>
             </div>

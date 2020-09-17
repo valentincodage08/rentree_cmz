@@ -359,6 +359,7 @@ function changeType(x, type) {
 
                   <div class="form-field col-12">
                     <center><input class="submit-btn" type="submit" value="Valider"></center>
+                    <p class="mt-5 policep text-center">Si rien ne se passe, merci de vérifier les numéros de téléphone et emails de chaque participants : une faute de frappe a dû avoir lieu.</p>
                   </div>
                 </div>
               </div>
@@ -374,14 +375,14 @@ function changeType(x, type) {
 
   <!-- Event Cards -->
   <div class="row my-4 justify-content-center align-items-center w-100 mx-auto">
-  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
+  <!-- <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
         <img class="img-fluid" src="img/capture_rde/basket_2.png">
         <p class="policetitres-proginc text-center" style="color: var(--color-blue-middle);">Tournoi de Basket</p>
         <hr class="style-five">
         <center><a href="event_register_basket.php" class="btn btn-secondary mb-2">S'inscrire</a></center>
       </div>
-    </div>
+    </div> -->
     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
       <div class="card-polaroid mx-auto">
         <img class="img-fluid" src="img/capture_rde/warrior_11.png">

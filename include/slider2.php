@@ -180,7 +180,7 @@
                 <div class="tp-caption   tp-resizeme rs-parallaxlevel-3" id="slide-32-layer-countdown"
                 data-x="['center','center','center','center']" data-hoffset="['0','50','25','0']"
                 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['0','0','120','0']"
-                data-fontsize="['40','30','25','18']" data-lineheight="['70','70','80','56']" data-width="none"
+                data-fontsize="['65','55','50','40']" data-lineheight="['70','70','80','56']" data-width="none"
                 data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on"
                 data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"sX:2;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
                 data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]"

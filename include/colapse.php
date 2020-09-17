@@ -71,7 +71,7 @@
               </div>
             </div>
 
-            <div class="card">
+            <!-- <div class="card">
               <div id="headingThree" class="card-header bg-white shadow-sm border-0">
                 <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseThree"
                     aria-expanded="false" aria-controls="collapseThree"
@@ -87,7 +87,7 @@
                   <br><p class="font-weight-light m-0 collapsetxt">-> Non, tout le matériel et les matières premières seront mis à disposition.</p>
                 </div>
               </div>
-            </div>
+            </div> -->
 
             <div class="card">
               <div id="headingFour" class="card-header bg-white shadow-sm border-0">
@@ -128,7 +128,7 @@
               </div>
             </div>
 
-            <div class="card">
+            <!-- <div class="card">
               <div id="headingSix" class="card-header bg-white shadow-sm border-0">
                 <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseSix"
                     aria-expanded="false" aria-controls="collapseSix"
@@ -144,7 +144,7 @@
                   <br><p class="font-weight-light m-0 collapsetxt">-> Oui, il est possible que les membres d’une même équipe proviennent d’établissements différents.</p>
                 </div>
               </div>
-            </div>
+            </div> -->
 
           </div>
         </div>

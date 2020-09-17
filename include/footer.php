@@ -18,7 +18,7 @@
     </div>
 
     <div class="copy"><a href="mention.php" style="text-decoration:none; color:white">Mentions Légales</a></div>
-    <div class="copy">© Copyright 2020 JJ.Yoyo.Val.Antho</div>
+    <div class="copy">© Copyright 2020 <a href="http://jupinet.simplon-charleville.fr/portfolio/" target="_blank">JJ</a>.<a href="http://desouza.simplon-charleville.fr/portfolio/" target="_blank">Yoyo</a>.<a href="http://demandat.simplon-charleville.fr/portfolio/" target="_blank">Val</a>.<a href="http://beenen.simplon-charleville.fr/portfolio/" target="_blank">Antho</a></div>
 </footer>
 
 
